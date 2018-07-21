@@ -5,7 +5,9 @@ My part of developing the SaferTrip web app
 ### 1.1 Responsive Web Design 
 #### 1.1.1 CSS @media query
 > The @media rule is used in media queries to apply different styles for different media types/devices
+
 Started with small screens first and work up.
+
     /* smartphones */ 
     @media screen and (min-width : 0px)
     /* iPhones 6/7/8 plus */
