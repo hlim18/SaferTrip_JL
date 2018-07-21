@@ -8,6 +8,7 @@ My part of developing the SaferTrip web app
 
 Started with small screens first and worked up.
 
+#### 1.1.2 Code Example
     /* smartphones */ 
     @media screen and (min-width : 0px)
     /* iPhones 6/7/8 plus */
@@ -16,8 +17,6 @@ Started with small screens first and worked up.
     @media screen and (min-width : 768px)
     /* Desktops and laptops */
     @media screen and (min-width : 1024px)
-
-#### 1.1.2 
 
 #### 1.1.3 Acknowledgements
 * CSS @media Rule @ [w3schools.com](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
