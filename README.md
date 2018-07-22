@@ -9,7 +9,7 @@ My part of developing the SaferTrip web app
 Started with small screens first and worked up.
 
 #### 1.1.2 How I divided sections
-    /* smartphones */ 
+    /* Smartphones */ 
     @media screen and (min-width : 0px)
     /* iPhones 6/7/8 plus */
     @media screen and (min-width : 414px)
@@ -34,6 +34,24 @@ To use BootstrapCDN, links of CSS and JS stated in the bootstrap website need to
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 #### 1.2.2 How to fade in on page load
+
+    [CSS]
+    #fallingStars{
+        opacity: 0;
+    }
+    #title{
+        opacity: 0;
+    }
+    #slogan{
+        opacity: 0;
+    }
+
+    [JS]
+    $(document).ready(function() {
+        $("#fallingStars").delay(200).animate({'opacity':'1'},500);
+        $("#title").delay(500).animate({'opacity':'1'},800);
+        $("#slogan").delay(800).animate({'opacity':'1'},800);
+    });
 
 #### 1.2.3 Acknowledgements
 * Boostrap 4.1.x Introduction @ [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
