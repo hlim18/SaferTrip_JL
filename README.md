@@ -4,7 +4,7 @@ My part of developing the SaferTrip web app
 ## 1. Main Page
 ### 1.1 Responsive Web Design 
 #### 1.1.1 CSS @media query
-> The @media rule is used in media queries to apply different styles for different media types/devices
+> The `@media` rule is used in media queries to apply different styles for different media types/devices
 
 Started with small screens first and worked up.
 
@@ -19,22 +19,27 @@ Started with small screens first and worked up.
     @media screen and (min-width : 1024px)
 
 #### 1.1.3 Acknowledgements
-* CSS @media rule @ [w3schools](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
+* CSS `@media` rule @ [w3schools](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
 * 2017.03.31 "Stop using device breakpoints" (by Adam Silver @ [Medium](https://medium.com/simple-human/stop-using-device-breakpoints-b11a87e2625c))
-* 2012.10.08 "How to deal with various screen sizes by using CSS3 @media query" in Korean (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
+* 2012.10.08 "How to deal with various screen sizes by using CSS3 `@media` query" in Korean (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
 
 - - -
 
 ### 1.2 Fade-in on page load
 #### 1.2.1 How to work with Bootstrap 4.1.x
-To use Bootstrap CDN, links of CSS and JS stated in the bootstrap website need to be added. But, when I copied and pasted the links in my html document. It didn't work. 
-> I solved the issue by replacing the jQuery Bootstrap CDN with the jQuery Google CDN. 
+To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be added. But, when I copied and pasted the links in a html document. It didn't work. 
+> I solved the issue by replacing the `jQuery & Popper.js` scripts with `jQuery Google CDN`. 
 
-    [jQuery Bootstrap CDN]
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+```JS
+// [Before]
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+```
 
-    [jQuery Google CDN]
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+```JS
+// [After]
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+```
 
 #### 1.2.2 How to fade in on page load
 
@@ -87,7 +92,7 @@ Increasing opacity from 0 to 1 and including contents in a html document prevent
 
 - - -
 
-### 1.3 Fade-in on page load
+### 1.3 Two Language Options
 The SaferTrip project will be available in 2 languages : Korean & English. 
 
     1. Parse the Accept-Language HTTP header, which contains information about users' language preferences
