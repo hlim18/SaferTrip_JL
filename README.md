@@ -31,13 +31,13 @@ To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be a
 > I solved the issue by replacing the `jQuery & Popper.js` scripts with `jQuery Google CDN`. 
 
 ```HTML
-// [Before]
+<!-- [Before] -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 ```
 
 ```HTML
-// [After]
+<!-- [After] -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 ```
 
@@ -70,8 +70,8 @@ $(document).ready(function() {
 ###### 1.2.2.1.2 Acknowledgements
 * Boostrap 4.1.x Introduction @ [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 * jQuery Get Started @ [w3schools](https://www.w3schools.com/JQuery/jquery_get_started.asp)
-* jQuery delay() Method @ [w3schools](https://www.w3schools.com/jquery/eff_delay.asp)
-* jQuery .animate() @ [jQuery](http://api.jquery.com/animate/)
+* jQuery `delay()` Method @ [w3schools](https://www.w3schools.com/jquery/eff_delay.asp)
+* jQuery `.animate()` @ [jQuery](http://api.jquery.com/animate/)
 * jQuery fade-in on page load (by James Houghton @ [CodePen](https://codepen.io/blondersholmvik/pen/BLKxZE))
 
 ###### 1.2.2.1.3 Limit
@@ -102,8 +102,8 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 
 #### 1.1.3 Acknowledgements
 * Website that recognizes user's location/IP & changes lang. based on that @ [StackOverflow](https://stackoverflow.com/questions/2039016/website-that-recognizes-users-location-ip-changes-lang-based-on-that)
-* Accept-Language @ [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
-* Accept-Language used for locale setting @ [W3C](https://www.w3.org/International/questions/qa-accept-lang-locales)
+* `Accept-Language` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
+* `Accept-Language` used for locale setting @ [W3C](https://www.w3.org/International/questions/qa-accept-lang-locales)
 * Detecting Language of a Visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
 
 
