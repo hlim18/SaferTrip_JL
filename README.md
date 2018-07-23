@@ -30,16 +30,18 @@ Started with small screens first and worked up.
 To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be added. But, when I copied and pasted the links in a html document. It didn't work. 
 > I solved the issue by replacing the `jQuery & Popper.js` scripts with `jQuery Google CDN`. 
 
-```JS
+```HTML
 // [Before]
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 ```
 
-```JS
+```HTML
 // [After]
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 ```
+
+- - -
 
 #### 1.2.2 How to fade in on page load
 
@@ -47,7 +49,7 @@ To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be a
 
 ###### 1.2.2.1.1 CSS & JS Codes for Method 1
 
-```JS
+```CSS
 #fallingStars{
     opacity: 0;
 }
