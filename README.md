@@ -11,6 +11,8 @@ Started with small screens first and worked up.
 #### 1.1.2 How I divided sections
     /* Smartphones */ 
     @media screen and (min-width : 0px)
+    /* iPhones 6/7/8  */
+    @media screen and (min-width : 375px)
     /* iPhones 6/7/8 plus */
     @media screen and (min-width : 414px)
     /* iPads */
@@ -18,11 +20,34 @@ Started with small screens first and worked up.
     /* Desktops and laptops */
     @media screen and (min-width : 1024px)
 
-#### 1.1.3 Acknowledgements
+#### 1.1.3 Responsive background - full screen
+```CSS
+body{
+    background: url("Images/main_1_cover.svg") no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+```
+
+#### 1.1.4 Responsive image - full screen, fixed top
+```CSS
+#fallingStars{
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    overflow: auto;
+}
+```
+
+#### 1.1.5 Acknowledgements
 * CSS `@media` rule @ [w3schools](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
 * 2017.03.31 "Stop using device breakpoints" (by Adam Silver @ [Medium](https://medium.com/simple-human/stop-using-device-breakpoints-b11a87e2625c))
 * 2012.10.08 "How to deal with various screen sizes by using CSS3 `@media` query" in Korean (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
-
+* 2013.08.28 "Responsive image full screen" @ [StackOverflow](https://stackoverflow.com/questions/18490334/responsive-image-full-screen-and-centered-maintain-aspect-ratio-not-exceed-wi)
 - - -
 
 ### 1.2 Fade-in on page load
@@ -44,9 +69,7 @@ To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be a
 - - -
 
 #### 1.2.2 How to fade in on page load
-
 ##### 1.2.2.1 Method 1 : Chainging opacity from 0 to 1 
-
 ###### 1.2.2.1.1 CSS & JS Codes for Method 1
 
 ```CSS
@@ -100,7 +123,7 @@ The SaferTrip project will be available in 2 languages : Korean & English.
     1. Parse the Accept-Language HTTP header, which contains information about users' language preferences
     2. (If the server can't find matching language(s)) Determine users' location from their IP address
 
-#### 1.1.3 Acknowledgements
+#### 1.3.2 Acknowledgements
 * Website that recognizes user's location/IP & changes lang. based on that @ [StackOverflow](https://stackoverflow.com/questions/2039016/website-that-recognizes-users-location-ip-changes-lang-based-on-that)
 * `Accept-Language` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
 * `Accept-Language` used for locale setting @ [W3C](https://www.w3.org/International/questions/qa-accept-lang-locales)
@@ -109,7 +132,21 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 
 - - -
 
-## 2. Bulit With
+## 2. On the map
+### 2.1. Crime-ridden Areas Selection
+#### 2.1.1. Multiple options fade-in on click
+The translate() function accepts two arguments, indicating how much to move the element along the x and y axes respectively.
+
+##### 2.1.1.1. Code Example
+The translate() function accepts two arguments, indicating how much to move the element along the x and y axes respectively.
+
+##### 2.1.1.2. Acknowledgements
+* `.fadeIn()` @ [jQuery](https://api.jquery.com/fadeIn/)
+* `:hidden Selector` @ [jQuery](https://api.jquery.com/hidden-selector/)
+* CSS 'translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
+- - -
+
+## 3. Bulit With
 * <b>HTML, CSS</b>
 * <b>JavaScript</b>
     - [jQuery](https://jquery.com/) : a lightweight, "write less, do more", JavaScript library

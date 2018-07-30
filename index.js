@@ -1,5 +1,11 @@
 $(document).ready(function() {
-    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
+    $("#fallingStars").delay(300).animate({'opacity':'1'},500);
     $("#title").delay(500).animate({'opacity':'1'},800);
     $("#slogan").delay(800).animate({'opacity':'1'},800);
+
+    // https://codepen.io/hlim18/pen/EpbLmN
+    $('#test').click(function(){
+        // $(this).slideUp();
+        $("div:hidden").fadeIn("slow");
+    });
 });

@@ -1,0 +1,192 @@
+body{
+    /* located in the file */
+    /* https://css-tricks.com/using-svg/ */
+    background: url("Images/main_1_cover.svg") no-repeat center center fixed;
+    background-size: 100% 100%;
+    font-style: normal;
+
+    /* https://hangeul.naver.com/2017/nanum */
+    /* font-family: 'NanumBarunpen';  */
+
+    /* https://developers.google.com/fonts/ : All the fonts in our catalog are free and open source, making beautiful type accessible to anyone for any project. */
+    /* https://fonts.google.com/?subset=korean *
+    /* [Google Fonts] Use the following CSS rules to specify these families: */
+    /* font-family: 'Sunflower', sans-serif; */
+
+    /* https://fonts.google.com/specimen/Poor+Story */
+    font-family: 'Poor Story', sans-serif;
+}
+
+#paragraph{
+    color: white;
+    top: 3%; 
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+    position: absolute; 
+}
+
+#fallingStars{
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    overflow: auto;
+}
+
+#title{
+    color: white;
+    text-align: center; 
+    position: absolute; 
+    top: 30%; 
+    width: 100%;
+    opacity: 0;
+
+}
+
+#slogan{
+    color: white;
+    text-align: center; 
+    position: absolute; 
+    top: 10%; 
+    width: 100%;
+    font-style: italic;
+    opacity: 0;
+
+}
+
+#test{
+    /* horizontally & vertically middle */
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 50%; 
+    /* The translate() CSS function repositions an element in the horizontal and/or vertical directions. */
+    transform: translate(-50%, -50%);
+    /* content: url("Images/ovalOrange.svg"); */
+}  
+
+.options {
+    color: white;
+    display: none;
+    margin: 3px;
+    text-align: center;
+    position: absolute;
+    background: url("Images/oval100.svg");
+}
+
+#option1{
+    transform: translate(70px, 160px);
+    /* transform: translate(-50%, -50%); */
+}
+
+#option2{
+    transform: translate(35px, 245px);
+    /* transform: translate(-50%, -50%); */
+}
+
+#option3{
+    transform: translate(105px, 310px);
+    /* transform: translate(-50%, -50%); */
+}
+
+#option4{
+    transform: translate(183px, 245px);
+    /* transform: translate(-50%, -50%); */
+}
+
+#option5{
+    transform: translate(150%, 160px);
+    /* transform: translate(-50%, -50%); */
+}
+
+/* smartphones */
+@media screen and (min-width : 0px) {
+    #title{
+        font-size: 20px;
+    }
+    #slogan{
+        font-size: 14px;
+    }
+    #option1, #option2, #option3, #option4, #option5 {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Galaxy S5 */
+@media screen and (min-width : 360px) {
+    #title{
+        font-size: 25px;
+    }
+    #slogan{
+        font-size: 20px;
+    }
+    #option1, #option2, #option3, #option4, #option5 {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* iPhones 6/7/8 */
+@media screen and (min-width : 375px) {
+    #title{
+        font-size: 20px;
+    }
+    #slogan{
+        font-size: 14px;
+    }
+    #option1, #option2, #option3, #option4, #option5 {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* iPhones 6/7/8 plus */
+@media screen and (min-width : 414px) {
+    #title{
+        font-size: 22px;
+    }
+    #slogan{
+        font-size: 16px;
+    }
+    #option1, #option2, #option3, #option4, #option5 {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* iPads */
+@media screen and (min-width : 768px) {
+    #title{
+        font-size: 30px;
+    }
+    #slogan{
+        font-size: 24px;
+    }
+    #option1, #option2, #option3, #option4, #option5 {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Desktops and laptops */
+@media screen and (min-width : 1024px) {
+    #title{
+        font-size: 37px;
+    }
+    #slogan{
+        font-size: 29px;
+    }
+    #option1, #option2, #option3, #option4, #option5 {
+        width: 70px;
+        height: 70px;
+    }
+}
