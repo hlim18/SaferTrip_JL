@@ -68,46 +68,67 @@ body{
     display: flex;
     left: 50%;
     top: 50%; 
+    /* https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
     /* The translate() CSS function repositions an element in the horizontal and/or vertical directions. */
     transform: translate(-50%, -50%);
     /* content: url("Images/ovalOrange.svg"); */
 }  
 
+/* .options{
+    position: relative;
+} */
+
 .options {
-    color: white;
+    background: #f7f7f5;
     display: none;
-    margin: 3px;
     text-align: center;
+    vertical-align: middle;
     position: absolute;
-    background: url("Images/oval100.svg");
+    width: 100%;
+    /* reference point : vertically & horizontally middle */
+    left: 50%;
+    top: 50%; 
+    /* circle */
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #F3C78D;
+}
+
+.options span {
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    /* Center text and container inside a circle */
 }
 
 #option1{
-    transform: translate(70px, 160px);
-    /* transform: translate(-50%, -50%); */
+    /* transform: translate(70px, 160px); */
+    transform: translate(-100%, -150%);
 }
 
 #option2{
-    transform: translate(35px, 245px);
-    /* transform: translate(-50%, -50%); */
+    /* transform: translate(35px, 245px); */
+    transform: translate(-160%, -40%);
 }
 
 #option3{
-    transform: translate(105px, 310px);
-    /* transform: translate(-50%, -50%); */
+    /* transform: translate(105px, 310px); */
+    transform: translate(-50%, 50%);
 }
 
 #option4{
-    transform: translate(183px, 245px);
-    /* transform: translate(-50%, -50%); */
+    /* transform: translate(183px, 245px); */
+    transform: translate(60%, -40%);
 }
 
 #option5{
-    transform: translate(150%, 160px);
-    /* transform: translate(-50%, -50%); */
+    /* transform: translate(150%, 160px); */
+    transform: translate(15%, -150%);
 }
 
-/* smartphones */
+/* smartphones including iPhone 5 */
 @media screen and (min-width : 0px) {
     #title{
         font-size: 20px;
@@ -115,9 +136,10 @@ body{
     #slogan{
         font-size: 14px;
     }
-    #option1, #option2, #option3, #option4, #option5 {
+    .options {
         width: 60px;
         height: 60px;
+        font-size: 12px;
     }
 }
 
@@ -129,9 +151,10 @@ body{
     #slogan{
         font-size: 20px;
     }
-    #option1, #option2, #option3, #option4, #option5 {
+    .options {
         width: 70px;
         height: 70px;
+        font-size: 13px;
     }
 }
 
@@ -143,9 +166,10 @@ body{
     #slogan{
         font-size: 14px;
     }
-    #option1, #option2, #option3, #option4, #option5 {
-        width: 70px;
-        height: 70px;
+    .options {
+        width: 75px;
+        height: 75px;
+        font-size: 14px;
     }
 }
 
@@ -157,36 +181,39 @@ body{
     #slogan{
         font-size: 16px;
     }
-    #option1, #option2, #option3, #option4, #option5 {
-        width: 70px;
-        height: 70px;
+    .options {
+        width: 80px;
+        height: 80px;
+        font-size: 15px;
     }
 }
 
 /* iPads */
 @media screen and (min-width : 768px) {
     #title{
-        font-size: 30px;
+        font-size: 35px;
     }
     #slogan{
         font-size: 24px;
     }
-    #option1, #option2, #option3, #option4, #option5 {
-        width: 70px;
-        height: 70px;
+    .options {
+        width: 110px;
+        height: 110px;
+        font-size: 20px;
     }
 }
 
 /* Desktops and laptops */
 @media screen and (min-width : 1024px) {
     #title{
-        font-size: 37px;
+        font-size: 43px;
     }
     #slogan{
-        font-size: 29px;
+        font-size: 35px;
     }
-    #option1, #option2, #option3, #option4, #option5 {
-        width: 70px;
-        height: 70px;
+    .options {
+        width: 170px;
+        height: 170px;
+        font-size: 30px;
     }
 }

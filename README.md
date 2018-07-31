@@ -11,6 +11,8 @@ Started with small screens first and worked up.
 #### 1.1.2 How I divided sections
     /* Smartphones */ 
     @media screen and (min-width : 0px)
+    /* Galaxy S5 */
+    @media screen and (min-width : 360px) 
     /* iPhones 6/7/8  */
     @media screen and (min-width : 375px)
     /* iPhones 6/7/8 plus */
@@ -144,6 +146,8 @@ The translate() function accepts two arguments, indicating how much to move the 
 * `.fadeIn()` @ [jQuery](https://api.jquery.com/fadeIn/)
 * `:hidden Selector` @ [jQuery](https://api.jquery.com/hidden-selector/)
 * CSS 'translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
+* The shapes of CSS @ [CSS-Tricks](https://css-tricks.com/examples/ShapesOfCSS/)
+
 - - -
 
 ## 3. Bulit With
