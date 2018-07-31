@@ -136,7 +136,7 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 
 ## 2. On the map
 ### 2.1. Crime-ridden Areas Selection
-#### 2.1.1. Multiple options fade-in on click
+#### 2.1.1. Multiple options fade-toggle on click
 The translate() function accepts two arguments, indicating how much to move the element along the x and y axes respectively.
 
 ##### 2.1.1.1. Code Example
@@ -147,7 +147,8 @@ The translate() function accepts two arguments, indicating how much to move the 
 * `:hidden Selector` @ [jQuery](https://api.jquery.com/hidden-selector/)
 * CSS 'translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
 * The shapes of CSS @ [CSS-Tricks](https://css-tricks.com/examples/ShapesOfCSS/)
-
+* Center texts inside circles & fadeToggle not working @ [StackOverflow](https://stackoverflow.com/questions/51609769/center-texts-inside-circles-fadetoggle-not-working)
+* CSS background image to fit width, height should auto-scale in proportion @ [StackOverflow](https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion?rq=1)
 - - -
 
 ## 3. Bulit With

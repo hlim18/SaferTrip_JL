@@ -6,7 +6,10 @@ $(document).ready(function() {
     // https://codepen.io/hlim18/pen/EpbLmN
     $('#test').click(function(){
         // $(this).slideUp();
-        // toggle not working
-        $(".options:hidden").fadeToggle();
+        // $(".options").fadeToggle();
+        $(".options:hidden").fadeIn();
     });
+
+    var click = false;
+    
 });

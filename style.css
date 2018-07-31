@@ -2,7 +2,9 @@ body{
     /* located in the file */
     /* https://css-tricks.com/using-svg/ */
     background: url("Images/main_1_cover.svg") no-repeat center center fixed;
-    background-size: 100% 100%;
+    background-size: cover;
+    /* This shows white spaces on both sides or at the top and the bottom for  */
+    /* background-size: 100% 100%; */
     font-style: normal;
 
     /* https://hangeul.naver.com/2017/nanum */
@@ -74,10 +76,6 @@ body{
     /* content: url("Images/ovalOrange.svg"); */
 }  
 
-/* .options{
-    position: relative;
-} */
-
 .options {
     background: #f7f7f5;
     display: none;
@@ -101,6 +99,13 @@ body{
     position: absolute;
     width: 100%;
     /* Center text and container inside a circle */
+    top: 50%; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#withoutInput:active{
+    background-color: red!important;
 }
 
 #option1{
