@@ -332,8 +332,8 @@ $(document).ready(function() {
 * You can also indent once to create a code block. 
 
 This is not indented paragraph.
-    This is indented paragraph.
 
+    This is indented paragraph.
 
 * Indenting once or labeling ` ``` ` with a different type of programming language will not apply color effects to codes.
 
