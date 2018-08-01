@@ -7,7 +7,9 @@ $(document).ready(function() {
     $('#test').click(function(){
         // $(this).slideUp();
         // $(".options").fadeToggle();
-        $(".options:hidden").fadeIn();
+        $(".options:hidden").fadeIn().on("click", function(){
+            $(this).css("background", "#F3C78D");
+        });
     });
 
     var click = false;
