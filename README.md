@@ -163,7 +163,7 @@ $('#test').click(function(){
 #### 2.1.3. translate()
 To locate five options in a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find right pixels for each 
 
-![circles](/ImagesREADME/circles.png)
+![circles](SaferTrip_JL/ImagesREADME/circles.png)
 ```
 <img src="ImagesREADME/circles.png" =200x200>
 <img src="ImagesREADME/circles.png"width="200" height="200" />
