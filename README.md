@@ -1,14 +1,14 @@
 # SaferTrip_JL
 My part of developing the SaferTrip web app
 
-## 1. Main Page
-### 1.1. Responsive Web Design 
-#### 1.1.1. CSS @media query
+# 1. Main Page
+## 1.1. Responsive Web Design 
+### 1.1.1. CSS @media query
 > The `@media` rule is used in media queries to apply different styles for different media types/devices
 
 Started with small screens first and worked up.
 
-#### 1.1.2. Responsive Breakpoints
+### 1.1.2. Responsive Breakpoints
     /* Smartphones */ 
     @media screen and (min-width : 0px)
     /* Galaxy S5 */
@@ -22,7 +22,7 @@ Started with small screens first and worked up.
     /* Desktops and laptops */
     @media screen and (min-width : 1024px)
 
-#### 1.1.3. Responsive background - full screen
+### 1.1.3. Responsive background - full screen
 ```CSS
 body{
     background: url("Images/main_1_cover.svg") no-repeat center center fixed;
@@ -32,7 +32,7 @@ body{
 
 Previously, I used `ackground-size: 100% 100%;` and the background image I received didn't fit into some screen sizes. For example, there were empty spaces on left & right sides for the following screen sizes: 360 x 640, 768 x 1024, 1024 x 1366 and empty spaces on top & bottom sides for the following screen sizes: 411 x 823, 375 x 812.
 
-#### 1.1.4. Acknowledgements
+### 1.1.4. Acknowledgements
 * CSS `@media` rule @ [w3schools](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
 * 2017.03.31 Stop using device breakpoints (by Adam Silver @ [Medium](https://medium.com/simple-human/stop-using-device-breakpoints-b11a87e2625c))
 * 2012.10.08 How to deal with various screen sizes by using CSS3 `@media` query `in Korean` (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
@@ -40,8 +40,8 @@ Previously, I used `ackground-size: 100% 100%;` and the background image I recei
 * CSS background image to fit width, height should auto-scale in proportion @ [StackOverflow](https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion?rq=1)
 - - -
 
-#### 1.2. How to fade in on page load
-##### 1.2.1. Method 1 : Changing opacity from 0 to 1 
+### 1.2. How to fade in on page load
+#### 1.2.1. Method 1 : Changing opacity from 0 to 1 
 ```CSS
 #fallingStars{
     opacity: 0;
@@ -60,22 +60,22 @@ $(document).ready(function() {
     $("#slogan").delay(800).animate({'opacity':'1'},800);
 ```
 
-###### 1.2.1.1. Acknowledgements
+##### 1.2.1.1. Acknowledgements
 * Boostrap 4.1.x Introduction @ [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 * jQuery Get Started @ [w3schools](https://www.w3schools.com/JQuery/jquery_get_started.asp)
 * jQuery `delay()` Method @ [w3schools](https://www.w3schools.com/jquery/eff_delay.asp)
 * jQuery `.animate()` @ [jQuery](http://api.jquery.com/animate/)
 * jQuery fade-in on page load (by James Houghton @ [CodePen](https://codepen.io/blondersholmvik/pen/BLKxZE))
 
-###### 1.2.1.2. Limit
+##### 1.2.1.2. Limit
 Increasing opacity from 0 to 1 and including contents in a html document prevents me from creating a singple page application.
 
 - - -
 
-##### 1.2.2. Method 2 : 
+#### 1.2.2. Method 2 : 
 
 
-###### 1.2.2.1. Acknowledgements
+##### 1.2.2.1. Acknowledgements
 * JSON - What is JSON and how to use it @ [ILoveCoding](https://ilovecoding.org/lessons/json-what-is-json-and-how-to-use-it)
 * Ajax: Create a Single Page App with jQuery @ [ILoveCoding](https://ilovecoding.org/lessons/ajax-create-a-single-page-app-with-jquery)
 * jQuery Ajax in Korean @ [Open Tutorials](https://opentutorials.org/course/1375/6851)
@@ -85,9 +85,9 @@ Increasing opacity from 0 to 1 and including contents in a html document prevent
 
 - - -
 
-## 2. On the map
-### 2.1. Crime-ridden Areas Report Options
-#### 2.1.1. Fadein() on click
+# 2. On the map
+## 2.1. Crime-ridden Areas Report Options
+### 2.1.1. Fadein() on click
 I wanted to show options after clicking a button. So, I used ":hidden" & ".fadeIn()".
 
 ```HTML
@@ -107,14 +107,14 @@ $('#test').click(function(){
 });
 ```
 
-##### 2.1.1.1. Acknowledgements
+#### 2.1.1.1. Acknowledgements
 * `.fadeIn()` @ [jQuery](https://api.jquery.com/fadeIn/)
 * `:hidden Selector` @ [jQuery](https://api.jquery.com/hidden-selector/)
 * The shapes of CSS @ [CSS-Tricks](https://css-tricks.com/examples/ShapesOfCSS/)
 
 - - -
 
-#### 2.1.2. Center texts inside circles vertically & horizontally
+### 2.1.2. Center texts inside circles vertically & horizontally
 ```HTML
 <div class="container">
     <button type="button" class="btn btn-outline-success" id="test">test</button>
@@ -156,11 +156,11 @@ $('#test').click(function(){
 }
 ```
 
-##### 2.1.2.1. Acknowledgments
+#### 2.1.2.1. Acknowledgments
 * Center texts inside circles & fadeToggle not working @ [StackOverflow](https://stackoverflow.com/questions/51609769/center-texts-inside-circles-fadetoggle-not-working)
 - - -
 
-#### 2.1.3. translate()
+### 2.1.3. translate()
 To locate five options in a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find right pixels for each 
 
 [![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
@@ -187,14 +187,14 @@ To locate five options in a circle around a button, I used the translate() funct
 }
 ```
 
-##### 2.1.3.1. Acknowledgements
+#### 2.1.3.1. Acknowledgements
 * `translate()` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate)
 * CSS 'translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
 - - -
 
-## 3. Settings
+# 3. Settings
 
-### 3.1. How to use jQuery with Bootstrap 4.1.x
+## 3.1. How to use jQuery with Bootstrap 4.1.x
 To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be added. But, when I copied and pasted the links in a html document. It didn't work. 
 > I solved the issue by replacing the `jQuery & Popper.js` scripts with `jQuery Google CDN`. 
 
@@ -212,7 +212,7 @@ To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be a
 All Google fonts are released under open source licenses. So, those can be used in any non-commercial or commercial project.
 - - -
 
-### 3.2. Fonts Comparison
+## 3.2. Fonts Comparison
 [![fonts.png](https://s25.postimg.cc/9gtyi4fkf/fonts.png)](https://postimg.cc/image/3snnr8b7v/)
 
 Default vs `Sunflower` font vs `Poor Story` font
@@ -236,23 +236,22 @@ body{
 * Poor Story @ [Google Fonts](https://fonts.google.com/specimen/Poor+Story)
 - - -
 
-### 3.3. Two Language Options
+## 3.3. Two Language Options
 The SaferTrip project will be available in 2 languages : Korean & English. 
 
     1. Parse the Accept-Language HTTP header, which contains information about users' language preferences
     2. (If the server can't find matching language(s)) Determine users' location from their IP address
 
 
-#### 3.3.1. Acknowledgements
+### 3.3.1. Acknowledgements
 * Website that recognizes user's location/IP & changes lang. based on that @ [StackOverflow](https://stackoverflow.com/questions/2039016/website-that-recognizes-users-location-ip-changes-lang-based-on-that)
 * `Accept-Language` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
 * `Accept-Language` used for locale setting @ [W3C](https://www.w3.org/International/questions/qa-accept-lang-locales)
 * Detecting Language of a Visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
 - - -
 
-### 3.4. GitHub README : Useful Techniques
-
-##### 3.4.1. Headers
+## 3.4. GitHub README : Useful Techniques
+### 3.4.1. Headers
 
 # This is a H1
 ## This is a H2
@@ -270,8 +269,7 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 ###### This is a H6
 ```
 
-
-##### 3.4.2. BlockQuote
+### 3.4.2. BlockQuote
 
 > This is a first blockquote.
 >   > This is a second blockquote.
@@ -281,9 +279,8 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 >   > This is a second blockquote.
 ```
 
-
-##### 3.4.3. List
-##### 3.4.3.1. Ordered List
+### 3.4.3. List
+#### 3.4.3.1. Ordered List
 1. First
 2. Second
 3. Third
@@ -294,8 +291,7 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 3. Third
 ```
 
-
-##### 3.4.3.2. Unordered List
+#### 3.4.3.2. Unordered List
 * First
     - Second
         + Third
@@ -306,8 +302,7 @@ The SaferTrip project will be available in 2 languages : Korean & English.
         + Third
 ```
 
-
-##### 3.4.4. Code Block 
+### 3.4.4. Code Block 
 
 ```
     ```JS
@@ -343,8 +338,7 @@ $(document).ready(function() {
         $("#title").delay(500).animate({'opacity':'1'},800);
         $("#slogan").delay(800).animate({'opacity':'1'},800);
 
-
-##### 3.4.? Relative links and image paths in README files
+### 3.4.? Relative links and image paths in README files
 
 GitHub Help says, "A relative link is a link that is relative to the current file. For example, if you have a README file in root of your repository, and you have another file in docs/CONTRIBUTING.md, the relative link to CONTRIBUTING.md in your README might look like this:
 [Contribution guidelines for this project](docs/CONTRIBUTING.md)".
@@ -368,7 +362,7 @@ https://postimg.cc/image/6lgvb9qzv/54c815da/
 
 markdown for GitHub, Reddit, StackOverflow
 
-#### 3.4.?. Acknowledgements
+### 3.4.?. Acknowledgements
 * About READMEs @[GitHub Help](https://help.github.com/articles/about-readmes/)
 * README-Template.md by PurpleBooth @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * How to use Markdown `in Korean` by ihoneymon @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
@@ -377,7 +371,7 @@ markdown for GitHub, Reddit, StackOverflow
 * GitHub relative link in markdown file @ [StackOverflow](https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file?rq=1)
 - - -
 
-## 5. Bulit With
+# 5. Bulit With
 * <b>HTML, CSS</b>
     - [BootStrap 4.1.2](https://getbootstrap.com/docs/4.1/getting-started/introduction/) : the world’s most popular framework for building responsive, mobile-first sites
 * <b>JavaScript</b>
