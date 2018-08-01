@@ -4,8 +4,7 @@ My part of developing the SaferTrip web app
 ## Table of Contents
 1. [Main Page](https://github.com/hlim18/SaferTrip_JL#1-main-page)
 - 1.1. [Responsive Web Design](https://github.com/hlim18/SaferTrip_JL#11-responsive-web-design) 
-2. [On the Map](https://github.com/hlim18/SaferTrip_JL#2-on-the-map)
-- 2.1. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#21-crime-ridden-areas-report-options)
+2. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#21-crime-ridden-areas-report-options)
 3. [Settings](https://github.com/hlim18/SaferTrip_JL#3-settings)
 - 3.1. [How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#31-how-to-use-jquery-with-bootstrap-412)
 - 3.2. [Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#32-fonts-comparison)
@@ -53,8 +52,8 @@ Previously, I used `ackground-size: 100% 100%;` and the background image I recei
 * CSS background image to fit width, height should auto-scale in proportion @ [StackOverflow](https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion?rq=1)
 - - -
 
-### 1.2. How to fade in on page load
-#### 1.2.1. Method 1 : Changing opacity from 0 to 1 
+## 1.2. How to fade in on page load
+### 1.2.1. Method 1 : Changing opacity from 0 to 1 
 ```CSS
 #fallingStars{
     opacity: 0;
@@ -73,22 +72,22 @@ $(document).ready(function() {
     $("#slogan").delay(800).animate({'opacity':'1'},800);
 ```
 
-##### 1.2.1.1. Acknowledgements
+#### 1.2.1.1. Acknowledgements
 * Boostrap 4.1.x Introduction @ [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 * jQuery Get Started @ [w3schools](https://www.w3schools.com/JQuery/jquery_get_started.asp)
 * jQuery `delay()` Method @ [w3schools](https://www.w3schools.com/jquery/eff_delay.asp)
 * jQuery `.animate()` @ [jQuery](http://api.jquery.com/animate/)
 * jQuery fade-in on page load (by James Houghton @ [CodePen](https://codepen.io/blondersholmvik/pen/BLKxZE))
 
-##### 1.2.1.2. Limit
+#### 1.2.1.2. Limit
 Increasing opacity from 0 to 1 and including contents in a html document prevents me from creating a singple page application.
 
 - - -
 
-#### 1.2.2. Method 2 : 
+### 1.2.2. Method 2 : 
 
 
-##### 1.2.2.1. Acknowledgements
+#### 1.2.2.1. Acknowledgements
 * JSON - What is JSON and how to use it @ [ILoveCoding](https://ilovecoding.org/lessons/json-what-is-json-and-how-to-use-it)
 * Ajax: Create a Single Page App with jQuery @ [ILoveCoding](https://ilovecoding.org/lessons/ajax-create-a-single-page-app-with-jquery)
 * jQuery Ajax in Korean @ [Open Tutorials](https://opentutorials.org/course/1375/6851)
@@ -98,9 +97,8 @@ Increasing opacity from 0 to 1 and including contents in a html document prevent
 
 - - -
 
-# 2. On the map
-## 2.1. Crime-ridden Areas Report Options
-### 2.1.1. Fadein() on click
+# 2. Crime-ridden Areas Report Options
+## 2.1. Fadein() on click
 I wanted to show options after clicking a button. So, I used ":hidden" & ".fadeIn()".
 
 ```HTML
@@ -120,14 +118,14 @@ $('#test').click(function(){
 });
 ```
 
-#### 2.1.1.1. Acknowledgements
+### 2.1.1. Acknowledgements
 * `.fadeIn()` @ [jQuery](https://api.jquery.com/fadeIn/)
 * `:hidden Selector` @ [jQuery](https://api.jquery.com/hidden-selector/)
 * The shapes of CSS @ [CSS-Tricks](https://css-tricks.com/examples/ShapesOfCSS/)
 
 - - -
 
-### 2.1.2. Center texts inside circles vertically & horizontally
+## 2.2. Center texts inside circles vertically & horizontally
 ```HTML
 <div class="container">
     <button type="button" class="btn btn-outline-success" id="test">test</button>
@@ -169,11 +167,11 @@ $('#test').click(function(){
 }
 ```
 
-#### 2.1.2.1. Acknowledgments
+### 2.2.1. Acknowledgments
 * Center texts inside circles & fadeToggle not working @ [StackOverflow](https://stackoverflow.com/questions/51609769/center-texts-inside-circles-fadetoggle-not-working)
 - - -
 
-### 2.1.3. translate()
+## 2.3. translate()
 To locate five options in a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find right pixels for each responsive breakpoints.
 
 [![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
@@ -200,14 +198,34 @@ To locate five options in a circle around a button, I used the translate() funct
 }
 ```
 
-#### 2.1.3.1. Acknowledgements
+### 2.3.1. Acknowledgements
 * `translate()` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate)
 * CSS 'translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
 - - -
 
+## 2.4. Changing DIV background color
+
+```JS
+    $('#test').click(function(){
+        $(".options:hidden").fadeIn().on("click", function(){
+            $(this).css("background", "#F3C78D");
+        });
+    });
+```
+
+### 2.4.1. Acknowledgements
+* Change DIV background color with .click(function(){ @ [StackOverflow](https://stackoverflow.com/questions/13882265/change-div-background-color-with-clickfunction)
+
+## 2.5. Popup Messages
+
+### 2.5.1. Acknowledgements
+* SweetAlert plug-in @ [SweetAlert](https://sweetalert.js.org/)
+* Simple confirmation popup @ [CodyHouse](https://codyhouse.co/gem/simple-confirmation-popup/)
+* 2018.01.15 45+ jQuery javaScript CSS popup window dialog box @ [Fresh Design Web](https://freshdesignweb.com/jquery-javascript-popup-window/)
+
 # 3. Settings
 
-## 3.1. How to use jQuery with Bootstrap 4.1.2.
+## 3.1. How to Use jQuery with Bootstrap 4.1.2.
 To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be added. But, when I copied and pasted the links in a html document. It didn't work. 
 > I solved the issue by replacing the `jQuery & Popper.js` scripts with `jQuery Google CDN`. 
 
@@ -425,6 +443,7 @@ __bold__
     - [BootStrap 4.1.2.](https://getbootstrap.com/docs/4.1/getting-started/introduction/) : the world’s most popular framework for building responsive, mobile-first sites
 * <b>JavaScript</b>
     - [jQuery 3.3.1.](https://jquery.com/) : a lightweight, "write less, do more", JavaScript library
+    - [SweetAlert](https://sweetalert.js.org/) : making popup messages easy and pretty
 
 - - -
 2018 © Jen Lim 
