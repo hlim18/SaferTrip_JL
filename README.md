@@ -174,7 +174,8 @@ To locate five options in a circle around a button, I used the translate() funct
 ![circles](./circles.png)
 ![circles](/circles.png)
 ![circles](../../circles.png)
-![석촌호수 러버덕](http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0 "RubberDuck")
+
+![circles](http://bit.ly/STJLcircles "circles")
 
 ```CSS
 #option1{
