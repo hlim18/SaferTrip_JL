@@ -4,7 +4,8 @@ My part of developing the SaferTrip web app
 ## Table of Contents
 1. [Main Page](https://github.com/hlim18/SaferTrip_JL#1-main-page)
 - 1.1. [Responsive Web Design](https://github.com/hlim18/SaferTrip_JL#11-responsive-web-design) 
-2. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#21-crime-ridden-areas-report-options)
+2. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#2-crime-ridden-areas-report-options)
+- 2.1. [Fadein() on Click]
 3. [Settings](https://github.com/hlim18/SaferTrip_JL#3-settings)
 - 3.1. [How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#31-how-to-use-jquery-with-bootstrap-412)
 - 3.2. [Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#32-fonts-comparison)
@@ -52,7 +53,7 @@ Previously, I used `ackground-size: 100% 100%;` and the background image I recei
 * CSS background image to fit width, height should auto-scale in proportion @ [StackOverflow](https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion?rq=1)
 - - -
 
-## 1.2. How to fade in on page load
+## 1.2. How to Fade In on Page Load
 ### 1.2.1. Method 1 : Changing opacity from 0 to 1 
 ```CSS
 #fallingStars{
@@ -98,7 +99,7 @@ Increasing opacity from 0 to 1 and including contents in a html document prevent
 - - -
 
 # 2. Crime-ridden Areas Report Options
-## 2.1. Fadein() on click
+## 2.1. Fadein() on Click
 I wanted to show options after clicking a button. So, I used ":hidden" & ".fadeIn()".
 
 ```HTML
@@ -125,7 +126,7 @@ $('#test').click(function(){
 
 - - -
 
-## 2.2. Center texts inside circles vertically & horizontally
+## 2.2. Center Texts Inside Circles Vertically & Horizontally
 ```HTML
 <div class="container">
     <button type="button" class="btn btn-outline-success" id="test">test</button>
@@ -171,7 +172,7 @@ $('#test').click(function(){
 * Center texts inside circles & fadeToggle not working @ [StackOverflow](https://stackoverflow.com/questions/51609769/center-texts-inside-circles-fadetoggle-not-working)
 - - -
 
-## 2.3. translate()
+## 2.3. Translate() Function
 To locate five options in a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find right pixels for each responsive breakpoints.
 
 [![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
@@ -203,7 +204,7 @@ To locate five options in a circle around a button, I used the translate() funct
 * CSS 'translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
 - - -
 
-## 2.4. Changing DIV background color
+## 2.4. Changing DIV Background Color
 
 ```JS
     $('#test').click(function(){
