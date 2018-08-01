@@ -60,20 +60,6 @@ $(document).ready(function() {
     $("#slogan").delay(800).animate({'opacity':'1'},800);
 ```
 
-```CSS
-$(document).ready(function() {
-    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
-    $("#title").delay(500).animate({'opacity':'1'},800);
-    $("#slogan").delay(800).animate({'opacity':'1'},800);
-```
-
-```HTML
-$(document).ready(function() {
-    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
-    $("#title").delay(500).animate({'opacity':'1'},800);
-    $("#slogan").delay(800).animate({'opacity':'1'},800);
-```
-
 ###### 1.2.1.1. Acknowledgements
 * Boostrap 4.1.x Introduction @ [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 * jQuery Get Started @ [w3schools](https://www.w3schools.com/JQuery/jquery_get_started.asp)
@@ -227,7 +213,8 @@ All Google fonts are released under open source licenses. So, those can be used 
 - - -
 
 ### 3.2. Fonts Comparison
-[![fonts.png](https://s25.postimg.cc/qhcuqopzz/fonts.png)](https://postimg.cc/image/to7eabafv/)
+[![fonts.png](https://s25.postimg.cc/9gtyi4fkf/fonts.png)](https://postimg.cc/image/3snnr8b7v/)
+
 Default vs `Sunflower` font vs `Poor Story` font
 
 ```HTML
@@ -316,7 +303,34 @@ The SaferTrip project will be available in 2 languages : Korean & English.
         + Third
 ```
 
-##### 3.4.1.4. List
+##### 3.4.1.4. Code Block 
+
+```JS
+$(document).ready(function() {
+    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
+    $("#title").delay(500).animate({'opacity':'1'},800);
+    $("#slogan").delay(800).animate({'opacity':'1'},800);
+```
+
+
+```CSS
+$(document).ready(function() {
+    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
+    $("#title").delay(500).animate({'opacity':'1'},800);
+    $("#slogan").delay(800).animate({'opacity':'1'},800);
+```
+
+```HTML
+$(document).ready(function() {
+    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
+    $("#title").delay(500).animate({'opacity':'1'},800);
+    $("#slogan").delay(800).animate({'opacity':'1'},800);
+```
+
+    $(document).ready(function() {
+        $("#fallingStars").delay(200).animate({'opacity':'1'},500);
+        $("#title").delay(500).animate({'opacity':'1'},800);
+        $("#slogan").delay(800).animate({'opacity':'1'},800);
 
 
 ##### 3.4.1.? Relative links and image paths in README files
