@@ -159,12 +159,13 @@ $('#test').click(function(){
 
 ##### 2.1.2.1. Acknowledgments
 * Center texts inside circles & fadeToggle not working @ [StackOverflow](https://stackoverflow.com/questions/51609769/center-texts-inside-circles-fadetoggle-not-working)
+- - -
 
-
-##### 2.1.3. translate()
+#### 2.1.3. translate()
 To locate five options in a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find right pixels for each 
 
-![](./Images_README/circles.png =200x)
+![](/Images_README/circles.png =200x)
+![Alt text](Images_README/circles.png)
 
 ```CSS
 #option1{
@@ -210,7 +211,8 @@ To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be a
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 ```
 
-çAll Google fonts are released under open source licenses. So, those can be used in any non-commercial or commercial project.
+All Google fonts are released under open source licenses. So, those can be used in any non-commercial or commercial project.
+- - -
 
 ### 3.2. Fonts Comparison
 ![](./Images_README/fonts.png =200x)
@@ -233,6 +235,7 @@ body{
 * Fonts @ [Google Fonts](https://developers.google.com/fonts/)
 * Sunflower @ [Google Fonts](https://fonts.google.com/specimen/Sunflower)
 * Poor Story @ [Google Fonts](https://fonts.google.com/specimen/Poor+Story)
+- - -
 
 ### 3.3. Two Language Options
 The SaferTrip project will be available in 2 languages : Korean & English. 
