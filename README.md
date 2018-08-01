@@ -248,11 +248,11 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 * `Accept-Language` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
 * `Accept-Language` used for locale setting @ [W3C](https://www.w3.org/International/questions/qa-accept-lang-locales)
 * Detecting Language of a Visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
+- - -
 
-### 3.4. GitHub README
+### 3.4. GitHub README : Useful Techniques
 
-#### 3.4.1. Useful techniques
-##### 3.4.1.1. Headers
+##### 3.4.1. Headers
 
 # This is a H1
 ## This is a H2
@@ -270,7 +270,8 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 ###### This is a H6
 ```
 
-##### 3.4.1.2. BlockQuote
+
+##### 3.4.2. BlockQuote
 
 > This is a first blockquote.
 >   > This is a second blockquote.
@@ -280,8 +281,9 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 >   > This is a second blockquote.
 ```
 
-##### 3.4.1.3. List
-##### 3.4.1.3.1. Ordered List
+
+##### 3.4.3. List
+##### 3.4.3.1. Ordered List
 1. First
 2. Second
 3. Third
@@ -292,7 +294,8 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 3. Third
 ```
 
-##### 3.4.1.3.1. Unordered List
+
+##### 3.4.3.2. Unordered List
 * First
     - Second
         + Third
@@ -303,7 +306,17 @@ The SaferTrip project will be available in 2 languages : Korean & English.
         + Third
 ```
 
-##### 3.4.1.4. Code Block 
+
+##### 3.4.4. Code Block 
+
+```
+    ```JS
+    $(document).ready(function() {
+        $("#fallingStars").delay(200).animate({'opacity':'1'},500);
+        $("#title").delay(500).animate({'opacity':'1'},800);
+        $("#slogan").delay(800).animate({'opacity':'1'},800);
+    ```
+```
 
 ```JS
 $(document).ready(function() {
@@ -312,12 +325,10 @@ $(document).ready(function() {
     $("#slogan").delay(800).animate({'opacity':'1'},800);
 ```
 
-
 ```CSS
-$(document).ready(function() {
-    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
-    $("#title").delay(500).animate({'opacity':'1'},800);
-    $("#slogan").delay(800).animate({'opacity':'1'},800);
+#option1{
+    transform: translate(-100%, -150%);
+}
 ```
 
 ```HTML
@@ -333,7 +344,7 @@ $(document).ready(function() {
         $("#slogan").delay(800).animate({'opacity':'1'},800);
 
 
-##### 3.4.1.? Relative links and image paths in README files
+##### 3.4.? Relative links and image paths in README files
 
 GitHub Help says, "A relative link is a link that is relative to the current file. For example, if you have a README file in root of your repository, and you have another file in docs/CONTRIBUTING.md, the relative link to CONTRIBUTING.md in your README might look like this:
 [Contribution guidelines for this project](docs/CONTRIBUTING.md)".
@@ -357,11 +368,14 @@ https://postimg.cc/image/6lgvb9qzv/54c815da/
 
 markdown for GitHub, Reddit, StackOverflow
 
-#### 3.4.2. 
+#### 3.4.?. Acknowledgements
 * About READMEs @[GitHub Help](https://help.github.com/articles/about-readmes/)
 * README-Template.md by PurpleBooth @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * How to use Markdown `in Korean` by ihoneymon @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 * Markdown Cheatsheet by adam-p @ [GitHubGist](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* How to add screenshot to READMEs in github repository? @ [StackOverflow](https://stackoverflow.com/questions/10189356/how-to-add-screenshot-to-readmes-in-github-repository?noredirect=1&lq=1)
+* GitHub relative link in markdown file @ [StackOverflow](https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file?rq=1)
+- - -
 
 ## 5. Bulit With
 * <b>HTML, CSS</b>
