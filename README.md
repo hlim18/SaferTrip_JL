@@ -168,11 +168,6 @@ To locate five options in a circle around a button, I used the translate() funct
 <img src="Images_README/circles.png" =200x200>
 <img src="Images_README/circles.png"width="200" height="200" />
 
-![circles](https://unsplash.com/photos/UTbcrtjp18g =200x200)
-<img src="https://unsplash.com/photos/UTbcrtjp18g" =200x200>
-<img src="https://unsplash.com/photos/UTbcrtjp18g"width="200" height="200" />
-
-
 ```CSS
 #option1{
     transform: translate(-100%, -150%);

@@ -10,12 +10,8 @@ body{
     /* https://hangeul.naver.com/2017/nanum */
     /* font-family: 'NanumBarunpen';  */
 
-    /* https://developers.google.com/fonts/ : All the fonts in our catalog are free and open source, making beautiful type accessible to anyone for any project. */
-    /* https://fonts.google.com/?subset=korean *
-    /* [Google Fonts] Use the following CSS rules to specify these families: */
+    /* https://fonts.google.com/?subset=korean */
     /* font-family: 'Sunflower', sans-serif; */
-
-    /* https://fonts.google.com/specimen/Poor+Story */
     font-family: 'Poor Story', sans-serif;
 }
 
@@ -83,7 +79,7 @@ body{
     vertical-align: middle;
     position: absolute;
     width: 100%;
-    /* reference point : vertically & horizontally middle */
+    /* vertically & horizontally middle */
     left: 50%;
     top: 50%; 
     /* circle */
@@ -98,39 +94,34 @@ body{
     vertical-align: middle;
     position: absolute;
     width: 100%;
-    /* Center text and container inside a circle */
+    /* Center texts inside circles */
     top: 50%; 
     left: 50%; 
     transform: translateX(-50%) translateY(-50%);
 }
 
-#withoutInput:active{
-    background-color: red!important;
-}
-
 #option1{
-    /* transform: translate(70px, 160px); */
     transform: translate(-100%, -150%);
 }
 
 #option2{
-    /* transform: translate(35px, 245px); */
     transform: translate(-160%, -40%);
 }
 
 #option3{
-    /* transform: translate(105px, 310px); */
     transform: translate(-50%, 50%);
 }
 
 #option4{
-    /* transform: translate(183px, 245px); */
     transform: translate(60%, -40%);
 }
 
 #option5{
-    /* transform: translate(150%, 160px); */
     transform: translate(15%, -150%);
+}
+
+#withoutInput:active{
+    background-color: red!important;
 }
 
 /* smartphones including iPhone 5 */
