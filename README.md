@@ -163,20 +163,7 @@ $('#test').click(function(){
 #### 2.1.3. translate()
 To locate five options in a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find right pixels for each 
 
-![circles](../../ImagesREADME/circles.png)
-![circles](/../ImagesREADME/circles.png)
-![circles](../ImagesREADME/circles.png)
-![circles](./ImagesREADME/circles.png)
-![circles](/ImagesREADME/circles.png)
-![circles](ImagesREADME/circles.png)
-![circles](/../circles.png)
-![circles](../circles.png)
-![circles](./circles.png)
-![circles](/circles.png)
-![circles](../../circles.png)
-
-![circles](https://photos.app.goo.gl/sv2TNDPsprJ5eTeN9 "circles")
-[circles.png](https://postimg.cc/image/6lgvb9qzv/)
+![circles](circles.png)
 [![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
 
 ```CSS
@@ -263,6 +250,31 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 * Detecting Language of a Visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
 
 ### 3.4. GitHub README
+
+#### 3.4.1.
+
+https://postimg.cc/image/6lgvb9qzv/54c815da/ 
+
+markdown for GitHub, Reddit, StackOverflow
+
+```
+![circles](/../ImagesREADME/circles.png)
+![circles](../ImagesREADME/circles.png)
+![circles](./ImagesREADME/circles.png)
+![circles](/ImagesREADME/circles.png)
+![circles](ImagesREADME/circles.png)
+![circles](/../circles.png)
+![circles](../circles.png)
+![circles](./circles.png)
+![circles](/circles.png)
+![circles](circles.png)
+
+[![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
+```
+
+#### 3.4.2.
+
+#### 3.4.3. 
 * About READMEs @[GitHub Help](https://help.github.com/articles/about-readmes/)
 * README-Template.md by PurpleBooth @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * How to use Markdown `in Korean` by ihoneymon @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
