@@ -253,72 +253,67 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 ## 3.4. GitHub README : Useful Techniques
 ### 3.4.1. Headers
 
+```
 # This is a H1
 ## This is a H2
 ### This is a H3
 #### This is a H4
 ##### This is a H5
 ###### This is a H6
+```
 
-```
 # This is a H1
 ## This is a H2
 ### This is a H3
 #### This is a H4
 ##### This is a H5
 ###### This is a H6
-```
 
 ### 3.4.2. BlockQuote
 
+```
 > This is a first blockquote.
 >   > This is a second blockquote.
+```
 
-```
 > This is a first blockquote.
 >   > This is a second blockquote.
-```
 
 ### 3.4.3. List
 #### 3.4.3.1. Ordered List
-1. First
-2. Second
-3. Third
 
 ```
 1. First
 2. Second
 3. Third
 ```
+
+1. First
+2. Second
+3. Third
 
 #### 3.4.3.2. Unordered List
+```
 * First
     - Second
         + Third
+```
 
-```
 * First
     - Second
         + Third
-```
 
 ### 3.4.4. Code Block 
 
-```
-    ```JS
-    $(document).ready(function() {
-        $("#fallingStars").delay(200).animate({'opacity':'1'},500);
-        $("#title").delay(500).animate({'opacity':'1'},800);
-        $("#slogan").delay(800).animate({'opacity':'1'},800);
-    ```
+* For HTML codes, put ` ```HTML ` before & ` ``` ` after
+
+```HTML
+<div class="container">
+    <button type="button" class="btn btn-outline-success" id="test">test</button>
+</div>
 ```
 
-```JS
-$(document).ready(function() {
-    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
-    $("#title").delay(500).animate({'opacity':'1'},800);
-    $("#slogan").delay(800).animate({'opacity':'1'},800);
-```
+* For CSS codes, put ` ```CSS ` before & ` ``` ` after
 
 ```CSS
 #option1{
@@ -326,17 +321,40 @@ $(document).ready(function() {
 }
 ```
 
-```HTML
+* For JavaScript codes, put ` ```JS ` before & ` ``` ` after
+
+```JS
 $(document).ready(function() {
-    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
-    $("#title").delay(500).animate({'opacity':'1'},800);
     $("#slogan").delay(800).animate({'opacity':'1'},800);
+}
 ```
 
+* Putting CSS & JS codes with ` ```HTML ` before & ` ``` ` after is shown as:
+
+```HTML
+#option1{
+    transform: translate(-100%, -150%);
+}
+
+$(document).ready(function() {
+    $("#slogan").delay(800).animate({'opacity':'1'},800);
+}
+```
+
+* You can also indent once to create a code block.
+
+    <div class="container">
+        <button type="button" class="btn btn-outline-success" id="test">test</button>
+    </div>
+
+    #option1{
+        transform: translate(-100%, -150%);
+    }
+
     $(document).ready(function() {
-        $("#fallingStars").delay(200).animate({'opacity':'1'},500);
-        $("#title").delay(500).animate({'opacity':'1'},800);
         $("#slogan").delay(800).animate({'opacity':'1'},800);
+    }
+
 
 ### 3.4.? Relative links and image paths in README files
 
