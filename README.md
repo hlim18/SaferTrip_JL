@@ -34,9 +34,9 @@ Previously, I used `ackground-size: 100% 100%;` and the background image I recei
 
 #### 1.1.4. Acknowledgements
 * CSS `@media` rule @ [w3schools](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
-* 2017.03.31 "Stop using device breakpoints" (by Adam Silver @ [Medium](https://medium.com/simple-human/stop-using-device-breakpoints-b11a87e2625c))
-* 2012.10.08 "How to deal with various screen sizes by using CSS3 `@media` query" in Korean (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
-* 2013.08.28 "Responsive image full screen" @ [StackOverflow](https://stackoverflow.com/questions/18490334/responsive-image-full-screen-and-centered-maintain-aspect-ratio-not-exceed-wi)
+* 2017.03.31 Stop using device breakpoints (by Adam Silver @ [Medium](https://medium.com/simple-human/stop-using-device-breakpoints-b11a87e2625c))
+* 2012.10.08 How to deal with various screen sizes by using CSS3 `@media` query `in Korean` (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
+* 2013.08.28 Responsive image full screen @ [StackOverflow](https://stackoverflow.com/questions/18490334/responsive-image-full-screen-and-centered-maintain-aspect-ratio-not-exceed-wi)
 * CSS background image to fit width, height should auto-scale in proportion @ [StackOverflow](https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion?rq=1)
 - - -
 
@@ -110,7 +110,6 @@ $('#test').click(function(){
 ##### 2.1.1.1. Acknowledgements
 * `.fadeIn()` @ [jQuery](https://api.jquery.com/fadeIn/)
 * `:hidden Selector` @ [jQuery](https://api.jquery.com/hidden-selector/)
-* CSS 'translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
 * The shapes of CSS @ [CSS-Tricks](https://css-tricks.com/examples/ShapesOfCSS/)
 
 - - -
@@ -167,6 +166,7 @@ To locate five options in a circle around a button, I used the translate() funct
 ![circles](./Images_README/circles.png =200x200)
 <img src="Images_README/circles.png" =200x200>
 <img src="Images_README/circles.png"width="200" height="200" />
+![석촌호수 러버덕](http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0 "RubberDuck")
 
 ```CSS
 #option1{
@@ -192,7 +192,7 @@ To locate five options in a circle around a button, I used the translate() funct
 
 ##### 2.1.3.1. Acknowledgements
 * `translate()` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate)
-
+* CSS 'translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
 - - -
 
 ## 3. Settings
@@ -251,8 +251,11 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 * `Accept-Language` used for locale setting @ [W3C](https://www.w3.org/International/questions/qa-accept-lang-locales)
 * Detecting Language of a Visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
 
+### 3.4. GitHub README
+* README-Template.md @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+* How to use Markdown `in Korean` @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 
-## 4. Bulit With
+## 5. Bulit With
 * <b>HTML, CSS</b>
     - [BootStrap 4.1.2](https://getbootstrap.com/docs/4.1/getting-started/introduction/) : the world’s most popular framework for building responsive, mobile-first sites
 * <b>JavaScript</b>
