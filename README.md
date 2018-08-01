@@ -331,16 +331,9 @@ $(document).ready(function() {
 
 * You can also indent once to create a code block. 
 
-This is not indented paragraph.
-
     This is indented paragraph.
 
-* Indenting once or labeling ` ``` ` with a different type of programming language will not apply color effects to codes.
-
-    #option1{
-        transform: translate(-100%, -150%);
-    }
-
+This is not indented paragraph.
 
 ### 3.4.5. Image Files
 
@@ -388,7 +381,6 @@ I finally made it work by uploading images to @ [PostImage](https://postimg.cc/)
 ### 3.4.7. Inline Links
 ```
 @ [Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
-
 ```
 @ [Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
 
@@ -406,8 +398,7 @@ _italic_
 __bold__
 ~~striked~~
 
-
-### 3.4.?. Acknowledgements
+### 3.4.9. Acknowledgements
 * About READMEs @[GitHub Help](https://help.github.com/articles/about-readmes/)
 * README-Template.md by PurpleBooth @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * How to use Markdown `in Korean` by ihoneymon @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
@@ -416,7 +407,7 @@ __bold__
 * GitHub relative link in markdown file @ [StackOverflow](https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file?rq=1)
 - - -
 
-# 5. Bulit With
+# 4. Bulit With
 * <b>HTML, CSS</b>
     - [BootStrap 4.1.2](https://getbootstrap.com/docs/4.1/getting-started/introduction/) : the world’s most popular framework for building responsive, mobile-first sites
 * <b>JavaScript</b>
