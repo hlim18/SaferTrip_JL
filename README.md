@@ -343,6 +343,20 @@ $(document).ready(function() {
 
 * You can also indent once to create a code block.
 
+```
+<div class="container">
+    <button type="button" class="btn btn-outline-success" id="test">test</button>
+</div>
+
+#option1{
+    transform: translate(-100%, -150%);
+}
+
+$(document).ready(function() {
+    $("#slogan").delay(800).animate({'opacity':'1'},800);
+}
+```
+
     <div class="container">
         <button type="button" class="btn btn-outline-success" id="test">test</button>
     </div>
