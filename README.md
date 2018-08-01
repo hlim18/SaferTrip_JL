@@ -2,16 +2,16 @@
 My part of developing the SaferTrip web app
 
 ## Table of Contents
-1. @[Main Page](https://github.com/hlim18/SaferTrip_JL#1-main-page)
-- 1.1. @[Responsive Web Design](https://github.com/hlim18/SaferTrip_JL#11-responsive-web-design) 
-2. @[On the Map](https://github.com/hlim18/SaferTrip_JL#2-on-the-map)
-- 2.1. @[Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#21-crime-ridden-areas-report-options)
-3. @[Settings](https://github.com/hlim18/SaferTrip_JL#3-settings)
-- 3.1. @[How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#31-how-to-use-jquery-with-bootstrap-412)
-- 3.2. @[Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#32-fonts-comparison)
-- 3.3. @[Language Options](https://github.com/hlim18/SaferTrip_JL#33-language-options)
-- 3.4. @[GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#34-github-markdown--useful-techniques)
-4. @[Built With](https://github.com/hlim18/SaferTrip_JL#4-bulit-with)
+1. [Main Page](https://github.com/hlim18/SaferTrip_JL#1-main-page)
+- 1.1. [Responsive Web Design](https://github.com/hlim18/SaferTrip_JL#11-responsive-web-design) 
+2. [On the Map](https://github.com/hlim18/SaferTrip_JL#2-on-the-map)
+- 2.1. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#21-crime-ridden-areas-report-options)
+3. [Settings](https://github.com/hlim18/SaferTrip_JL#3-settings)
+- 3.1. [How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#31-how-to-use-jquery-with-bootstrap-412)
+- 3.2. [Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#32-fonts-comparison)
+- 3.3. [Language Options](https://github.com/hlim18/SaferTrip_JL#33-language-options)
+- 3.4. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#34-github-markdown--useful-techniques)
+4. [Built With](https://github.com/hlim18/SaferTrip_JL#4-bulit-with)
 - - -
  
 # 1. Main Page
@@ -393,9 +393,9 @@ I finally made it work by uploading images to @ [PostImage](https://postimg.cc/)
 
 ### 3.4.7. Inline Links
 ```
-@ [Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
+[Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
 ```
-@ [Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
+[Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
 
 ### 3.4.8. Emphasize
 ```
