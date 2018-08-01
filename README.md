@@ -1,6 +1,19 @@
 # SaferTrip_JL
 My part of developing the SaferTrip web app
 
+## Table of Contents
+1. @[Main Page](https://github.com/hlim18/SaferTrip_JL#1-main-page)
+- 1.1. @[Responsive Web Design](https://github.com/hlim18/SaferTrip_JL#11-responsive-web-design) 
+2. @[On the Map](https://github.com/hlim18/SaferTrip_JL#2-on-the-map)
+- 2.1. @[Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#21-crime-ridden-areas-report-options)
+3. @[Settings](https://github.com/hlim18/SaferTrip_JL#3-settings)
+- 3.1. @[How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#31-how-to-use-jquery-with-bootstrap-412)
+- 3.2. @[Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#32-fonts-comparison)
+- 3.3. @[Language Options](https://github.com/hlim18/SaferTrip_JL#33-language-options)
+- 3.4. @[GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#34-github-markdown--useful-techniques)
+4. @[Built With](https://github.com/hlim18/SaferTrip_JL#4-bulit-with)
+- - -
+ 
 # 1. Main Page
 ## 1.1. Responsive Web Design 
 ### 1.1.1. CSS @media query
@@ -194,7 +207,7 @@ To locate five options in a circle around a button, I used the translate() funct
 
 # 3. Settings
 
-## 3.1. How to use jQuery with Bootstrap 4.1.x
+## 3.1. How to use jQuery with Bootstrap 4.1.2.
 To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be added. But, when I copied and pasted the links in a html document. It didn't work. 
 > I solved the issue by replacing the `jQuery & Popper.js` scripts with `jQuery Google CDN`. 
 
@@ -236,7 +249,7 @@ body{
 * Poor Story @ [Google Fonts](https://fonts.google.com/specimen/Poor+Story)
 - - -
 
-## 3.3. Two Language Options
+## 3.3. Language Options
 The SaferTrip project will be available in 2 languages : Korean & English. 
 
     1. Parse the Accept-Language HTTP header, which contains information about users' language preferences
@@ -250,7 +263,7 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 * Detecting Language of a Visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
 - - -
 
-## 3.4. GitHub README : Useful Techniques
+## 3.4. GitHub Markdown : Useful Techniques
 ### 3.4.1. Headers
 
 ```
@@ -269,7 +282,7 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 ##### This is a H5
 ###### This is a H6
 
-### 3.4.2. BlockQuote
+### 3.4.2. Block Quote
 
 ```
 > This is a first blockquote.
@@ -409,9 +422,9 @@ __bold__
 
 # 4. Bulit With
 * <b>HTML, CSS</b>
-    - [BootStrap 4.1.2](https://getbootstrap.com/docs/4.1/getting-started/introduction/) : the world’s most popular framework for building responsive, mobile-first sites
+    - [BootStrap 4.1.2.](https://getbootstrap.com/docs/4.1/getting-started/introduction/) : the world’s most popular framework for building responsive, mobile-first sites
 * <b>JavaScript</b>
-    - [jQuery 3.3.1](https://jquery.com/) : a lightweight, "write less, do more", JavaScript library
+    - [jQuery 3.3.1.](https://jquery.com/) : a lightweight, "write less, do more", JavaScript library
 
 - - -
 2018 © Jen Lim 
