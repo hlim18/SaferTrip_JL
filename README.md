@@ -329,52 +329,22 @@ $(document).ready(function() {
 }
 ```
 
-* Putting CSS & JS codes with ` ```HTML ` before & ` ``` ` after is shown as:
+* You can also indent once to create a code block. 
 
-```HTML
-#option1{
-    transform: translate(-100%, -150%);
-}
+This is not indented paragraph.
+    This is indented paragraph.
 
-$(document).ready(function() {
-    $("#slogan").delay(800).animate({'opacity':'1'},800);
-}
-```
 
-* You can also indent once to create a code block.
-
-```
-<div class="container">
-    <button type="button" class="btn btn-outline-success" id="test">test</button>
-</div>
-
-#option1{
-    transform: translate(-100%, -150%);
-}
-
-$(document).ready(function() {
-    $("#slogan").delay(800).animate({'opacity':'1'},800);
-}
-```
-
-    <div class="container">
-        <button type="button" class="btn btn-outline-success" id="test">test</button>
-    </div>
+* Indenting once or labeling ` ``` ` with a different type of programming language will not apply color effects to codes.
 
     #option1{
         transform: translate(-100%, -150%);
     }
 
-    $(document).ready(function() {
-        $("#slogan").delay(800).animate({'opacity':'1'},800);
-    }
 
+### 3.4.5. Image Files
 
-### 3.4.? Relative links and image paths in README files
-
-GitHub Help says, "A relative link is a link that is relative to the current file. For example, if you have a README file in root of your repository, and you have another file in docs/CONTRIBUTING.md, the relative link to CONTRIBUTING.md in your README might look like this:
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)".
-
+I couldn't upload an image in my computer as a part of my README file even after the following attempts:
 ```
 ![circles](/../ImagesREADME/circles.png)
 ![circles](../ImagesREADME/circles.png)
@@ -387,12 +357,55 @@ GitHub Help says, "A relative link is a link that is relative to the current fil
 ![circles](/circles.png)
 ![circles](circles.png)
 
-[![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
 ```
 
-https://postimg.cc/image/6lgvb9qzv/54c815da/ 
+I finally made it work by uploading images to @ [PostImage](https://postimg.cc/) and copied a link for GitHub markdown provided by `PostImage`. 
 
-markdown for GitHub, Reddit, StackOverflow
+```
+[![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
+```
+[![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
+
+### 3.4.6. A Horizontal Line
+```
+***
+*****
+* * *
+- - -
+---------------------------------------
+```
+
+* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+
+### 3.4.7. Inline Links
+```
+@ [Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
+
+```
+@ [Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
+
+### 3.4.8. Emphasize
+```
+*italic*
+_italic_
+**bold**
+__bold__
+~~striked~~
+```
+*italic*
+_italic_
+**bold**
+__bold__
+~~striked~~
+
 
 ### 3.4.?. Acknowledgements
 * About READMEs @[GitHub Help](https://help.github.com/articles/about-readmes/)
