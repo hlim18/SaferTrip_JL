@@ -60,6 +60,20 @@ $(document).ready(function() {
     $("#slogan").delay(800).animate({'opacity':'1'},800);
 ```
 
+```CSS
+$(document).ready(function() {
+    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
+    $("#title").delay(500).animate({'opacity':'1'},800);
+    $("#slogan").delay(800).animate({'opacity':'1'},800);
+```
+
+```HTML
+$(document).ready(function() {
+    $("#fallingStars").delay(200).animate({'opacity':'1'},500);
+    $("#title").delay(500).animate({'opacity':'1'},800);
+    $("#slogan").delay(800).animate({'opacity':'1'},800);
+```
+
 ###### 1.2.1.1. Acknowledgements
 * Boostrap 4.1.x Introduction @ [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 * jQuery Get Started @ [w3schools](https://www.w3schools.com/JQuery/jquery_get_started.asp)
@@ -163,7 +177,6 @@ $('#test').click(function(){
 #### 2.1.3. translate()
 To locate five options in a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find right pixels for each 
 
-![circles](circles.png)
 [![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
 
 ```CSS
@@ -214,7 +227,7 @@ All Google fonts are released under open source licenses. So, those can be used 
 - - -
 
 ### 3.2. Fonts Comparison
-![](./Images_README/fonts.png =200x)
+[![fonts.png](https://s25.postimg.cc/qhcuqopzz/fonts.png)](https://postimg.cc/image/to7eabafv/)
 Default vs `Sunflower` font vs `Poor Story` font
 
 ```HTML
@@ -251,11 +264,65 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 
 ### 3.4. GitHub README
 
-#### 3.4.1.
+#### 3.4.1. Useful techniques
+##### 3.4.1.1. Headers
 
-https://postimg.cc/image/6lgvb9qzv/54c815da/ 
+# This is a H1
+## This is a H2
+### This is a H3
+#### This is a H4
+##### This is a H5
+###### This is a H6
 
-markdown for GitHub, Reddit, StackOverflow
+```
+# This is a H1
+## This is a H2
+### This is a H3
+#### This is a H4
+##### This is a H5
+###### This is a H6
+```
+
+##### 3.4.1.2. BlockQuote
+
+> This is a first blockquote.
+>   > This is a second blockquote.
+
+```
+> This is a first blockquote.
+>   > This is a second blockquote.
+```
+
+##### 3.4.1.3. List
+##### 3.4.1.3.1. Ordered List
+1. First
+2. Second
+3. Third
+
+```
+1. First
+2. Second
+3. Third
+```
+
+##### 3.4.1.3.1. Unordered List
+* First
+    - Second
+        + Third
+
+```
+* First
+    - Second
+        + Third
+```
+
+##### 3.4.1.4. List
+
+
+##### 3.4.1.? Relative links and image paths in README files
+
+GitHub Help says, "A relative link is a link that is relative to the current file. For example, if you have a README file in root of your repository, and you have another file in docs/CONTRIBUTING.md, the relative link to CONTRIBUTING.md in your README might look like this:
+[Contribution guidelines for this project](docs/CONTRIBUTING.md)".
 
 ```
 ![circles](/../ImagesREADME/circles.png)
@@ -272,9 +339,11 @@ markdown for GitHub, Reddit, StackOverflow
 [![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
 ```
 
-#### 3.4.2.
+https://postimg.cc/image/6lgvb9qzv/54c815da/ 
 
-#### 3.4.3. 
+markdown for GitHub, Reddit, StackOverflow
+
+#### 3.4.2. 
 * About READMEs @[GitHub Help](https://help.github.com/articles/about-readmes/)
 * README-Template.md by PurpleBooth @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * How to use Markdown `in Korean` by ihoneymon @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
