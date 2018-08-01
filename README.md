@@ -163,7 +163,7 @@ $('#test').click(function(){
 #### 2.1.3. translate()
 To locate five options in a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find right pixels for each 
 
-![circles](SaferTrip_JL/ImagesREADME/circles.png)
+![circles](/circles.png)
 ```
 <img src="ImagesREADME/circles.png" =200x200>
 <img src="ImagesREADME/circles.png"width="200" height="200" />
@@ -254,8 +254,9 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 * Detecting Language of a Visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
 
 ### 3.4. GitHub README
-* README-Template.md @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* How to use Markdown `in Korean` @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+* README-Template.md by PurpleBooth @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+* How to use Markdown `in Korean` by ihoneymon @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+* Markdown Cheatsheet by adam-p @ [GitHubGist](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## 5. Bulit With
 * <b>HTML, CSS</b>
