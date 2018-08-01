@@ -5,7 +5,11 @@ My part of developing the SaferTrip web app
 1. [Main Page](https://github.com/hlim18/SaferTrip_JL#1-main-page)
 - 1.1. [Responsive Web Design](https://github.com/hlim18/SaferTrip_JL#11-responsive-web-design) 
 2. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#2-crime-ridden-areas-report-options)
-- 2.1. [Fadein() on Click]
+- 2.1. [Fadein() on Click](https://github.com/hlim18/SaferTrip_JL#21-fadein-on-click)
+- 2.2. [Center Texts Inside Circles Vertically & Horizontally](https://github.com/hlim18/SaferTrip_JL#22-center-texts-inside-circles-vertically--horizontally)
+- 2.3. [Translate() Function](https://github.com/hlim18/SaferTrip_JL#23-translate-function)
+- 2.4. [Changing DIV Background Color](https://github.com/hlim18/SaferTrip_JL#24-changing-div-background-color)
+- 2.5. [Popup Messages](https://github.com/hlim18/SaferTrip_JL#25-popup-messages) 
 3. [Settings](https://github.com/hlim18/SaferTrip_JL#3-settings)
 - 3.1. [How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#31-how-to-use-jquery-with-bootstrap-412)
 - 3.2. [Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#32-fonts-comparison)
@@ -216,6 +220,7 @@ To locate five options in a circle around a button, I used the translate() funct
 
 ### 2.4.1. Acknowledgements
 * Change DIV background color with .click(function(){ @ [StackOverflow](https://stackoverflow.com/questions/13882265/change-div-background-color-with-clickfunction)
+- - - 
 
 ## 2.5. Popup Messages
 
