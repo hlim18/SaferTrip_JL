@@ -122,10 +122,6 @@ body{
     transform: translate(15%, -150%);
 }
 
-#withoutInput:active{
-    background-color: red!important;
-}
-
 /* smartphones including iPhone 5 */
 @media screen and (min-width : 0px) {
     #title{
@@ -139,6 +135,13 @@ body{
         height: 60px;
         font-size: 12px;
     }
+}
+
+.swal2-popup {
+    margin: auto; 
+}
+.swal2-popup.sweetalert-lg { 
+    width: 90%; 
 }
 
 /* Galaxy S5 */

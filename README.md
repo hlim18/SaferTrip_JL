@@ -208,7 +208,8 @@ To locate five options in a circle around a button, I used the translate() funct
 * CSS 'translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
 - - -
 
-## 2.4. Changing DIV Background Color
+## 2.4. Changing DIV Background Color 
+As of jQuery 3.0, .bind() has been deprecated. It was superseded by the .on() method for attaching event handlers to a document since jQuery 1.7, so its use was already discouraged.
 
 ```JS
     $('#test').click(function(){
@@ -219,15 +220,37 @@ To locate five options in a circle around a button, I used the translate() funct
 ```
 
 ### 2.4.1. Acknowledgements
-* Change DIV background color with .click(function(){ @ [StackOverflow](https://stackoverflow.com/questions/13882265/change-div-background-color-with-clickfunction)
+* DIV Background Color Change
+    - Change DIV background color with .click(function(){ @ [StackOverflow](https://stackoverflow.com/questions/13882265/change-div-background-color-with-clickfunction)
+* .on()
+    - 2011.12.07 jQuery 1.7 .on() vs .live() review by Sam Deering @ [SitePoint](https://www.sitepoint.com/on-vs-live-review/#.UEbZwIogdRM)
+    - .bind() @ [jQuery](http://api.jquery.com/bind/)
+
 - - - 
 
 ## 2.5. Popup Messages
 
 ### 2.5.1. Acknowledgements
-* SweetAlert plug-in @ [SweetAlert](https://sweetalert.js.org/)
-* Simple confirmation popup @ [CodyHouse](https://codyhouse.co/gem/simple-confirmation-popup/)
-* 2018.01.15 45+ jQuery javaScript CSS popup window dialog box @ [Fresh Design Web](https://freshdesignweb.com/jquery-javascript-popup-window/)
+* Popup Messages CSS
+    - SweetAlert
+        + SweetAlert official page @ [SweetAlert](https://sweetalert.js.org/)
+        + SweetAlert for Bootstrap @ [GitHub](https://lipis.github.io/bootstrap-sweetalert/)
+        + How to use SweetAlert @ [Ludu](https://www.ludu.co/lesson/how-to-use-sweetalert)
+        + SweetAlert display HTML code in text @ [StackOverflow](https://stackoverflow.com/questions/26838965/sweet-alert-display-html-code-in-text#27842854)
+        + SweetAlert SWAL is not defined - after NPM install @ [Laracasts](https://laracasts.com/discuss/channels/javascript/sweetalert-swal-is-not-defined-after-npm-install)        
+    - SweetAlert2
+        + SweetAlert2 official page @ [GitHub](https://sweetalert2.github.io/)
+        + Creating pretty popup messages using SweetAlert2 @ [TutsPlus](https://code.tutsplus.com/tutorials/creating-pretty-popup-messages-using-sweetalert2--cms-30662)
+        + SweetAlert2 getting it to work @ [Laracasts](https://laracasts.com/discuss/channels/laravel/sweetalert2-getting-it-to-work?page=1)
+        + Support rem units for sizing @[GitHub](https://github.com/sweetalert2/sweetalert2/issues/25)
+    - Etc
+        + CDNJS Library @[CDN]() 
+        + 2018.01.15 45+ jQuery javaScript CSS popup window dialog box @ [Fresh Design Web](https://freshdesignweb.com/jquery-javascript-popup-window/)
+        + Simple confirmation popup @ [CodyHouse](https://codyhouse.co/gem/simple-confirmation-popup/)
+* Multiple jQuery Events
+    - 
+
+- - - 
 
 # 3. Settings
 
@@ -449,7 +472,7 @@ __bold__
     - [BootStrap 4.1.2.](https://getbootstrap.com/docs/4.1/getting-started/introduction/) : the world’s most popular framework for building responsive, mobile-first sites
 * <b>JavaScript</b>
     - [jQuery 3.3.1.](https://jquery.com/) : a lightweight, "write less, do more", JavaScript library
-    - [SweetAlert](https://sweetalert.js.org/) : making popup messages easy and pretty
+    - [SweetAlert2](https://sweetalert2.github.io/) : A beautiful, responsive, customizable, accessible replacement for JavaScript's popup boxes
 
 - - -
 2018 © Jen Lim 
