@@ -1,25 +1,9 @@
 $(document).ready(function() {
 
-    // // ES6 Modules or TypeScript
-    // import Swal from 'sweetalert2'
+    // $("#fallingStars").delay(300).animate({'opacity':'1'},500);
+    // $("#title").delay(500).animate({'opacity':'1'},800);
+    // $("#slogan").delay(800).animate({'opacity':'1'},800);
 
-    // // CommonJS
-    // const Swal = require('sweetalert2')
-
-    $("#fallingStars").delay(300).animate({'opacity':'1'},500);
-    $("#title").delay(500).animate({'opacity':'1'},800);
-    $("#slogan").delay(800).animate({'opacity':'1'},800);
-
-    // swal({
-    //     title: 'Sweet!',
-    //     text: 'Modal with a custom image.',
-    //     imageUrl: 'https://unsplash.it/400/200',
-    //     imageWidth: 400,
-    //     imageHeight: 200,
-    //     imageAlt: 'Custom image',
-    //     animation: false
-    // });
-    
     // https://codepen.io/hlim18/pen/EpbLmN
     $('#test').click(function(){
         // $(".options").fadeToggle();
@@ -30,20 +14,61 @@ $(document).ready(function() {
             .on("click", function(){
                 swal({
                     title: 'Thank you!',
-                    text: 'Your request has been recorded.',
+                    text: 'Your input has been recorded.',
+                    // type: 'warning',
                     imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png',
-                    imageWidth: 100,
-                    imageHeight: 100,
-                    imageAlt: 'Custom image',
+                    imageAlt: 'Cat logo',
                     animation: false,
-                    customClass: 'sweetalert-lg',
                     // backdrop color : light gray
                     backdrop: `
                         rgba(211,211,211,0.4) 
                         center left
                         no-repeat
-                    `
-                })
+                    `,
+                    confirmButtonColor: '#9FEDDA',
+                    confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>',
+                });
+
+                // // "Cancel" buton
+                // swal({
+                //     title: 'Are you sure?',
+                //     imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png',
+                //     imageClass: 'swal2-img',
+                //     imageAlt: 'Cat logo',
+                //     animation: false,
+                //     customClass: 'swal2-thxu',
+                //     // backdrop color : light gray
+                //     backdrop: `
+                //         rgba(211,211,211,0.4) 
+                //         center left
+                //         no-repeat
+                //     `,
+                //     // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
+                //     showCancelButton: true,
+                //     confirmButtonColor: '#F3C78D',
+                //     cancelButtonColor: '#9FEDDA',
+                //     confirmButtonText: 'Yes!'
+                // }).then((result) => {
+                //     if (result.value){
+                //         swal({
+                //             title: 'Recorded!',
+                //             text: 'Your input has been deleted.',
+                //             type: 'success',
+                //             imageClass: 'swal2-img',
+                //             imageAlt: 'Cat logo',
+                //             animation: false,
+                //             customClass: 'swal2-thxu',
+                //             // backdrop color : light gray
+                //             backdrop: `
+                //                 rgba(211,211,211,0.4) 
+                //                 center left
+                //                 no-repeat
+                //             `
+                //         });
+                //     }
+                // });
+
+
             });
     });
-});
+})

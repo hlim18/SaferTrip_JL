@@ -130,18 +130,45 @@ body{
     #slogan{
         font-size: 14px;
     }
-    .options {
+    .options{
         width: 60px;
         height: 60px;
         font-size: 12px;
     }
-}
-
-.swal2-popup {
-    margin: auto; 
-}
-.swal2-popup.sweetalert-lg { 
-    width: 90%; 
+    /* SweetAlert2 popup message START */
+    .swal2-popup{
+        width: 180px !important;
+        transform: translate(0, -100%);
+        padding: 10px 10px 15px 10px !important; 
+    }
+    .swal2-header .swal2-image{
+        width: auto;
+        height: auto;
+        /* top, right, bottom, left  */
+        margin: 0 0 10px 0 !important;  
+    }
+    .swal2-header #swal2-title{
+        font-size: 19px;
+    }
+    #swal2-content{
+        font-size: 14px;
+    }
+    .swal2-actions{
+        width: auto;
+        height: auto;
+        margin: 10px auto 0 auto !important;
+    }
+    /* .swal2-confirm is the confirm button. */
+    .swal2-actions .swal2-confirm{
+        width: auto;
+        height: auto;
+        padding: 5px 5px 5px 5px !important;
+        margin: 0 !important;
+    }
+    .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
+        font-size: 12px;
+    }
+    /* SweetAlert2 popup message END */
 }
 
 /* Galaxy S5 */
@@ -157,6 +184,21 @@ body{
         height: 70px;
         font-size: 13px;
     }
+    /* SweetAlert2 popup message START */
+    .swal2-popup{
+        width: 200px !important;
+        transform: translate(0, -112%);
+    }
+    .swal2-header #swal2-title{
+        font-size: 20px;
+    }
+    #swal2-content{
+        font-size: 15px;
+    }
+    .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
+        font-size: 13px;
+    }
+    /* SweetAlert2 popup message END */
 }
 
 /* iPhones 6/7/8 */
@@ -172,6 +214,44 @@ body{
         height: 75px;
         font-size: 14px;
     }
+    /* SweetAlert2 popup message START */
+    .swal2-popup{
+        width: 230px !important;
+        transform: translate(0, -112%);
+    }
+    .swal2-header #swal2-title{
+        font-size: 23px;
+    }
+    #swal2-content{
+        font-size: 17px;
+    }
+    .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
+        font-size: 14px;
+    }
+    /* SweetAlert2 popup message END */
+}
+
+/* iPhone X */
+@media screen and (min-width : 375px) and (min-height : 812px) {
+    /* SweetAlert2 popup message START */
+    .swal2-popup{
+        width: 250px !important;
+        transform: translate(0, -122%);
+    }
+    .swal2-header #swal2-title{
+        font-size: 26px;
+    }
+    #swal2-content{
+        font-size: 20px;
+    }
+    .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
+        font-size: 17px;
+    }
+    .swal2-header .swal2-image{
+        transform: scale(1.2);
+        margin: 10px 0 10px 0 !important;  
+    }
+    /* SweetAlert2 popup message END */
 }
 
 /* iPhones 6/7/8 plus */
@@ -187,6 +267,25 @@ body{
         height: 80px;
         font-size: 15px;
     }
+    /* SweetAlert2 popup message START */
+    .swal2-popup{
+        width: 250px !important;
+        transform: translate(0, -114%);
+    }
+    .swal2-header #swal2-title{
+        font-size: 26px;
+    }
+    #swal2-content{
+        font-size: 20px;
+    }
+    .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
+        font-size: 17px;
+    }
+    .swal2-header .swal2-image{
+        transform: scale(1.3);
+        margin: 10px 0 10px 0 !important;  
+    }
+    /* SweetAlert2 popup message END */
 }
 
 /* iPads */
@@ -198,13 +297,37 @@ body{
         font-size: 24px;
     }
     .options {
-        width: 110px;
-        height: 110px;
-        font-size: 20px;
+        width: 120px;
+        height: 120px;
+        font-size: 23px;
     }
+    /* SweetAlert2 popup message START */
+    .swal2-popup{
+        width: 350px !important;
+        transform: translate(0, -127%);
+    }
+    .swal2-header #swal2-title{
+        font-size: 36px;
+        /* top, right, bottom, left  */
+        margin: 0 0 13px 0 !important;  
+    }
+    #swal2-content{
+        font-size: 27px;
+    }
+    .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
+        font-size: 24px;
+    }
+    .swal2-header .swal2-image{
+        transform: scale(1.5);
+        padding: 10px 0 10px 0 !important;  
+    }
+    .swal2-actions{
+        margin: 13px auto 0 auto !important;
+    }
+    /* SweetAlert2 popup message END */
 }
 
-/* Desktops and laptops */
+/* iPad Pro */
 @media screen and (min-width : 1024px) {
     #title{
         font-size: 43px;
@@ -217,4 +340,27 @@ body{
         height: 170px;
         font-size: 30px;
     }
+    /* SweetAlert2 popup message START */
+    .swal2-popup{
+        width: 500px !important;
+        transform: translate(0, -130%);
+    }
+    .swal2-header #swal2-title{
+        font-size: 46px;
+        /* top, right, bottom, left  */
+        margin: 0 0 13px 0 !important;  
+    }
+    #swal2-content{
+        font-size: 37px;
+    }
+    .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
+        font-size: 34px;
+    }
+    .swal2-header .swal2-image{
+        transform: scale(2.2);
+    }
+    .swal2-actions{
+        margin: 18px auto 0 auto !important;
+    }
+    /* SweetAlert2 popup message END */    
 }

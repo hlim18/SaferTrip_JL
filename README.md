@@ -20,26 +20,36 @@ My part of developing the SaferTrip web app
  
 # 1. Main Page
 ## 1.1. Responsive Web Design 
-### 1.1.1. CSS @media query
+### 1.1.1. Responsive Breakpoints
 > The `@media` rule is used in media queries to apply different styles for different media types/devices
 
 Started with small screens first and worked up.
 
-### 1.1.2. Responsive Breakpoints
-    /* Smartphones */ 
-    @media screen and (min-width : 0px)
-    /* Galaxy S5 */
-    @media screen and (min-width : 360px) 
-    /* iPhones 6/7/8  */
-    @media screen and (min-width : 375px)
-    /* iPhones 6/7/8 plus */
-    @media screen and (min-width : 414px)
-    /* iPads */
-    @media screen and (min-width : 768px)
-    /* Desktops and laptops */
-    @media screen and (min-width : 1024px)
+```CSS
+/* Smartphones */ 
+@media screen and (min-width : 0px);
+/* Galaxy S5 */
+@media screen and (min-width : 360px); 
+/* iPhones 6/7/8  */
+@media screen and (min-width : 375px);
+/* iPhone X */
+@media screen and (min-width : 375px) and (min-height : 812px);
+/* iPhones 6/7/8 plus */
+@media screen and (min-width : 414px);
+/* iPads */
+@media screen and (min-width : 768px);
+/* iPad Pro */
+@media screen and (min-width : 1024px);
+```
 
-### 1.1.3. Responsive background - full screen
+#### 1.1.1.1. Acknowledgements
+* CSS `@media` rule @ [w3schools](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
+* 2017.03.31 Stop using device breakpoints (by Adam Silver @ [Medium](https://medium.com/simple-human/stop-using-device-breakpoints-b11a87e2625c))
+* 2012.10.08 How to deal with various screen sizes by using CSS3 `@media` query `in Korean` (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
+* CSS background image to fit width, height should auto-scale in proportion @ [StackOverflow](https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion?rq=1)
+* Responsive web design @[ShayHowe](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+
+### 1.1.2. Responsive background - full screen
 ```CSS
 body{
     background: url("Images/main_1_cover.svg") no-repeat center center fixed;
@@ -49,12 +59,6 @@ body{
 
 Previously, I used `ackground-size: 100% 100%;` and the background image I received didn't fit into some screen sizes. For example, there were empty spaces on left & right sides for the following screen sizes: 360 x 640, 768 x 1024, 1024 x 1366 and empty spaces on top & bottom sides for the following screen sizes: 411 x 823, 375 x 812.
 
-### 1.1.4. Acknowledgements
-* CSS `@media` rule @ [w3schools](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
-* 2017.03.31 Stop using device breakpoints (by Adam Silver @ [Medium](https://medium.com/simple-human/stop-using-device-breakpoints-b11a87e2625c))
-* 2012.10.08 How to deal with various screen sizes by using CSS3 `@media` query `in Korean` (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
-* 2013.08.28 Responsive image full screen @ [StackOverflow](https://stackoverflow.com/questions/18490334/responsive-image-full-screen-and-centered-maintain-aspect-ratio-not-exceed-wi)
-* CSS background image to fit width, height should auto-scale in proportion @ [StackOverflow](https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion?rq=1)
 - - -
 
 ## 1.2. How to Fade In on Page Load
@@ -237,19 +241,20 @@ As of jQuery 3.0, .bind() has been deprecated. It was superseded by the .on() me
         + SweetAlert for Bootstrap @ [GitHub](https://lipis.github.io/bootstrap-sweetalert/)
         + How to use SweetAlert @ [Ludu](https://www.ludu.co/lesson/how-to-use-sweetalert)
         + SweetAlert display HTML code in text @ [StackOverflow](https://stackoverflow.com/questions/26838965/sweet-alert-display-html-code-in-text#27842854)
-        + SweetAlert SWAL is not defined - after NPM install @ [Laracasts](https://laracasts.com/discuss/channels/javascript/sweetalert-swal-is-not-defined-after-npm-install)        
+        + SweetAlert SWAL is not defined - after NPM install @ [Laracasts](https://laracasts.com/discuss/channels/javascript/sweetalert-swal-is-not-defined-after-npm-install)
+        + Can i change the text colour in Sweet Alert box when call Alert inside a controller? @ [Laracasts](https://laracasts.com/discuss/channels/laravel/can-i-change-the-text-colour-in-sweet-alert-box-when-call-alert-inside-a-controller?page=1)
     - SweetAlert2
         + SweetAlert2 official page @ [GitHub](https://sweetalert2.github.io/)
         + Creating pretty popup messages using SweetAlert2 @ [TutsPlus](https://code.tutsplus.com/tutorials/creating-pretty-popup-messages-using-sweetalert2--cms-30662)
         + SweetAlert2 getting it to work @ [Laracasts](https://laracasts.com/discuss/channels/laravel/sweetalert2-getting-it-to-work?page=1)
         + Support rem units for sizing @[GitHub](https://github.com/sweetalert2/sweetalert2/issues/25)
+        + Alert changes body padding style @ [GitHub](https://github.com/sweetalert2/sweetalert2/issues/678)
     - Etc
-        + CDNJS Library @[CDN]() 
         + 2018.01.15 45+ jQuery javaScript CSS popup window dialog box @ [Fresh Design Web](https://freshdesignweb.com/jquery-javascript-popup-window/)
         + Simple confirmation popup @ [CodyHouse](https://codyhouse.co/gem/simple-confirmation-popup/)
-* Multiple jQuery Events
-    - 
-
+        + CSS element>element selector @ [w3schools](https://www.w3schools.com/cssref/sel_element_gt.asp)
+        + Centering a div within a div, inner DIV responsive @ [Tipue](http://www.tipue.com/blog/center-a-div/)
+        + Enlarging images using CSS or Javascript @ [StackOverflow](https://stackoverflow.com/questions/18052838/enlarging-images-using-css-or-javascript)
 - - - 
 
 # 3. Settings
