@@ -25,21 +25,21 @@ My part of developing the SaferTrip web app
 
 Started with small screens first and worked up.
 
-```CSS
+```
 /* Smartphones */ 
-@media screen and (min-width : 0px);
+@media screen and (min-width : 0px)
 /* Galaxy S5 */
-@media screen and (min-width : 360px); 
+@media screen and (min-width : 360px)
 /* iPhones 6/7/8  */
-@media screen and (min-width : 375px);
+@media screen and (min-width : 375px)
 /* iPhone X */
-@media screen and (min-width : 375px) and (min-height : 812px);
+@media screen and (min-width : 375px) and (min-height : 812px)
 /* iPhones 6/7/8 plus */
-@media screen and (min-width : 414px);
+@media screen and (min-width : 414px)
 /* iPads */
-@media screen and (min-width : 768px);
+@media screen and (min-width : 768px)
 /* iPad Pro */
-@media screen and (min-width : 1024px);
+@media screen and (min-width : 1024px)
 ```
 
 #### 1.1.1.1. Acknowledgements
@@ -396,9 +396,10 @@ $(document).ready(function() {
 
 * You can also indent once to create a code block. 
 
-    This is indented paragraph.
+    *This is indented paragraph.*
+    *This is indented paragraph 2.*
 
-This is not indented paragraph.
+*This is not indented paragraph.*
 
 ### 3.4.5. Image Files
 
