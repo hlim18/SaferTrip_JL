@@ -393,22 +393,9 @@ $(document).ready(function() {
 }
 ```
 
-* You can also press the tab key once or the space bar four times to create a code block. 
+You can also press the tab key once or the space bar four times to create a code block. 
 
-    /* Smartphones */ 
-    @media screen and (min-width : 0px)
-    /* Galaxy S5 */
-    @media screen and (min-width : 360px)
-    /* iPhones 6/7/8  */
-    @media screen and (min-width : 375px)
-    /* iPhone X */
-    @media screen and (min-width : 375px) and (min-height : 812px)
-    /* iPhones 6/7/8 plus */
-    @media screen and (min-width : 414px)
-    /* iPads */
-    @media screen and (min-width : 768px)
-    /* iPad Pro */
-    @media screen and (min-width : 1024px)
+    *This is not a code block.*
 
 *This is not a code block.*
 
