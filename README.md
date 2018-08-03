@@ -396,6 +396,7 @@ $(document).ready(function() {
 * You can also indent once to create a code block. 
 
     *This is a code block.*
+
 *This is not a code block.*
 
 ### 3.4.5. Image Files
