@@ -399,6 +399,7 @@ $(document).ready(function() {
 
 *This is not a code block.*
 
+
 ### 3.4.5. Image Files
 
 I couldn't upload an image in my computer as a part of my README file even after the following attempts:
