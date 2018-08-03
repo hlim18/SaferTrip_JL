@@ -395,8 +395,7 @@ $(document).ready(function() {
 
 * You can also press the tab key once or the space bar four times to create a code block. 
 
-    *This is a code block.*
-    *This is a code block.*
+
     *This is a code block.*
 
 *This is not a code block.*
