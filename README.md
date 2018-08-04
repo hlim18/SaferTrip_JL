@@ -19,7 +19,7 @@ My part of developing the SaferTrip web app
 - 3.3. [Language Options](https://github.com/hlim18/SaferTrip_JL#33-language-options)
 - 3.4. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#34-github-markdown--useful-techniques)
 
-4. [Resources]
+4. [Resources : Tutorials](https://github.com/hlim18/SaferTrip_JL#4-resources--tutorials)
 
 5. [Built With](https://github.com/hlim18/SaferTrip_JL#4-bulit-with)
 - - -
@@ -237,15 +237,97 @@ As of jQuery 3.0, .bind() has been deprecated. It was superseded by the .on() me
 
 - - - 
 
-## 2.5. Customized SweetAlert2 Popup Messages 
-### 2.5.1. "Thank-you" Message
+## 2.5. Customized SweetAlert2 Popup Boxes 
+SweetAlert2 allows us to create beautiful, responsive, customizable, accessible popup boxes.
 
+### 2.5.1. "Thank-you" Message
+```JS
+.on({click: function(){
+    swal({
+        title: 'Thank you!',
+        text: 'Your input has been recorded.',
+        imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png', 
+        imageAlt: 'Cat logo',
+        animation: false,
+        customClass: 'swal2-thx-msg',
+        // backdrop color : light gray
+        backdrop: `
+            rgba(211,211,211,0.4) 
+            center left
+            no-repeat
+        `,
+        confirmButtonColor: '#9FEDDA',
+        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
+    })}
+});
+```
 
 ### 2.5.2. "Cancel" Confirmation Message
-
+```JS
+.on({click: function(){
+    swal({
+        title: 'Are you sure?',
+        imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png',
+        imageAlt: 'Cat logo',
+        animation: false,
+        customClass: 'swal2-cancel-msg',
+        // backdrop color : light gray
+        backdrop: `
+            rgba(211,211,211,0.4) 
+            center left
+            no-repeat
+        `,
+        // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
+        showCancelButton: true,
+        confirmButtonColor: '#F3C78D',
+        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
+        cancelButtonColor: '#9FEDDA',
+        cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
+    }).then((result) => {
+        if (result.value){
+            swal({
+                title: 'Recorded!',
+                text: 'Your input has been deleted.',
+                type: 'success',
+                animation: true,
+                customClass: 'swal2-cancel-confirm-msg',
+                // backdrop color : light gray
+                backdrop: `
+                    rgba(211,211,211,0.4) 
+                    center left
+                    no-repeat
+                `,
+                confirmButtonColor: '#9FEDDA',
+                confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!<div id="swal2-confirmBtnTxt" style="color:#000000">'            
+            });
+        }
+    })}
+});
+```
 
 ### 2.5.3. User-input Message
 `Async/await` is a new way to write asynchronous code. Previous options for asynchronous code are `callbacks` and `promises`. The keyword `await` makes JavaScript wait until that promise settles and  then go on with its result. 
+
+```JS
+.on({click: async function(){
+    const {value: text} = await swal({
+    title: 'Why do you feel unsafe here?',
+    input: 'text',
+    inputPlaceholder: 'Type your message :)',
+    customClass: 'swal2-textbox-msg',
+    showCancelButton: true,
+    confirmButtonColor: '#F3C78D',
+    confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
+    cancelButtonColor: '#9FEDDA',
+    cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
+    });
+
+    if (text) {
+    swal(
+        `Your entered : <div id="swal2-textBoxTxt" style="color:#426A6F">"${text}"</div>`
+    )}}
+});
+```
 
 ### 2.5.4. Acknowledgements
 * `SweetAlert2`
