@@ -101,7 +101,7 @@ body{
     left: 50%; 
     transform: translateX(-50%) translateY(-50%);
 }
-
+/* make a circle shape */
 #option1{
     transform: translate(-100%, -150%);
 }
@@ -122,8 +122,9 @@ body{
     transform: translate(15%, -150%);
 }
 
-/* smartphones including iPhone 5 */
+/* 1) smartphones including iPhone 5 (320 x 568) */
 @media screen and (min-width : 0px) {
+    /* loading animation */
     #title{
         font-size: 20px;
     }
@@ -136,16 +137,39 @@ body{
         font-size: 12px;
     }
     /* SweetAlert2 popup message START */
-    .swal2-popup{
+    .swal2-thx-msg{
         width: 180px !important;
-        transform: translate(0, -100%);
+        transform: translate(0, -105%);
         padding: 10px 10px 15px 10px !important; 
     }
-    .swal2-header .swal2-image{
+    .swal2-cancel-msg{
+        width: 150px !important;
+        transform: translate(0, -115%);
+        padding: 10px 0 13px 0 !important; 
+    }
+    .swal2-cancel-confirm-msg{
+        width: 170px !important;
+        /* can't use "transform": the move from middle to the translated location is shown. */
+        /* transform: translate(0, -50%); */
+        padding: 0 5px 13px 5px !important; 
+    }
+    .swal2-textbox-msg{
+        padding: 14px 12px 14px 12px !important;             
+    }
+    /* where people enter data */
+    .swal2-content .swal2-input{
+        /* top, right, bottom, left  */
+        margin: 0 !important;
+        padding: 12px !important;
+        margin: 7px 0 7px 0 !important;
+    }
+    .swal2-image{
         width: auto;
         height: auto;
-        /* top, right, bottom, left  */
-        margin: 0 0 10px 0 !important;  
+        margin: 0 0 10px 0 !important;
+    }
+    .swal2-animate-success-icon{
+        margin: 10px 10px 15px 10px !important;        
     }
     .swal2-header #swal2-title{
         font-size: 19px;
@@ -158,7 +182,7 @@ body{
         height: auto;
         margin: 10px auto 0 auto !important;
     }
-    /* .swal2-confirm is the confirm button. */
+    /* .swal2-confirm is the "confirm" button at the bottom. */
     .swal2-actions .swal2-confirm{
         width: auto;
         height: auto;
@@ -168,11 +192,27 @@ body{
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
         font-size: 12px;
     }
+    /* .swal2-cancel is the "cancel" button at the bottom. */
+    .swal2-actions .swal2-cancel{
+        width: auto;
+        height: auto;
+        padding: 5px 5px 5px 5px !important;
+        /* top, right, bottom, left  */
+        margin: 0 0 0 10px !important; 
+    }
+    .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
+        font-size: 12px;
+    }
+    /* .swal2-success-ring is the success animation */
+    .swal2-animate-success-icon{
+        transform: scale(0.8);
+    }
     /* SweetAlert2 popup message END */
 }
 
-/* Galaxy S5 */
+/* 2) Galaxy S5 (360 x 640) */
 @media screen and (min-width : 360px) {
+    /* loading animation */
     #title{
         font-size: 25px;
     }
@@ -185,11 +225,17 @@ body{
         font-size: 13px;
     }
     /* SweetAlert2 popup message START */
-    .swal2-popup{
+    .swal2-thx-msg{
         width: 200px !important;
         transform: translate(0, -112%);
     }
-    .swal2-header #swal2-title{
+    .swal2-cancel-msg{
+        transform: translate(0, -135%);
+    }
+    .swal2-cancel-confirm-msg{
+        width: 180px !important;
+    }
+    .swal2-image{
         font-size: 20px;
     }
     #swal2-content{
@@ -198,11 +244,23 @@ body{
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
         font-size: 13px;
     }
+    .swal2-actions .swal2-cancel{
+        /* top, right, bottom, left  */
+        margin: 0 0 0 12px !important; 
+    }
+    .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
+        font-size: 13px;
+    }
+    /* .swal2-success-ring is the success animation */
+    .swal2-animate-success-icon{
+        transform: scale(0.9);
+    }    
     /* SweetAlert2 popup message END */
 }
 
-/* iPhones 6/7/8 */
+/* 3) iPhones 6/7/8 (375 x 667) */
 @media screen and (min-width : 375px) {
+    /* loading animation */
     #title{
         font-size: 20px;
     }
@@ -215,9 +273,18 @@ body{
         font-size: 14px;
     }
     /* SweetAlert2 popup message START */
-    .swal2-popup{
+    .swal2-thx-msg{
         width: 230px !important;
         transform: translate(0, -112%);
+    }
+    .swal2-cancel-msg{
+        width: 160px !important;
+        transform: translate(0, -127%);
+        padding: 13px 0 16px 0 !important; 
+    }
+    .swal2-cancel-confirm-msg{
+        width: 210px !important;
+        padding: 8px 5px 16px 5px !important; 
     }
     .swal2-header #swal2-title{
         font-size: 23px;
@@ -226,17 +293,39 @@ body{
         font-size: 17px;
     }
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
-        font-size: 14px;
+        font-size: 15px;
     }
+    .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
+        font-size: 15px;
+    }
+    /* .swal2-success-ring is the success animation */
+    .swal2-animate-success-icon{
+        transform: scale(1.0);
+    }        
     /* SweetAlert2 popup message END */
 }
 
-/* iPhone X */
+/* 4) iPhone X */
 @media screen and (min-width : 375px) and (min-height : 812px) {
     /* SweetAlert2 popup message START */
-    .swal2-popup{
+    .swal2-thx-msg{
         width: 250px !important;
         transform: translate(0, -122%);
+    }
+    .swal2-cancel-msg{
+        width: 180px !important;
+        padding: 13px 0 18px 0 !important; 
+    }
+    .swal2-cancel-confirm-msg{
+        width: 234px !important;
+        padding: 6px 5px 19px 5px !important; 
+    }
+    .swal2-textbox-msg{
+        padding: 22px 12px 22px 12px !important;             
+    }
+    .swal2-image{
+        transform: scale(1.2);
+        margin: 10px 0 10px 0 !important;  
     }
     .swal2-header #swal2-title{
         font-size: 26px;
@@ -247,15 +336,19 @@ body{
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
         font-size: 17px;
     }
-    .swal2-header .swal2-image{
-        transform: scale(1.2);
-        margin: 10px 0 10px 0 !important;  
+    .swal2-actions .swal2-cancel{
+        /* top, right, bottom, left  */
+        margin: 0 0 0 15px !important; 
+    }
+    .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
+        font-size: 17px;
     }
     /* SweetAlert2 popup message END */
 }
 
-/* iPhones 6/7/8 plus */
+/* 5) iPhones 6/7/8 plus (414 x 746) */
 @media screen and (min-width : 414px) {
+    /* loading animation */
     #title{
         font-size: 22px;
     }
@@ -268,9 +361,23 @@ body{
         font-size: 15px;
     }
     /* SweetAlert2 popup message START */
-    .swal2-popup{
+    .swal2-thx-msg{
         width: 250px !important;
         transform: translate(0, -114%);
+        padding: 15px 10px 15px 10px !important; 
+    }
+    .swal2-cancel-msg{
+        width: 190px !important;
+    }
+    .swal2-cancel-confirm-msg{
+        width: 240px !important;
+        padding: 6px 5px 20px 5px !important; 
+    }
+    .swal2-textbox-msg{
+        padding: 24px 12px 22px 12px !important;             
+    }
+    .swal2-image{
+        transform: scale(1.2);
     }
     .swal2-header #swal2-title{
         font-size: 26px;
@@ -279,17 +386,25 @@ body{
         font-size: 20px;
     }
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
-        font-size: 17px;
+        font-size: 18px;
     }
-    .swal2-header .swal2-image{
-        transform: scale(1.3);
-        margin: 10px 0 10px 0 !important;  
+    .swal2-actions .swal2-cancel{
+        /* top, right, bottom, left  */
+        margin: 0 0 0 18px !important; 
     }
+    .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
+        font-size: 18px;
+    }
+    /* .swal2-success-ring is the success animation */
+    .swal2-animate-success-icon{
+        transform: scale(1.1);
+    }       
     /* SweetAlert2 popup message END */
 }
 
-/* iPads */
+/* 6) iPad (768 x 1024) */
 @media screen and (min-width : 768px) {
+    /* loading animation */    
     #title{
         font-size: 35px;
     }
@@ -302,9 +417,29 @@ body{
         font-size: 23px;
     }
     /* SweetAlert2 popup message START */
-    .swal2-popup{
+    .swal2-thx-msg{
         width: 350px !important;
         transform: translate(0, -127%);
+    }
+    .swal2-cancel-msg{
+        width: 240px !important;
+        transform: translate(0, -140%);
+        padding: 15px 0 22px 0 !important; 
+    }
+    .swal2-cancel-confirm-msg{
+        width: 320px !important;
+        padding: 31px 5px 31px 5px !important; 
+    }
+    .swal2-textbox-msg{
+        padding: 24px 24px 22px 24px !important;             
+    }
+    /* where people enter data */
+    .swal2-content .swal2-input{
+        /* top, right, bottom, left  */
+        margin: 17px 0 17px 0 !important;
+    }
+    .swal2-image{
+        transform: scale(1.5);
     }
     .swal2-header #swal2-title{
         font-size: 36px;
@@ -317,18 +452,26 @@ body{
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
         font-size: 24px;
     }
-    .swal2-header .swal2-image{
-        transform: scale(1.5);
-        padding: 10px 0 10px 0 !important;  
+    .swal2-actions .swal2-cancel{
+        /* top, right, bottom, left  */
+        margin: 0 0 0 20px !important; 
+    }
+    .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
+        font-size: 24px;
     }
     .swal2-actions{
         margin: 13px auto 0 auto !important;
     }
+    /* .swal2-success-ring is the success animation */
+    .swal2-animate-success-icon{
+        transform: scale(1.3);
+    }     
     /* SweetAlert2 popup message END */
 }
 
-/* iPad Pro */
+/* 7) iPad Pro (1024 x 1366) */
 @media screen and (min-width : 1024px) {
+    /* loading animation */
     #title{
         font-size: 43px;
     }
@@ -341,14 +484,38 @@ body{
         font-size: 30px;
     }
     /* SweetAlert2 popup message START */
-    .swal2-popup{
+    .swal2-thx-msg{
         width: 500px !important;
+        transform: translate(0, -110%);
+        padding: 33px 5px 27px 5px !important; 
+    }
+    .swal2-cancel-msg{
+        width: 330px !important;
         transform: translate(0, -130%);
+        padding: 37px 0 25px 0 !important; 
+    }
+    .swal2-cancel-confirm-msg{
+        width: 450px !important;
+        padding: 54px 5px 32px 5px !important; 
+    }
+    .swal2-textbox-msg{
+        width: 750px !important;
+        padding: 20px 30px 30px 30px !important;             
+    }
+    /* where people enter data */
+    .swal2-content .swal2-input{
+        /* top, right, bottom, left  */
+        margin: 17px 0 17px 0 !important;
+    }
+    .swal2-image{
+        transform: scale(2.2);
+        padding: 17px 5px 17px 5px !important; 
     }
     .swal2-header #swal2-title{
         font-size: 46px;
         /* top, right, bottom, left  */
-        margin: 0 0 13px 0 !important;  
+        padding: 13px 0 13px 0 !important;  
+        margin: 13px 0 0 0 !important;  
     }
     #swal2-content{
         font-size: 37px;
@@ -356,11 +523,19 @@ body{
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
         font-size: 34px;
     }
-    .swal2-header .swal2-image{
-        transform: scale(2.2);
+    .swal2-actions .swal2-cancel{
+        /* top, right, bottom, left  */
+        margin: 0 0 0 30px !important; 
+    }
+    .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
+        font-size: 34px;
     }
     .swal2-actions{
         margin: 18px auto 0 auto !important;
     }
+    /* .swal2-success-ring is the success animation */
+    .swal2-animate-success-icon{
+        transform: scale(1.8);
+    }     
     /* SweetAlert2 popup message END */    
 }

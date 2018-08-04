@@ -4,18 +4,24 @@ My part of developing the SaferTrip web app
 ## Table of Contents
 1. [Main Page](https://github.com/hlim18/SaferTrip_JL#1-main-page)
 - 1.1. [Responsive Web Design](https://github.com/hlim18/SaferTrip_JL#11-responsive-web-design) 
+
 2. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#2-crime-ridden-areas-report-options)
 - 2.1. [Fadein() on Click](https://github.com/hlim18/SaferTrip_JL#21-fadein-on-click)
 - 2.2. [Center Texts Inside Circles Vertically & Horizontally](https://github.com/hlim18/SaferTrip_JL#22-center-texts-inside-circles-vertically--horizontally)
 - 2.3. [Translate() Function](https://github.com/hlim18/SaferTrip_JL#23-translate-function)
 - 2.4. [Changing DIV Background Color](https://github.com/hlim18/SaferTrip_JL#24-changing-div-background-color)
 - 2.5. [Popup Messages](https://github.com/hlim18/SaferTrip_JL#25-popup-messages) 
+- 2.6. [Multiple jQuery Events]
+
 3. [Settings](https://github.com/hlim18/SaferTrip_JL#3-settings)
 - 3.1. [How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#31-how-to-use-jquery-with-bootstrap-412)
 - 3.2. [Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#32-fonts-comparison)
 - 3.3. [Language Options](https://github.com/hlim18/SaferTrip_JL#33-language-options)
 - 3.4. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#34-github-markdown--useful-techniques)
-4. [Built With](https://github.com/hlim18/SaferTrip_JL#4-bulit-with)
+
+4. [Resources]
+
+5. [Built With](https://github.com/hlim18/SaferTrip_JL#4-bulit-with)
 - - -
  
 # 1. Main Page
@@ -96,11 +102,11 @@ Increasing opacity from 0 to 1 and including contents in a html document prevent
 
 
 #### 1.2.2.1. Acknowledgements
-* JSON - What is JSON and how to use it @ [ILoveCoding](https://ilovecoding.org/lessons/json-what-is-json-and-how-to-use-it)
-* Ajax: Create a Single Page App with jQuery @ [ILoveCoding](https://ilovecoding.org/lessons/ajax-create-a-single-page-app-with-jquery)
+* JSON - What is `JSON` and how to use it @ [ILoveCoding](https://ilovecoding.org/lessons/json-what-is-json-and-how-to-use-it)
+* Ajax: Create a `Single Page App` with jQuery @ [ILoveCoding](https://ilovecoding.org/lessons/ajax-create-a-single-page-app-with-jquery)
 * jQuery Ajax in Korean @ [Open Tutorials](https://opentutorials.org/course/1375/6851)
 * Node.js Course in Korean @ [Open Tutorials](https://opentutorials.org/course/2136)
-* What is CRUD? @ [CodeAcademy](https://www.codecademy.com/articles/what-is-crud)
+* What is `CRUD`? @ [CodeAcademy](https://www.codecademy.com/articles/what-is-crud)
 * Build a Single Page Application with jQuery & AJAX Course @ [Udemy](https://www.udemy.com/jquery-ajax/learn/v4/overview)
 
 - - -
@@ -176,7 +182,7 @@ $('#test').click(function(){
 ```
 
 ### 2.2.1. Acknowledgments
-* Center texts inside circles & fadeToggle not working @ [StackOverflow](https://stackoverflow.com/questions/51609769/center-texts-inside-circles-fadetoggle-not-working)
+* Center texts inside circles & `fadeToggle` not working @ [StackOverflow](https://stackoverflow.com/questions/51609769/center-texts-inside-circles-fadetoggle-not-working)
 - - -
 
 ## 2.3. Translate() Function
@@ -208,7 +214,7 @@ To locate five options in a circle around a button, I used the translate() funct
 
 ### 2.3.1. Acknowledgements
 * `translate()` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate)
-* CSS 'translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
+* CSS `translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
 - - -
 
 ## 2.4. Changing DIV Background Color 
@@ -226,35 +232,49 @@ As of jQuery 3.0, .bind() has been deprecated. It was superseded by the .on() me
 * DIV Background Color Change
     - Change DIV background color with .click(function(){ @ [StackOverflow](https://stackoverflow.com/questions/13882265/change-div-background-color-with-clickfunction)
 * .on()
-    - 2011.12.07 jQuery 1.7 .on() vs .live() review by Sam Deering @ [SitePoint](https://www.sitepoint.com/on-vs-live-review/#.UEbZwIogdRM)
+    - 2011.12.07 jQuery 1.7 `.on()` vs `.live()` review by Sam Deering @ [SitePoint](https://www.sitepoint.com/on-vs-live-review/#.UEbZwIogdRM)
     - .bind() @ [jQuery](http://api.jquery.com/bind/)
 
 - - - 
 
-## 2.5. Popup Messages
+## 2.5. Customized SweetAlert2 Popup Messages 
+### 2.5.1. "Thank-you" Message
 
-### 2.5.1. Acknowledgements
-* Popup Messages CSS
-    - SweetAlert
-        + SweetAlert official page @ [SweetAlert](https://sweetalert.js.org/)
-        + SweetAlert for Bootstrap @ [GitHub](https://lipis.github.io/bootstrap-sweetalert/)
-        + How to use SweetAlert @ [Ludu](https://www.ludu.co/lesson/how-to-use-sweetalert)
-        + SweetAlert display HTML code in text @ [StackOverflow](https://stackoverflow.com/questions/26838965/sweet-alert-display-html-code-in-text#27842854)
-        + SweetAlert SWAL is not defined - after NPM install @ [Laracasts](https://laracasts.com/discuss/channels/javascript/sweetalert-swal-is-not-defined-after-npm-install)
-        + Can i change the text colour in Sweet Alert box when call Alert inside a controller? @ [Laracasts](https://laracasts.com/discuss/channels/laravel/can-i-change-the-text-colour-in-sweet-alert-box-when-call-alert-inside-a-controller?page=1)
-    - SweetAlert2
-        + SweetAlert2 official page @ [GitHub](https://sweetalert2.github.io/)
-        + Creating pretty popup messages using SweetAlert2 @ [TutsPlus](https://code.tutsplus.com/tutorials/creating-pretty-popup-messages-using-sweetalert2--cms-30662)
-        + SweetAlert2 getting it to work @ [Laracasts](https://laracasts.com/discuss/channels/laravel/sweetalert2-getting-it-to-work?page=1)
-        + Support rem units for sizing @[GitHub](https://github.com/sweetalert2/sweetalert2/issues/25)
-        + Alert changes body padding style @ [GitHub](https://github.com/sweetalert2/sweetalert2/issues/678)
-    - Etc
-        + 2018.01.15 45+ jQuery javaScript CSS popup window dialog box @ [Fresh Design Web](https://freshdesignweb.com/jquery-javascript-popup-window/)
-        + Simple confirmation popup @ [CodyHouse](https://codyhouse.co/gem/simple-confirmation-popup/)
-        + CSS element>element selector @ [w3schools](https://www.w3schools.com/cssref/sel_element_gt.asp)
-        + Centering a div within a div, inner DIV responsive @ [Tipue](http://www.tipue.com/blog/center-a-div/)
-        + Enlarging images using CSS or Javascript @ [StackOverflow](https://stackoverflow.com/questions/18052838/enlarging-images-using-css-or-javascript)
+
+### 2.5.2. "Cancel" Confirmation Message
+
+
+### 2.5.3. User-input Message
+`Async/await` is a new way to write asynchronous code. Previous options for asynchronous code are `callbacks` and `promises`. The keyword `await` makes JavaScript wait until that promise settles and  then go on with its result. 
+
+### 2.5.4. Acknowledgements
+* `SweetAlert2`
+    - SweetAlert2 official page @ [GitHub](https://sweetalert2.github.io/)
+    - Creating pretty popup messages using SweetAlert2 @ [TutsPlus](https://code.tutsplus.com/tutorials/creating-pretty-popup-messages-using-sweetalert2--cms-30662)
+    - SweetAlert2 getting it to work @ [Laracasts](https://laracasts.com/discuss/channels/laravel/sweetalert2-getting-it-to-work?page=1)
+    - Support `rem` units for sizing @[GitHub](https://github.com/sweetalert2/sweetalert2/issues/25)
+    - Alert changes body `padding` style @ [GitHub](https://github.com/sweetalert2/sweetalert2/issues/678)
+    - Sweetalert 2 textarea async @[StackOverflow](https://stackoverflow.com/questions/49751053/sweetalert-2-textarea-async)
+* `CSS` Techniques
+    - 2018.01.15 45+ jQuery javaScript CSS popup window dialog box @ [Fresh Design Web](https://freshdesignweb.com/jquery-javascript-popup-window/)
+    - Simple confirmation popup @ [CodyHouse](https://codyhouse.co/gem/simple-confirmation-popup/)
+    - CSS `element>element` selector @ [w3schools](https://www.w3schools.com/cssref/sel_element_gt.asp)
+    - Centering a div within a div, inner DIV responsive @ [Tipue](http://www.tipue.com/blog/center-a-div/)
+    - Enlarging images using CSS or Javascript @ [StackOverflow](https://stackoverflow.com/questions/18052838/enlarging-images-using-css-or-javascript)
+* `Node.js` Techniques
+    - 6 Reasons why JavaScript’s Async/Await blows `promises` away (Tutorial) by Mostafa Gaafar @ [HackerNoon](https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9)
+    - Async/await @ [JavaScript Info](https://javascript.info/async-await)
+        
 - - - 
+
+## 2.6. Multiple jQeury Events 
+
+
+### 2.6.1. Acknowledgements
+* Combine hover and click functions (jQuery)? @ [StackOverflow](https://stackoverflow.com/questions/2432003/combine-hover-and-click-functions-jquery)
+* 2016.02.08 Mouseenter by Mike Bostock @[bl.ocks](https://bl.ocks.org/mbostock/5247027)
+
+- - -
 
 # 3. Settings
 
@@ -395,9 +415,9 @@ $(document).ready(function() {
 
 You can also press the tab key once or the space bar four times to create a code block. 
 
-    *This is not a code block.*
+    *This is a code block.*
 
-*This is not a code block.*
+*This is NOT a code block.*
 
 ### 3.4.5. Image Files
 
@@ -471,7 +491,22 @@ __bold__
 * GitHub relative link in markdown file @ [StackOverflow](https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file?rq=1)
 - - -
 
-# 4. Bulit With
+# 4. Resources : Tutorials
+* <b>CSS</b>
+    - Blog
+        + Learn to Code Advanced HTML & CSS by Shay Howe @ [ShayHowe](https://learn.shayhowe.com/advanced-html-css/)
+    - Video
+        + Master CSS `flexbox` by Wes Bos @ [FlexBox](https://flexbox.io/)
+        + Learn CSS `grid` by Wes Bos @[CSS Grid](https://cssgrid.io/)
+* <b>JS</b>
+    - Blog
+        + The Modern JavaScript Tutorial by Ilya Kantor @ [JavaScript Info](https://javascript.info/)
+    - Video
+        + 30 Days of `Vanlia JS` coding challenge by Wes Bos @ [JavaScript30](https://javascript30.com/) 
+
+- - -
+
+# 5. Bulit With
 * <b>HTML, CSS</b>
     - [BootStrap 4.1.2.](https://getbootstrap.com/docs/4.1/getting-started/introduction/) : the world’s most popular framework for building responsive, mobile-first sites
 * <b>JavaScript</b>
