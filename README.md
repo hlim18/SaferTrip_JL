@@ -71,7 +71,7 @@ But, for desktop, when `background-size: cover` was used, I could't see the cat 
 
 So, I wanted to repeat only a partial part of my image that a cat didn't appear. When I used `background-size: contain` & `background-repeat: repeat-x`, what I saw was the following:
 
-[![current_middle.png](https://s25.postimg.cc/l52r85gn3/current_middle.png)](https://postimg.cc/image/gvy15zddn/)
+[![current_small.png](https://s25.postimg.cc/pqyvgace7/current_small.png)](https://postimg.cc/image/bkj4l21iz/)
 
 Because I wanted to see the cat only in the middle, I asked a question on `StackOverflow` and learned about `multiple background`. This solved the issue.
 
