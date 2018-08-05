@@ -138,7 +138,7 @@ body{
     }
     /* SweetAlert2 popup message START */
     .swal2-thx-msg{
-        width: 180px !important;
+        width: 200px !important;
         transform: translate(0, -105%);
         padding: 10px 10px 15px 10px !important; 
     }
@@ -148,7 +148,7 @@ body{
         padding: 10px 0 13px 0 !important; 
     }
     .swal2-cancel-confirm-msg{
-        width: 170px !important;
+        width: 190px !important;
         /* can't use "transform": the move from middle to the translated location is shown. */
         /* transform: translate(0, -50%); */
         padding: 0 5px 13px 5px !important; 
@@ -156,12 +156,24 @@ body{
     .swal2-textbox-msg{
         padding: 14px 12px 14px 12px !important;             
     }
+    .swal2-header #swal2-title{
+        font-size: 20px;
+    }
     /* where people enter data */
     .swal2-content .swal2-input{
         /* top, right, bottom, left  */
         margin: 0 !important;
         padding: 12px !important;
         margin: 7px 0 7px 0 !important;
+        font-size: 16px !important;
+    }
+    /* show what people entered */
+    .swal2-content #swal2-content{
+        font-size: 16px !important;
+    }
+    /* Validation ERROR */
+    #swal2-validationerror{
+        font-size: 13px !important;
     }
     .swal2-image{
         width: auto;
@@ -170,12 +182,6 @@ body{
     }
     .swal2-animate-success-icon{
         margin: 10px 10px 15px 10px !important;        
-    }
-    .swal2-header #swal2-title{
-        font-size: 19px;
-    }
-    #swal2-content{
-        font-size: 14px;
     }
     .swal2-actions{
         width: auto;
@@ -190,7 +196,7 @@ body{
         margin: 0 !important;
     }
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
-        font-size: 12px;
+        font-size: 13px;
     }
     /* .swal2-cancel is the "cancel" button at the bottom. */
     .swal2-actions .swal2-cancel{
@@ -201,7 +207,7 @@ body{
         margin: 0 0 0 10px !important; 
     }
     .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
-        font-size: 12px;
+        font-size: 13px;
     }
     /* .swal2-success-ring is the success animation */
     .swal2-animate-success-icon{
@@ -226,30 +232,42 @@ body{
     }
     /* SweetAlert2 popup message START */
     .swal2-thx-msg{
-        width: 200px !important;
-        transform: translate(0, -112%);
+        width: 220px !important;
+        transform: translate(0, -102%);
     }
     .swal2-cancel-msg{
         transform: translate(0, -135%);
     }
     .swal2-cancel-confirm-msg{
-        width: 180px !important;
+        width: 200px !important;
+    }
+    .swal2-header #swal2-title{
+        font-size: 21px;
+    }
+    /* where people enter data */
+    .swal2-content .swal2-input{
+        font-size: 17px !important;
+    }
+    /* show what people entered */
+    .swal2-content #swal2-content{
+        font-size: 17px !important;
+    }
+    /* Validation ERROR */
+    #swal2-validationerror{
+        font-size: 14px !important;
     }
     .swal2-image{
         font-size: 20px;
     }
-    #swal2-content{
-        font-size: 15px;
-    }
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
-        font-size: 13px;
+        font-size: 14px;
     }
     .swal2-actions .swal2-cancel{
         /* top, right, bottom, left  */
         margin: 0 0 0 12px !important; 
     }
     .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
-        font-size: 13px;
+        font-size: 14px;
     }
     /* .swal2-success-ring is the success animation */
     .swal2-animate-success-icon{
@@ -289,14 +307,26 @@ body{
     .swal2-header #swal2-title{
         font-size: 23px;
     }
+    /* where people enter data */
+    .swal2-content .swal2-input{
+        font-size: 18px !important;
+    }
+    /* show what people entered */
+    .swal2-content #swal2-content{
+        font-size: 18px !important;
+    }
+    /* Validation ERROR */
+    #swal2-validationerror{
+        font-size: 16px !important;
+    }
     #swal2-content{
         font-size: 17px;
     }
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
-        font-size: 15px;
+        font-size: 16px;
     }
     .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
-        font-size: 15px;
+        font-size: 16px;
     }
     /* .swal2-success-ring is the success animation */
     .swal2-animate-success-icon{
@@ -305,7 +335,7 @@ body{
     /* SweetAlert2 popup message END */
 }
 
-/* 4) iPhone X */
+/* 4) iPhone X (375 x 812) */
 @media screen and (min-width : 375px) and (min-height : 812px) {
     /* SweetAlert2 popup message START */
     .swal2-thx-msg{
@@ -317,7 +347,7 @@ body{
         padding: 13px 0 18px 0 !important; 
     }
     .swal2-cancel-confirm-msg{
-        width: 234px !important;
+        width: 246px !important;
         padding: 6px 5px 19px 5px !important; 
     }
     .swal2-textbox-msg{
@@ -330,9 +360,18 @@ body{
     .swal2-header #swal2-title{
         font-size: 26px;
     }
-    #swal2-content{
-        font-size: 20px;
+    /* where people enter data */
+    .swal2-content .swal2-input{
+        font-size: 21px !important;
     }
+    /* show what people entered */
+    .swal2-content #swal2-content{
+        font-size: 21px !important;
+    }
+    /* Validation ERROR */
+    #swal2-validationerror{
+        font-size: 17px !important;
+    }    
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
         font-size: 17px;
     }
@@ -362,7 +401,7 @@ body{
     }
     /* SweetAlert2 popup message START */
     .swal2-thx-msg{
-        width: 250px !important;
+        width: 270px !important;
         transform: translate(0, -114%);
         padding: 15px 10px 15px 10px !important; 
     }
@@ -370,7 +409,7 @@ body{
         width: 190px !important;
     }
     .swal2-cancel-confirm-msg{
-        width: 240px !important;
+        width: 254px !important;
         padding: 6px 5px 20px 5px !important; 
     }
     .swal2-textbox-msg{
@@ -380,10 +419,19 @@ body{
         transform: scale(1.2);
     }
     .swal2-header #swal2-title{
-        font-size: 26px;
+        font-size: 27px;
     }
-    #swal2-content{
-        font-size: 20px;
+    /* where people enter data */
+    .swal2-content .swal2-input{
+        font-size: 22px !important;
+    }
+    /* show what people entered */
+    .swal2-content #swal2-content{
+        font-size: 22px !important;
+    }
+    /* Validation ERROR */
+    #swal2-validationerror{
+        font-size: 18px !important;
     }
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
         font-size: 18px;
@@ -427,37 +475,43 @@ body{
         padding: 15px 0 22px 0 !important; 
     }
     .swal2-cancel-confirm-msg{
-        width: 320px !important;
+        width: 340px !important;
         padding: 31px 5px 31px 5px !important; 
     }
     .swal2-textbox-msg{
         padding: 24px 24px 22px 24px !important;             
     }
+    .swal2-header #swal2-title{
+        font-size: 39px !important;  
+        /* top, right, bottom, left  */
+        margin: 0 0 13px 0 !important;  
+    }
     /* where people enter data */
     .swal2-content .swal2-input{
         /* top, right, bottom, left  */
         margin: 17px 0 17px 0 !important;
+        font-size: 30px !important;
+    }
+    /* show what people entered */
+    .swal2-content #swal2-content{
+        font-size: 30px !important;
+    }
+    /* Validation ERROR */
+    #swal2-validationerror{
+        font-size: 26px !important;
     }
     .swal2-image{
         transform: scale(1.5);
     }
-    .swal2-header #swal2-title{
-        font-size: 36px;
-        /* top, right, bottom, left  */
-        margin: 0 0 13px 0 !important;  
-    }
-    #swal2-content{
-        font-size: 27px;
-    }
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
-        font-size: 24px;
+        font-size: 26px;
     }
     .swal2-actions .swal2-cancel{
         /* top, right, bottom, left  */
         margin: 0 0 0 20px !important; 
     }
     .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
-        font-size: 24px;
+        font-size: 26px;
     }
     .swal2-actions{
         margin: 13px auto 0 auto !important;
@@ -502,33 +556,39 @@ body{
         width: 750px !important;
         padding: 20px 30px 30px 30px !important;             
     }
-    /* where people enter data */
-    .swal2-content .swal2-input{
-        /* top, right, bottom, left  */
-        margin: 17px 0 17px 0 !important;
-    }
     .swal2-image{
         transform: scale(2.2);
         padding: 17px 5px 17px 5px !important; 
     }
     .swal2-header #swal2-title{
-        font-size: 46px;
+        font-size: 50px !important;  
         /* top, right, bottom, left  */
         padding: 13px 0 13px 0 !important;  
         margin: 13px 0 0 0 !important;  
     }
-    #swal2-content{
-        font-size: 37px;
+    /* where people enter data */
+    .swal2-content .swal2-input{
+        /* top, right, bottom, left  */
+        /* margin: 17px 0 17px 0 !important; */
+        font-size: 37px !important;
+    }
+    /* show what people entered */
+    .swal2-content #swal2-content{
+        font-size: 37px !important;
+    }
+    /* Validation ERROR */
+    #swal2-validationerror{
+        font-size: 33px !important;
     }
     .swal2-actions .swal2-confirm #swal2-confirmBtnTxt {
-        font-size: 34px;
+        font-size: 33px;
     }
     .swal2-actions .swal2-cancel{
         /* top, right, bottom, left  */
         margin: 0 0 0 30px !important; 
     }
     .swal2-actions .swal2-cancel #swal2-cancelBtnTxt {
-        font-size: 34px;
+        font-size: 33px;
     }
     .swal2-actions{
         margin: 18px auto 0 auto !important;

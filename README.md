@@ -31,19 +31,19 @@ My part of developing the SaferTrip web app
 
 Started with small screens first and worked up.
 
-    /* Smartphones */ 
+    /* Smartphones (320 x 568) */ 
     @media screen and (min-width : 0px)
-    /* Galaxy S5 */
+    /* Galaxy S5 (360 x 640) */
     @media screen and (min-width : 360px)
-    /* iPhones 6/7/8  */
+    /* iPhones 6/7/8 (375 x 667) */
     @media screen and (min-width : 375px)
-    /* iPhone X */
+    /* iPhone X (375 x 812) */
     @media screen and (min-width : 375px) and (min-height : 812px)
-    /* iPhones 6/7/8 plus */
+    /* iPhones 6/7/8 plus (414 x 746)  */
     @media screen and (min-width : 414px)
-    /* iPads */
+    /* iPads (768 x 1024) */
     @media screen and (min-width : 768px)
-    /* iPad Pro */
+    /* iPad Pro (1024 x 1366) */
     @media screen and (min-width : 1024px)
 
 

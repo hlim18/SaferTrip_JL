@@ -13,10 +13,10 @@ $(document).ready(function() {
                 $(this).css("background", "#F3C78D");
             })
             .on({
-                // include this for "thank-you" & "cancel" message codes
+                // // include this for "thank-you" & "cancel" message codes
                 // click: function(){
 
-                // "Thank-you" message START
+                // // "Thank-you" message START
                 // swal({
                 //     title: 'Thank you!',
                 //     text: 'Your input has been recorded.',
@@ -35,9 +35,9 @@ $(document).ready(function() {
                 //     confirmButtonColor: '#9FEDDA',
                 //     confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
                 // })
-                // "Thank-you" message END
+                // // "Thank-you" message END
 
-                // "Cancel" button START
+                // // "Cancel" button START
                 // swal({
                 //     title: 'Are you sure?',
                 //     imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png',
@@ -75,10 +75,12 @@ $(document).ready(function() {
                 //         });
                 //     }
                 // });
-                // "cancel" button END
+                // // "cancel" button END
 
+                // // include this for "text-input" & "login & password" message codes
                 click: async function(){
-                // "text" enter message START
+
+                // // "text" enter message START
                 const {value: text} = await swal({
                     title: 'Why do you feel unsafe here?',
                     input: 'text',
@@ -96,25 +98,24 @@ $(document).ready(function() {
                     center left
                     no-repeat
                     `,
+                    inputValidator: (value) => {
+                        return !value && 'You need to write something!'
+                    }
                 });
-                // if (text) {
-                //     swal({
-                //         text: `Your entered : "${text}"`,
-                //         // backdrop color : light gray
-                //         backdrop: `
-                //         rgba(211,211,211,0.4) 
-                //         center left
-                //         no-repeat
-                //         `
-                //     })
-                // }
                 if (text) {
-                    swal(
-                        `Your entered : <div id="swal2-textBoxTxt" style="color:#426A6F">"${text}"</div>`
-                    )
+                    swal({
+                        text: `Your entered : "${text}"`,
+                        // backdrop color : light gray
+                        backdrop: `
+                        rgba(211,211,211,0.4) 
+                        center left
+                        no-repeat
+                        `,
+                        confirmButtonColor: '#F3C78D',
+                        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Okay</div>'
+                    })
                 }
-                // "text" enter message END
-
+                // // "text" enter message END
             }
         });
     });
