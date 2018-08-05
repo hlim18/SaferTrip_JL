@@ -21,7 +21,9 @@ My part of developing the SaferTrip web app
 
 4. [Resources : Tutorials](https://github.com/hlim18/SaferTrip_JL#4-resources--tutorials)
 
-5. [Built With](https://github.com/hlim18/SaferTrip_JL#4-bulit-with)
+5. [Libraries]
+
+6. [Built With](https://github.com/hlim18/SaferTrip_JL#6-bulit-with)
 - - -
  
 # 1. Main Page
@@ -31,21 +33,22 @@ My part of developing the SaferTrip web app
 
 Started with small screens first and worked up.
 
-    /* Smartphones (320 x 568) */ 
-    @media screen and (min-width : 0px)
-    /* Galaxy S5 (360 x 640) */
-    @media screen and (min-width : 360px)
-    /* iPhones 6/7/8 (375 x 667) */
-    @media screen and (min-width : 375px)
-    /* iPhone X (375 x 812) */
+    1. Smartphones (320 x 568) 
+    @media screen and (min-width : 0px) and (min-height: 0px)
+    2. Galaxy S5 (360 x 640) 
+    @media screen and (min-width : 360px) and (min-height: 64-px)
+    3. iPhones 6/7/8 (375 x 667) 
+    @media screen and (min-width : 375px) and (min-height: 667x)
+    4. iPhone X (375 x 812) 
     @media screen and (min-width : 375px) and (min-height : 812px)
-    /* iPhones 6/7/8 plus (414 x 746)  */
-    @media screen and (min-width : 414px)
-    /* iPads (768 x 1024) */
-    @media screen and (min-width : 768px)
-    /* iPad Pro (1024 x 1366) */
-    @media screen and (min-width : 1024px)
-
+    5. iPhones 6/7/8 plus (414 x 746)  
+    @media screen and (min-width : 414px) and (min-height: 746x)
+    6. iPads (768 x 1024) 
+    @media screen and (min-width : 768px) and (min-height: 1024px)
+    7. iPad Pro (1024 x 1366) 
+    @media screen and (min-width : 1024px) and (min-height: 1366px) 
+    8. Desktop
+    @media screen and (min-width : 630px)
 
 #### 1.1.1.1. Acknowledgements
 * CSS `@media` rule @ [w3schools](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
@@ -55,6 +58,8 @@ Started with small screens first and worked up.
 * Responsive web design @[ShayHowe](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
 ### 1.1.2. Responsive background - full screen
+At first, I used `ackground-size: 100% 100%;` and the background image I received didn't fit into some screen sizes. For example, there were empty spaces on left & right sides for the following screen sizes: 360 x 640, 768 x 1024, 1024 x 1366 and empty spaces on top & bottom sides for the following screen sizes: 411 x 823, 375 x 812. So, I did the following:
+
 ```CSS
 body{
     background: url("Images/main_1_cover.svg") no-repeat center center fixed;
@@ -62,7 +67,39 @@ body{
 }
 ```
 
-Previously, I used `ackground-size: 100% 100%;` and the background image I received didn't fit into some screen sizes. For example, there were empty spaces on left & right sides for the following screen sizes: 360 x 640, 768 x 1024, 1024 x 1366 and empty spaces on top & bottom sides for the following screen sizes: 411 x 823, 375 x 812.
+But, for desktop, when `background-size: cover` was used, I could't see the cat in my image. Because, the original size of my image's height was much longer than the width.
+
+So, I wanted to repeat only a partial part of my image that a cat didn't appear. When I used `background-size: contain` & `background-repeat: repeat-x`, what I saw was the following:
+
+[![background-repeat](https://s25.postimg.cc/utblx6ytr/current.png)](https://postimg.cc/image/6pku8wgcr/)
+
+Because I wanted to see the cat only in the middle, I asked a question on `StackOverflow` and learned about `multiple background`.
+
+```CSS
+@media screen and (min-width : 630px) {
+    body {
+        /* vh: hundredths of the viewport height. */
+        height:100vh;
+        background:
+            /*the main background*/
+            url(Images/main_1_cover.svg) center,
+            url(Images/main_1_cover.svg) 40% 50%,
+            /*repeat the left part*/
+            url(Images/main_1_cover.svg) 30% 50%,
+            url(Images/main_1_cover.svg) 20% 50%,
+            url(Images/main_1_cover.svg) 10% 50%,
+            url(Images/main_1_cover.svg) 0% 50%,
+            /*repeat the right part*/
+            url(Images/main_1_cover.svg) 60% 50%,
+            url(Images/main_1_cover.svg) 70% 50%,
+            url(Images/main_1_cover.svg) 80% 50%,
+            url(Images/main_1_cover.svg) 90% 50%,
+            url(Images/main_1_cover.svg) 100% 50%;
+        background-repeat:no-repeat;
+        background-size:contain;         
+    }
+}
+```
 
 - - -
 
@@ -585,10 +622,16 @@ __bold__
         + The Modern JavaScript Tutorial by Ilya Kantor @ [JavaScript Info](https://javascript.info/)
     - Video
         + 30 Days of `Vanlia JS` coding challenge by Wes Bos @ [JavaScript30](https://javascript30.com/) 
+- - -
+
+# 5. Libraries
+* <b>CSS</b>
+    - CSS @ [CSS Reference](https://cssreference.io/)
+    - 2017.08.04 75 Web animation tools you have to try by Nataly Birch @ [Web Designer Depot](https://www.webdesignerdepot.com/2017/08/75-web-animation-tools-you-have-to-try/)
 
 - - -
 
-# 5. Bulit With
+# 6. Bulit With
 * <b>HTML, CSS</b>
     - [BootStrap 4.1.2.](https://getbootstrap.com/docs/4.1/getting-started/introduction/) : the world’s most popular framework for building responsive, mobile-first sites
 * <b>JavaScript</b>
