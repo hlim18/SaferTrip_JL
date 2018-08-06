@@ -10,7 +10,7 @@ My part of developing the SaferTrip web app
 - 2.1. [How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#21-how-to-use-jquery-with-bootstrap-412)
 - 2.2. [Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#22-fonts-comparison)
 - 2.3. [Detecting Language of a Visitor](https://github.com/hlim18/SaferTrip_JL#23-detecting-language-of-a-visitor)
-- 2.4. [Building Multi-Language/Multilingual Website]
+- 2.4. [Building Multi-Language/Multilingual Website](https://github.com/hlim18/SaferTrip_JL#24-building-multi-languagemultilingual-website)
 
 3. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#3-crime-ridden-areas-report-options)
 - 3.1. [Fadein() on Click](https://github.com/hlim18/SaferTrip_JL#31-fadein-on-click)
@@ -22,7 +22,7 @@ My part of developing the SaferTrip web app
 
 4. [Side Navigation Menu]
 
-5. [Useful Information]
+5. [Useful Information](https://github.com/hlim18/SaferTrip_JL#5-useful-information)
 - 5.1. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#51-github-markdown--useful-techniques)
 - 5.2. [Resources : Tutorials](https://github.com/hlim18/SaferTrip_JL#52-resources--tutorials)
 - 5.3. [Libraries](https://github.com/hlim18/SaferTrip_JL#53-libraries)
