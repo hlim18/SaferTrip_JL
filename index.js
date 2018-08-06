@@ -15,8 +15,7 @@ $(document).ready(function() {
             .on({
                 // // include this for "thank-you" & "cancel" message codes
                 // click: function(){
-
-                // // "Thank-you" message START
+                // // // "Thank-you" message START
                 // swal({
                 //     title: 'Thank you!',
                 //     text: 'Your input has been recorded.',
@@ -35,7 +34,7 @@ $(document).ready(function() {
                 //     confirmButtonColor: '#9FEDDA',
                 //     confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
                 // })
-                // // "Thank-you" message END
+                // // // "Thank-you" message END
 
                 // // "Cancel" button START
                 // swal({
@@ -78,9 +77,9 @@ $(document).ready(function() {
                 // // "cancel" button END
 
                 // // include this for "text-input" & "login & password" message codes
-                click: async function(){
+                click:  function(){
 
-                // // "text" enter message START
+                // // // "text" enter message START
                 const {value: text} = await swal({
                     title: 'Why do you feel unsafe here?',
                     input: 'text',
