@@ -4,24 +4,28 @@ My part of developing the SaferTrip web app
 ## Table of Contents
 1. [Main Page](https://github.com/hlim18/SaferTrip_JL#1-main-page)
 - 1.1. [Responsive Web Design](https://github.com/hlim18/SaferTrip_JL#11-responsive-web-design) 
+- 1.2. [How to Fade In on Page Load](https://github.com/hlim18/SaferTrip_JL#12-how-to-fade-in-on-page-load)
 
-2. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#2-crime-ridden-areas-report-options)
-- 2.1. [Fadein() on Click](https://github.com/hlim18/SaferTrip_JL#21-fadein-on-click)
-- 2.2. [Center Texts Inside Circles Vertically & Horizontally](https://github.com/hlim18/SaferTrip_JL#22-center-texts-inside-circles-vertically--horizontally)
-- 2.3. [Translate() Function](https://github.com/hlim18/SaferTrip_JL#23-translate-function)
-- 2.4. [Changing DIV Background Color](https://github.com/hlim18/SaferTrip_JL#24-changing-div-background-color)
-- 2.5. [Popup Messages](https://github.com/hlim18/SaferTrip_JL#25-popup-messages) 
-- 2.6. [Multiple jQuery Events]
+2. [Settings](https://github.com/hlim18/SaferTrip_JL#2-settings)
+- 2.1. [How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#21-how-to-use-jquery-with-bootstrap-412)
+- 2.2. [Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#22-fonts-comparison)
+- 2.3. [Detecting Language of a Visitor](https://github.com/hlim18/SaferTrip_JL#23-detecting-language-of-a-visitor)
+- 2.4. [Building Multi-Language/Multilingual Website]
 
-3. [Settings](https://github.com/hlim18/SaferTrip_JL#3-settings)
-- 3.1. [How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#31-how-to-use-jquery-with-bootstrap-412)
-- 3.2. [Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#32-fonts-comparison)
-- 3.3. [Language Options](https://github.com/hlim18/SaferTrip_JL#33-language-options)
-- 3.4. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#34-github-markdown--useful-techniques)
+3. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#3-crime-ridden-areas-report-options)
+- 3.1. [Fadein() on Click](https://github.com/hlim18/SaferTrip_JL#31-fadein-on-click)
+- 3.2. [Center Texts Inside Circles Vertically & Horizontally](https://github.com/hlim18/SaferTrip_JL#32-center-texts-inside-circles-vertically--horizontally)
+- 3.3. [Translate() Function](https://github.com/hlim18/SaferTrip_JL#33-translate-function)
+- 3.4. [Changing DIV Background Color](https://github.com/hlim18/SaferTrip_JL#34-changing-div-background-color)
+- 3.5. [Customized SweetAlert2 Popup Boxes](https://github.com/hlim18/SaferTrip_JL#35-customized-sweetalert2-popup-boxes) 
+- 3.6. [Multiple jQuery Events](https://github.com/hlim18/SaferTrip_JL#36-multiple-jqeury-events)
 
-4. [Resources : Tutorials](https://github.com/hlim18/SaferTrip_JL#4-resources--tutorials)
+4. [Side Navigation Menu]
 
-5. [Libraries]
+5. [Useful Information]
+- 5.1. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#51-github-markdown--useful-techniques)
+- 5.2. [Resources : Tutorials](https://github.com/hlim18/SaferTrip_JL#52-resources--tutorials)
+- 5.3. [Libraries](https://github.com/hlim18/SaferTrip_JL#53-libraries)
 
 6. [Built With](https://github.com/hlim18/SaferTrip_JL#6-bulit-with)
 - - -
@@ -145,11 +149,72 @@ Increasing opacity from 0 to 1 and including contents in a html document prevent
 * Node.js Course in Korean @ [Open Tutorials](https://opentutorials.org/course/2136)
 * What is `CRUD`? @ [CodeAcademy](https://www.codecademy.com/articles/what-is-crud)
 * Build a Single Page Application with jQuery & AJAX Course @ [Udemy](https://www.udemy.com/jquery-ajax/learn/v4/overview)
-
 - - -
 
-# 2. Crime-ridden Areas Report Options
-## 2.1. Fadein() on Click
+# 2. Settings
+
+## 2.1. How to Use jQuery with Bootstrap 4.1.2.
+To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be added. But, when I copied and pasted the links in a html document. It didn't work. 
+> I solved the issue by replacing the `jQuery & Popper.js` scripts with `jQuery Google CDN`. 
+
+```HTML
+<!-- [Before] -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+```
+
+```HTML
+<!-- [After] -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+```
+
+All Google fonts are released under open source licenses. So, those can be used in any non-commercial or commercial project.
+- - -
+
+## 2.2. Fonts Comparison
+[![fonts.png](https://s25.postimg.cc/9gtyi4fkf/fonts.png)](https://postimg.cc/image/3snnr8b7v/)
+
+Default vs `Sunflower` font vs `Poor Story` font
+
+```HTML
+<!-- [Google Fonts] To embed your selected fonts into a webpage, copy this code into the <head> of your HTML document. -->
+<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+```
+
+```CSS
+/* [Google Fonts] Use the following CSS rules to specify these families: */
+body{
+    font-style: normal;
+    font-family: 'Poor Story', sans-serif;
+}
+```
+
+### 2.2.1. Acknowledgments
+* Fonts @ [Google Fonts](https://developers.google.com/fonts/)
+* Sunflower @ [Google Fonts](https://fonts.google.com/specimen/Sunflower)
+* Poor Story @ [Google Fonts](https://fonts.google.com/specimen/Poor+Story)
+- - -
+
+## 2.3. Detecting Language of a Visitor
+    1. Parse the Accept-Language HTTP header, which contains information about users' language preferences
+    2. (If the server can't find matching language(s)) Determine users' location from their IP address
+
+### 2.3.1. Acknowledgements
+* Website that recognizes user's location/IP & changes lang. based on that @ [StackOverflow](https://stackoverflow.com/questions/2039016/website-that-recognizes-users-location-ip-changes-lang-based-on-that)
+* `Accept-Language` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
+* `Accept-Language` used for locale setting @ [W3C](https://www.w3.org/International/questions/qa-accept-lang-locales)
+* Detecting language of a visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
+- - -
+
+## 2.4. Building Multi-Language/Multilingual Website
+
+
+### 2.4.1. Acknowledgements
+* Build multiple language website using jQuery and JSON based methods @[StackOverflow](https://stackoverflow.com/questions/48137394/build-multiple-language-website-using-jquery-and-json-based-methods)
+- - -
+
+# 3. Crime-ridden Areas Report Options
+## 3.1. Fadein() on Click
 I wanted to show options after clicking a button. So, I used ":hidden" & ".fadeIn()".
 
 ```HTML
@@ -169,14 +234,13 @@ $('#test').click(function(){
 });
 ```
 
-### 2.1.1. Acknowledgements
+### 3.1.1. Acknowledgements
 * `.fadeIn()` @ [jQuery](https://api.jquery.com/fadeIn/)
 * `:hidden Selector` @ [jQuery](https://api.jquery.com/hidden-selector/)
 * The shapes of CSS @ [CSS-Tricks](https://css-tricks.com/examples/ShapesOfCSS/)
-
 - - -
 
-## 2.2. Center Texts Inside Circles Vertically & Horizontally
+## 3.2. Center Texts Inside Circles Vertically & Horizontally
 ```HTML
 <div class="container">
     <button type="button" class="btn btn-outline-success" id="test">test</button>
@@ -218,11 +282,11 @@ $('#test').click(function(){
 }
 ```
 
-### 2.2.1. Acknowledgments
+### 3.2.1. Acknowledgments
 * Center texts inside circles & `fadeToggle` not working @ [StackOverflow](https://stackoverflow.com/questions/51609769/center-texts-inside-circles-fadetoggle-not-working)
 - - -
 
-## 2.3. Translate() Function
+## 3.3. Translate() Function
 To locate five options in a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find right pixels for each responsive breakpoints.
 
 [![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
@@ -249,12 +313,12 @@ To locate five options in a circle around a button, I used the translate() funct
 }
 ```
 
-### 2.3.1. Acknowledgements
+### 3.3.1. Acknowledgements
 * `translate()` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate)
 * CSS `translate()` function @ [Quackit](https://www.quackit.com/css/functions/css_translate_function.cfm)
 - - -
 
-## 2.4. Changing DIV Background Color 
+## 3.4. Changing DIV Background Color 
 As of jQuery 3.0, .bind() has been deprecated. It was superseded by the .on() method for attaching event handlers to a document since jQuery 1.7, so its use was already discouraged.
 
 ```JS
@@ -265,19 +329,18 @@ As of jQuery 3.0, .bind() has been deprecated. It was superseded by the .on() me
     });
 ```
 
-### 2.4.1. Acknowledgements
+### 3.4.1. Acknowledgements
 * DIV Background Color Change
     - Change DIV background color with .click(function(){ @ [StackOverflow](https://stackoverflow.com/questions/13882265/change-div-background-color-with-clickfunction)
 * .on()
     - 2011.12.07 jQuery 1.7 `.on()` vs `.live()` review by Sam Deering @ [SitePoint](https://www.sitepoint.com/on-vs-live-review/#.UEbZwIogdRM)
     - .bind() @ [jQuery](http://api.jquery.com/bind/)
-
 - - - 
 
-## 2.5. Customized SweetAlert2 Popup Boxes 
+## 3.5. Customized SweetAlert2 Popup Boxes 
 SweetAlert2 allows us to create beautiful, responsive, customizable, accessible popup boxes.
 
-### 2.5.1. "Thank-you" Message
+### 3.5.1. "Thank-you" Message
 ```JS
 .on({click: function(){
     swal({
@@ -299,7 +362,7 @@ SweetAlert2 allows us to create beautiful, responsive, customizable, accessible 
 });
 ```
 
-### 2.5.2. "Cancel" Confirmation Message
+### 3.5.2. "Cancel" Confirmation Message
 ```JS
 .on({click: function(){
     swal({
@@ -342,7 +405,7 @@ SweetAlert2 allows us to create beautiful, responsive, customizable, accessible 
 });
 ```
 
-### 2.5.3. User-input Message
+### 3.5.3. User-input Message
 `Async/await` is a new way to write asynchronous code. Previous options for asynchronous code are `callbacks` and `promises`. The keyword `await` makes JavaScript wait until that promise settles and  then go on with its result. 
 
 ```JS
@@ -366,7 +429,7 @@ SweetAlert2 allows us to create beautiful, responsive, customizable, accessible 
 });
 ```
 
-### 2.5.4. Acknowledgements
+### 3.5.4. Acknowledgements
 * `SweetAlert2`
     - SweetAlert2 official page @ [GitHub](https://sweetalert2.github.io/)
     - Creating pretty popup messages using SweetAlert2 @ [TutsPlus](https://code.tutsplus.com/tutorials/creating-pretty-popup-messages-using-sweetalert2--cms-30662)
@@ -386,75 +449,89 @@ SweetAlert2 allows us to create beautiful, responsive, customizable, accessible 
         
 - - - 
 
-## 2.6. Multiple jQeury Events 
+## 3.6. Multiple jQuery Events 
+### 3.6.1. Showing Different Images in SweetAlert2 Popup Messages
+Use data-attribute to define the image link inside the element 
+```JS
+$(document).ready(function() {
+    $('#test').click(function(){
+    $(".options:hidden").fadeIn()
+        .on("click", function(){
+        $(this).css("background", "#F3C78D");
+        })
+        .on("click", function(){
+        var url=$(this).attr('data-img');
+        swal({
+            title: 'Sweet!',
+            text: 'Modal with a custom image.',
+            imageUrl: url,
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+            animation: false
+            })
+        });
+    });
+});
+```
+
+```HTML
+  <div class="container">
+    <button type="button" class="btn btn-outline-success" id="test">test</button>
+    <div class="options" data-img="https://unsplash.it/400/200" id="option1"><span>Hello<br>World</span></div>
+    <div class="options" data-img="https://unsplash.it/400/200" id="option2"><span>Goodbye</span></div>
+    <div class="options" data-img="https://unsplash.it/400/200" id="option3"><span>How<br>are<br>you?</span></div>
+    <div class="options" data-img="https://unsplash.it/400/200" id="option4"><span>Fine</span></div>
+    <div class="options" data-img="https://s25.postimg.cc/kw0l49gz3/original.png" id="option5"><span>Okay</span></div>
+  </div>
+```
+- - -
+
+### 3.6.2. Different SweetAlert2 Popup Messages
+[Temani Afif](https://stackoverflow.com/users/8620333/temani-afif) let me know how to execute different SweetAlert function. His solution was using `if($(this).attr('id')!="option5")` and `else` within `.on("click", function(){}`. (jsFiddle for his solution can be found [here](https://jsfiddle.net/15no3zyd/5/)).
+```JS
+.on("click", function(){
+    if($(this).attr('id')!="option5") {
+        swal({
+            title: 'Sweet!',
+            text: 'Modal with a custom image.',
+            imageUrl: 'https://unsplash.it/400/200',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+            animation: false
+        })
+    } else {
+        swal(
+            'The Internet?',
+            'That thing is still around?',
+            'question'
+        )
+    }
+});
+```
+- - -
+
+### 3.6.3. Executing “function” or “async function” Based on Selection of a Div After Clicking a Button
+I wanted to use the textbox popup message that required user input on the `SweetAlert2` official [webpage]((sweetalert2.github.io/#position)) and couldn't make it work. I got `Uncaught SyntaxError: await is only valid in async function` error. So, I searched the issue on StackOverflow and found out that I needed to include `async` ([post](https://stackoverflow.com/questions/49751053/sweetalert-2-textarea-async)). The accepted answer says, "The issue is because you need to declare the click handler function as async in order to use the await keyword within it."
 
 
-### 2.6.1. Acknowledgements
+### 3.6.4. Acknowledgements
 * Combine hover and click functions (jQuery)? @ [StackOverflow](https://stackoverflow.com/questions/2432003/combine-hover-and-click-functions-jquery)
 * 2016.02.08 Mouseenter by Mike Bostock @[bl.ocks](https://bl.ocks.org/mbostock/5247027)
+* Including a different image in SweetAlert2 popup message based on selection of a div after clicking a button @ [StackOverflow](https://stackoverflow.com/questions/51694178/including-a-different-image-in-sweetalert2-popup-message-based-on-selection-of-a)
+* SweetAlert2 : Executing “function” or “async function” based on selection of a div after clicking a button @[StackOverflow](https://stackoverflow.com/questions/51701900/sweetalert2-executing-function-or-async-function-based-on-selection-of-a-d)
+* Sweetalert 2 textarea async @ [StackOverflow](https://stackoverflow.com/questions/49751053/sweetalert-2-textarea-async)
+- - -
+
+# 4. Side Navigation Menu
+
 
 - - -
 
-# 3. Settings
-
-## 3.1. How to Use jQuery with Bootstrap 4.1.2.
-To use `Bootstrap CDN`, links of JS stated in the bootstrap website need to be added. But, when I copied and pasted the links in a html document. It didn't work. 
-> I solved the issue by replacing the `jQuery & Popper.js` scripts with `jQuery Google CDN`. 
-
-```HTML
-<!-- [Before] -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-```
-
-```HTML
-<!-- [After] -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-```
-
-All Google fonts are released under open source licenses. So, those can be used in any non-commercial or commercial project.
-- - -
-
-## 3.2. Fonts Comparison
-[![fonts.png](https://s25.postimg.cc/9gtyi4fkf/fonts.png)](https://postimg.cc/image/3snnr8b7v/)
-
-Default vs `Sunflower` font vs `Poor Story` font
-
-```HTML
-<!-- [Google Fonts] To embed your selected fonts into a webpage, copy this code into the <head> of your HTML document. -->
-<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
-```
-
-```CSS
-/* [Google Fonts] Use the following CSS rules to specify these families: */
-body{
-    font-style: normal;
-    font-family: 'Poor Story', sans-serif;
-}
-```
-
-### 3.2.1. Acknowledgments
-* Fonts @ [Google Fonts](https://developers.google.com/fonts/)
-* Sunflower @ [Google Fonts](https://fonts.google.com/specimen/Sunflower)
-* Poor Story @ [Google Fonts](https://fonts.google.com/specimen/Poor+Story)
-- - -
-
-## 3.3. Language Options
-The SaferTrip project will be available in 2 languages : Korean & English. 
-
-    1. Parse the Accept-Language HTTP header, which contains information about users' language preferences
-    2. (If the server can't find matching language(s)) Determine users' location from their IP address
-
-
-### 3.3.1. Acknowledgements
-* Website that recognizes user's location/IP & changes lang. based on that @ [StackOverflow](https://stackoverflow.com/questions/2039016/website-that-recognizes-users-location-ip-changes-lang-based-on-that)
-* `Accept-Language` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
-* `Accept-Language` used for locale setting @ [W3C](https://www.w3.org/International/questions/qa-accept-lang-locales)
-* Detecting Language of a Visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
-- - -
-
-## 3.4. GitHub Markdown : Useful Techniques
-### 3.4.1. Headers
+# 5. Useful Information
+## 5.1. GitHub Markdown : Useful Techniques
+### 5.1.1. Headers
 
 ```
 # This is a H1
@@ -472,7 +549,7 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 ##### This is a H5
 ###### This is a H6
 
-### 3.4.2. Block Quote
+### 5.1.2. Block Quote
 
 ```
 > This is a first blockquote.
@@ -482,8 +559,8 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 > This is a first blockquote.
 >   > This is a second blockquote.
 
-### 3.4.3. List
-#### 3.4.3.1. Ordered List
+### 5.1.3. List
+#### 5.1.3.1. Ordered List
 
 ```
 1. First
@@ -495,7 +572,7 @@ The SaferTrip project will be available in 2 languages : Korean & English.
 2. Second
 3. Third
 
-#### 3.4.3.2. Unordered List
+#### 5.1.3.2. Unordered List
 ```
 * First
     - Second
@@ -506,7 +583,7 @@ The SaferTrip project will be available in 2 languages : Korean & English.
     - Second
         + Third
 
-### 3.4.4. Code Block 
+### 5.1.4. Code Block 
 
 * For HTML codes, put ` ```HTML ` before & ` ``` ` after
 
@@ -538,7 +615,7 @@ You can also press the tab key once or the space bar four times to create a code
 
 *This is NOT a code block.*
 
-### 3.4.5. Image Files
+### 5.1.5. Image Files
 
 I couldn't upload an image in my computer as a part of my README file even after the following attempts:
 ```
@@ -562,7 +639,7 @@ I finally made it work by uploading images to @ [PostImage](https://postimg.cc/)
 ```
 [![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
 
-### 3.4.6. A Horizontal Line
+### 5.1.6. A Horizontal Line
 ```
 ***
 *****
@@ -581,13 +658,13 @@ I finally made it work by uploading images to @ [PostImage](https://postimg.cc/)
 
 ---------------------------------------
 
-### 3.4.7. Inline Links
+### 5.1.7. Inline Links
 ```
 [Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
 ```
 [Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
 
-### 3.4.8. Emphasize
+### 5.1.8. Emphasize
 ```
 *italic*
 _italic_
@@ -601,7 +678,7 @@ _italic_
 __bold__
 ~~striked~~
 
-### 3.4.9. Acknowledgements
+### 5.1.9. Acknowledgements
 * About READMEs @[GitHub Help](https://help.github.com/articles/about-readmes/)
 * README-Template.md by PurpleBooth @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * How to use Markdown `in Korean` by ihoneymon @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
@@ -610,7 +687,7 @@ __bold__
 * GitHub relative link in markdown file @ [StackOverflow](https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file?rq=1)
 - - -
 
-# 4. Resources : Tutorials
+## 5.2. Resources : Tutorials
 * <b>CSS</b>
     - Blog
         + Learn to Code Advanced HTML & CSS by Shay Howe @ [ShayHowe](https://learn.shayhowe.com/advanced-html-css/)
@@ -624,7 +701,7 @@ __bold__
         + 30 Days of `Vanlia JS` coding challenge by Wes Bos @ [JavaScript30](https://javascript30.com/) 
 - - -
 
-# 5. Libraries
+## 5.3. Libraries
 * <b>CSS</b>
     - CSS @ [CSS Reference](https://cssreference.io/)
     - 2017.08.04 75 Web animation tools you have to try by Nataly Birch @ [Web Designer Depot](https://www.webdesignerdepot.com/2017/08/75-web-animation-tools-you-have-to-try/)
