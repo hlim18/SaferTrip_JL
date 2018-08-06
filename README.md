@@ -202,7 +202,7 @@ body{
 ### 2.3.1. Acknowledgements
 * Website that recognizes user's location/IP & changes lang. based on that @ [StackOverflow](https://stackoverflow.com/questions/2039016/website-that-recognizes-users-location-ip-changes-lang-based-on-that)
 * `Accept-Language` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
-* `Accept-Language` used for locale setting @ [W3C](https://www.w3.org/International/questions/qa-accept-lang-locales)
+* `Accept-Language` used for locale setting @ [w3schools](https://www.w3.org/International/questions/qa-accept-lang-locales)
 * Detecting language of a visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
 - - -
 
@@ -210,7 +210,10 @@ body{
 
 
 ### 2.4.1. Acknowledgements
-* Build multiple language website using jQuery and JSON based methods @[StackOverflow](https://stackoverflow.com/questions/48137394/build-multiple-language-website-using-jquery-and-json-based-methods)
+* Build multiple language website using jQuery and JSON based methods @ [StackOverflow](https://stackoverflow.com/questions/48137394/build-multiple-language-website-using-jquery-and-json-based-methods)
+* Window localStorage Property @ [w3schools](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
+* ISO 639-1 standard language codes @ [Andiamo](https://www.andiamo.co.uk/resources/iso-language-codes)
+* .attr() @ [jQuery](http://api.jquery.com/attr/)
 - - -
 
 # 3. Crime-ridden Areas Report Options
