@@ -20,7 +20,7 @@ My part of developing the SaferTrip web app
 - 3.5. [Customized SweetAlert2 Popup Boxes](https://github.com/hlim18/SaferTrip_JL#35-customized-sweetalert2-popup-boxes) 
 - 3.6. [Multiple jQuery Events](https://github.com/hlim18/SaferTrip_JL#36-multiple-jqeury-events)
 
-4. [Side Navigation Menu]
+4. [Side Navigation Menu](https://github.com/hlim18/SaferTrip_JL#4-side-navigation-menu)
 
 5. [Useful Information](https://github.com/hlim18/SaferTrip_JL#5-useful-information)
 - 5.1. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#51-github-markdown--useful-techniques)
