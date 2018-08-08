@@ -70,10 +70,14 @@ body{
 
 .options {
     background: #f7f7f5;
+    /* display: flex;
+    vertical-align: middle;
+    justify-content: center; */
     display: none;
     text-align: center;
     vertical-align: middle;
     position: absolute;
+    /* transform: translateX(-50%) translateY(-50%); */
     width: 100%;
     /* vertically & horizontally middle */
     left: 50%;
@@ -84,8 +88,9 @@ body{
     border-color: #F3C78D;
 }
 
-.options span {
-    color: #000000;
+/* text in circle */
+.options > p {
+    color: black;
     text-align: center;
     vertical-align: middle;
     position: absolute;
@@ -95,6 +100,26 @@ body{
     left: 50%; 
     transform: translateX(-50%) translateY(-50%);
 }
+
+/* .options span {
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    top: 50%; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%);
+} */
+
+.langBtn {
+    color: white;
+    background-color: transparent;
+    border-radius: 30%;
+    border-style: solid;
+    border-color: #F3C78D;
+}
+
 /* make a circle shape */
 #option1{
     transform: translate(-100%, -150%);

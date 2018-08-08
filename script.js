@@ -1,14 +1,13 @@
 var arrLang = {
-    // "object"에 "<br>안 먹힘.." 그럼 html에서 조정?!
     "en-us": {
         "tabTitle": "SaferTrip",
         "mainPgTitle": "SaferTrip",
         "subTitle": "Find safer paths to travel",
         "story" : "Kitty always patrols<br>tourist attractions to help people<br>to travel safely.<br><br>So, Kitty asks for your help.<br>Please let Kitty know<br>crime-ridden areas!<br><br>Based on what people tell Kitty,<br>Kitty will guide you<br>to safer paths to travel.",
-        "firstOption" : "Lonesome<br>road",
-        "secondOption" : "Too<br>Dark",
-        "thirdOption" : "There<br>was an<br>incident",
-        "fourthOption" : "Red-light<br>district",
+        "firstOption" : "Lonesome road",
+        "secondOption" : "Too Dark",
+        "thirdOption" : "There was an incident",
+        "fourthOption" : "Red-light district",
         "fifthOption" : "Etc",
         "tutorial1" : "Areas that CCTV cover are marked with green circles.",
         "tutorial2-1" : "Crime-ridden areas are marked with orange circles.",
@@ -27,9 +26,9 @@ var arrLang = {
         "mainPgTitle": "야옹씨의 안전한 하루",
         "subTitle": "내가 만들어나가는 우리동네 안전 지도",
         "story" : "야옹씨는 사람들이 안전하게<br>여행할 수 있도록<br>항상 여행지를 순찰하는<br>좋은 길고양이에요.<br><br>그래서 야옹씨는<br>여러분들에게 도움을 청해요.<br>위험해보이는 길을<br>알고있다면 알려주세요!<br><br>여러분이 알려주신<br>정보를 기반으로<br>위험 지역을 피한<br>안전한 길로 안내해 드릴 거에요.",
-        "firstOption" : "인적이<br>드물어요",
+        "firstOption" : "인적이 드물어요",
         "secondOption" : "어두워요",
-        "thirdOption" : "사고가<br>난 적<br>있어요",
+        "thirdOption" : "사고가 난 적 있어요",
         "fourthOption" : "유흥가에요",
         "fifthOption" : "기타",
         "tutorial1" : "CCTV가 설치되어있는 곳은<br>초록색으로 표시되어있어요.",
@@ -86,8 +85,9 @@ $(document).ready(function() {
 
     // https://codepen.io/hlim18/pen/EpbLmN
     $('#test').click(function(){
+        // $(".withoutInput:hidden").fadeIn()
         // $(".options").fadeToggle();
-        $(".options:hidden").fadeIn()
+        $(".withoutInput").fadeToggle()
             .on("click", function(){
                 // hex color #_ _ _ _ _ _
                 $(this).css("background", "#F3C78D");
@@ -115,7 +115,66 @@ $(document).ready(function() {
                         confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
                     })
                 }
-                // // // "Thank-you" message END
+                // // "click: function" END
+            });
+            // // "Thank-you" message END
+
+        $(".withInput").fadeToggle()
+            .on("click", function(){
+                // hex color #_ _ _ _ _ _
+                $(this).css("background", "#F3C78D");
+            })
+            .on({
+                // include this for "text-input" & "login & password" message codes
+                click: async function(){
+
+                    // // user-input message START
+                    const {value: text} = await swal({
+                        title: 'Why do you feel unsafe here?',
+                        input: 'text',
+                        inputPlaceholder: 'Type your message :)',
+                        customClass: 'swal2-textbox-msg',
+
+                        showCancelButton: true,
+                        confirmButtonColor: '#F3C78D',
+                        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
+                        cancelButtonColor: '#9FEDDA',
+                        cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
+                        // backdrop color : light gray
+                        backdrop: `
+                        rgba(211,211,211,0.4) 
+                        center left
+                        no-repeat
+                        `,
+                        inputValidator: (value) => {
+                            return !value && 'You need to write something!'
+                        }
+                        // inputValidator END
+                    });
+                    // swal END
+                    if (text) {
+                        swal({
+                            text: `Your entered : "${text}"`,
+                            // backdrop color : light gray
+                            backdrop: `
+                            rgba(211,211,211,0.4) 
+                            center left
+                            no-repeat
+                            `,
+                            confirmButtonColor: '#F3C78D',
+                            confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Okay</div>'
+                        })
+                        // swal END
+                    }
+                    // if(text) EHD
+                }
+                // // async msg END
+            });
+            // // "withInput" END
+    });   
+    // "test" click function END
+})
+// "document ready" function END
 
                 // // "Cancel" button START
                 // swal({
@@ -157,49 +216,7 @@ $(document).ready(function() {
                 // });
                 // // "cancel" button END
 
-                // // include this for "text-input" & "login & password" message codes
-                // click: async function(){
 
-                //     // // // "text" enter message START
-                //     const {value: text} = await swal({
-                //         title: 'Why do you feel unsafe here?',
-                //         input: 'text',
-                //         inputPlaceholder: 'Type your message :)',
-                //         customClass: 'swal2-textbox-msg',
-
-                //         showCancelButton: true,
-                //         confirmButtonColor: '#F3C78D',
-                //         confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
-                //         cancelButtonColor: '#9FEDDA',
-                //         cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
-                //         // backdrop color : light gray
-                //         backdrop: `
-                //         rgba(211,211,211,0.4) 
-                //         center left
-                //         no-repeat
-                //         `,
-                //         inputValidator: (value) => {
-                //             return !value && 'You need to write something!'
-                //         }
-                //     });
-                //     if (text) {
-                //         swal({
-                //             text: `Your entered : "${text}"`,
-                //             // backdrop color : light gray
-                //             backdrop: `
-                //             rgba(211,211,211,0.4) 
-                //             center left
-                //             no-repeat
-                //             `,
-                //             confirmButtonColor: '#F3C78D',
-                //             confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Okay</div>'
-                //         })
-                //     }
-                // // "text" enter message END
-                // }
-                // async msg END
-        });
-    });
     // $(".swal2-confirm.swal2-styled").on({
     //     mouseenter: function() {
     //         $(this).css({backgroundColor: 'blue'},500)
@@ -207,5 +224,4 @@ $(document).ready(function() {
     //     mouseleave: function() {
     //         $(this).css({backgroundColor: 'red'},500)
     //     }
-    // });        
-})
+    // });     

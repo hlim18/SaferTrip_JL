@@ -24,7 +24,7 @@ My part of developing the SaferTrip web app
 
 5. [Useful Information](https://github.com/hlim18/SaferTrip_JL#5-useful-information)
 - 5.1. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#51-github-markdown--useful-techniques)
-- 5.2. [Libraries](https://github.com/hlim18/SaferTrip_JL#52-libraries)
+- 5.2. [Resources](https://github.com/hlim18/SaferTrip_JL#52-resources)
 
 6. [Built With](https://github.com/hlim18/SaferTrip_JL#6-bulit-with)
 - - -
@@ -61,7 +61,9 @@ Started with small screens first and worked up.
 * Responsive web design @[ShayHowe](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
 ### 1.1.2. Responsive background - full screen
-At first, I used `ackground-size: 100% 100%;` and the background image I received didn't fit into some screen sizes. For example, there were empty spaces on left & right sides for the following screen sizes: 360 x 640, 768 x 1024, 1024 x 1366 and empty spaces on top & bottom sides for the following screen sizes: 411 x 823, 375 x 812. So, I did the following:
+At first, I used `ackground-size: 100% 100%;` and the background image I received didn't fit into some screen sizes.
+
+For example, there were empty spaces on left & right sides for the following screen sizes: `360 x 640`, `768 x 1024`, `1024 x 1366` and empty spaces on top & bottom sides for the following screen sizes: `411 x 823`, `375 x 812`. So, I did the following:
 
 ```CSS
 body{
@@ -206,7 +208,65 @@ body{
 - - -
 
 ## 2.4. Building Multi-Language/Multilingual Website
+```HTML
+<body>
+    <!-- `Bootstrap` button didn't work. So, I couldn't use it here. -->
+    <button class="translate langBtn" id="en-us">English</button>
+    <button class="translate langBtn" id="ko">Korean</button>
 
+    <div id="mainPage">
+        <p class="lang" key="mainPgTitle" id="title"></p>
+        <p class="lang" key="subTitle" id="slogan"></p>    
+</body>
+```
+
+```JS
+var arrLang = {
+    "en-us": {
+        "tabTitle": "SaferTrip",
+        "mainPgTitle": "SaferTrip",
+        "subTitle": "Find safer paths to travel",
+    },
+    "ko": {
+        "tabTitle": "야옹씨의 안전한 하루",
+        "mainPgTitle": "야옹씨의 안전한 하루",
+        "subTitle": "내가 만들어나가는 우리동네 안전 지도"
+    }
+};
+
+// The default language is Korean
+var lang = "ko";
+// Check for localStorage support (On reload, show the website based on previous setting)
+if("localStorage" in window){
+    var usrLang = localStorage.getItem("uiLang");
+        if(usrLang) {
+            lang = usrLang
+        }
+}
+
+$(document).ready(function() {
+
+    // // * language setting START
+    $(".lang").each(function(index, element) {
+        $(this).text(arrLang[lang][$(this).attr("key")]);
+    });
+      
+    // get/set the selected language
+    $(".translate").click(function() {
+        var lang = $(this).attr("id");
+
+        // update localStorage key
+        if("localStorage" in window){
+            localStorage.setItem("uiLang", lang);
+            // console.log( localStorage.getItem('uiLang') );
+        }
+        $(".lang").each(function(index, element) {
+          $(this).text(arrLang[lang][$(this).attr("key")]);
+        });
+    });
+    // // * language setting END
+}
+```
 
 ### 2.4.1. Acknowledgements
 * Build multiple language website using jQuery and JSON based methods @ [StackOverflow](https://stackoverflow.com/questions/48137394/build-multiple-language-website-using-jquery-and-json-based-methods)
@@ -243,6 +303,9 @@ $('#test').click(function(){
 - - -
 
 ## 3.2. Center Texts Inside Circles Vertically & Horizontally
+In other StackOverflow posts, people gave solutions by using `display: flex` & `vertical-align: middle` & `justify-content: center`. However, I can't use the option and solutions using `display: table-cell`, because I would like to keep `display: none` for `options` class not to show the circles when people visit the webpage. Also, I didn't set `line-height` same as `height` of a div, because this method worked for only one line of text and some of my texts became two lines inside a div. In addition, adding `transform: translateX(-50%) translateY(-50%);` didn't work for me.
+
+### 3.2.1. By using <span>
 ```HTML
 <div class="container">
     <button type="button" class="btn btn-outline-success" id="test">test</button>
@@ -283,9 +346,29 @@ $('#test').click(function(){
     transform: translateX(-50%) translateY(-50%);
 }
 ```
+- - - 
+### 3.2.2. Without using "span" as well as "display: flex" or "display: table-cell"
+Aftering adding codes to make a multi-language web app, I couldn't see texts in circles wrapped in `<span>`. So, I used `<p>` tag instead. 
 
-### 3.2.1. Acknowledgments
-* Center texts inside circles & `fadeToggle` not working @ [StackOverflow](https://stackoverflow.com/questions/51609769/center-texts-inside-circles-fadetoggle-not-working)
+> `.options span` has been changed to `.options > p`.
+
+```HTML
+<div class="container">
+    <button type="button" id="test">test</button>
+    <div class="options withoutInput" id="option1"><p class="lang" key="firstOption"></p></div>
+    <div class="options withoutInput" id="option2"><p class="lang" key="secondOption"></p></div>
+    <div class="options withoutInput" id="option3"><p class="lang" key="thirdOption"></p></div>
+    <div class="options withoutInput" id="option4"><p class="lang" key="fourthOption"></p></div>
+    <div class="options withInput" id="option5"><p class="lang" key="fifthOption"></p></div>
+</div>
+```
+
+- - -
+
+### 3.2.3. Acknowledgments
+* CSS center text (horizontally and vertically) inside a div block @ [StackOverflow](https://stackoverflow.com/questions/5703552/)
+* How do I vertically align text in a div? @ [StackOverflow](https://stackoverflow.com/questions/2939914/)
+
 - - -
 
 ## 3.3. Translate() Function
@@ -517,7 +600,49 @@ $(document).ready(function() {
 ### 3.6.3. Executing “function” or “async function” Based on Selection of a Div After Clicking a Button
 I wanted to use the textbox popup message that required user input on the `SweetAlert2` official [webpage]((sweetalert2.github.io/#position)) and couldn't make it work. I got `Uncaught SyntaxError: await is only valid in async function` error. So, I searched the issue on StackOverflow and found out that I needed to include `async` ([post](https://stackoverflow.com/questions/49751053/sweetalert-2-textarea-async)). The accepted answer says, "The issue is because you need to declare the click handler function as async in order to use the await keyword within it."
 
+> Because `await` works on `swal`, `swal` is a `promise`.
 
+```HTML
+    <div class="container">
+        <button type="button" class="btn btn-outline-success" id="test">test</button>
+        <div class="options withoutInput" key="firstOption" id="option1">span>Lonesome<br>road</span></div>
+        <div class="options withoutInput" id="option2"><span>Too<br>Dark</span></div>
+        <div class="options withoutInput" id="option3"><span>There<br>was an<br>incident</span></div>
+        <div class="options withoutInput" id="option4"><span>Red-light<br>district</span></div>
+        <div class="options withInput" id="option5"><span>Etc</span></div>
+    </div>
+```
+
+```JS
+$('#test').click(function(){
+    $(".withoutInput:hidden").fadeIn()
+        .on("click", function(){
+            $(this).css("background", "#F3C78D");
+        })
+        .on({ 
+            click: function(){
+            // "Thank-you" popup message" //
+            }
+        });
+    $(".withInput:hidden").fadeIn()
+        .on("click", function(){
+            $(this).css("background", "#F3C78D");
+        })
+        .on({ 
+            click: async function(){
+            // "user-input" popup message" //
+                const {value: text} = await swal({
+                    // swal code goes here
+                });
+                if (text) {
+                    // swal code goes here
+                }
+            }
+        });
+}); 
+```
+
+jsFiddle for this exercise can be found [here](jsfiddle.net/hlim188/15no3zyd/30).
 
 ### 3.6.4. Acknowledgements
 * Combine hover and click functions (jQuery)? @ [StackOverflow](https://stackoverflow.com/questions/2432003/combine-hover-and-click-functions-jquery)
@@ -525,6 +650,7 @@ I wanted to use the textbox popup message that required user input on the `Sweet
 * Including a different image in SweetAlert2 popup message based on selection of a div after clicking a button @ [StackOverflow](https://stackoverflow.com/questions/51694178/including-a-different-image-in-sweetalert2-popup-message-based-on-selection-of-a)
 * SweetAlert2 : Executing “function” or “async function” based on selection of a div after clicking a button @[StackOverflow](https://stackoverflow.com/questions/51701900/sweetalert2-executing-function-or-async-function-based-on-selection-of-a-d)
 * Sweetalert 2 textarea async @ [StackOverflow](https://stackoverflow.com/questions/49751053/sweetalert-2-textarea-async)
+* Multiple Class/ID and Class Selectors @ [CSS-Tricks](https://css-tricks.com/multiple-class-id-selectors/)
 - - -
 
 # 4. Side Navigation Menu
@@ -690,10 +816,13 @@ __bold__
 * GitHub relative link in markdown file @ [StackOverflow](https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file?rq=1)
 - - -
 
-## 5.2. Libraries
+## 5.2. Resources
 * <b>CSS</b>
     - CSS @ [CSS Reference](https://cssreference.io/)
     - 2017.08.04 75 Web animation tools you have to try by Nataly Birch @ [Web Designer Depot](https://www.webdesignerdepot.com/2017/08/75-web-animation-tools-you-have-to-try/)
+    - Writing effective CSS selectors @ [CSS Wizardy](https://csswizardry.com/2011/09/writing-efficient-css-selectors/)
+    - How to center in CSS @[How to Center in CSS](http://howtocenterincss.com/)
+    - The Skinny on CSS attribute selectors @ [CSS-tricks](https://css-tricks.com/attribute-selectors/)
 - - -
 
 # 6. Bulit With

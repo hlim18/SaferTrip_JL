@@ -38,8 +38,10 @@
 <body>
     <!-- <button type="button" class="btn btn-outline-secondary" class="translate" id="en-us">English</button>
     <button type="button" class="btn btn-outline-secondary" class="translate" id="ko">한국어</button> -->
-    <button class="translate" id="en-us">English</button>
-    <button class="translate" id="ko">Korean</button>
+    
+    <button class="translate langBtn" id="en-us">English</button>
+    <button class="translate langBtn" id="ko">Korean</button>
+    <!-- `Bootstrap` button didn't work. So, I couldn't use it here. -->
 
     <div id="mainPage">
         <!-- 1st Fade in : Falling stars -->
@@ -62,27 +64,43 @@
 
     <!-- <div class="container">
         <button type="button" class="btn btn-outline-success" id="test">test</button>
-        <div class="options" class="withoutInput" id="option1"><span>인적이<br>드물어요</span></div>
-        <div class="options" class="withoutInput" id="option2"><span>어두워요</span></div>
-        <div class="options" class="withoutInput" id="option3"><span>사고가<br>난 적<br>있어요</span></div>
-        <div class="options" class="withoutInput" id="option4"><span>유흥가에요</span></div>
-        <div class="options" class="withInput" id="option5"><span>기타</span></div>
+        <div class="options withoutInput" id="option1"><span>인적이<br>드물어요</span></div>
+        <div class="options withoutInput" id="option2"><span>어두워요</span></div>
+        <div class="options withoutInput" id="option3"><span>사고가<br>난 적<br>있어요</span></div>
+        <div class="options withoutInput" id="option4"><span>유흥가에요</span></div>
+        <div class="options withInput" id="option5"><span>기타</span></div>
     </div> -->
-    <div class="container">
-        <button type="button" class="btn btn-outline-success" id="test">test</button>
-        <div class="options" class="withoutInput" id="option1"><span>Lonesome<br>road</span></div>
-        <div class="options" class="withoutInput" id="option2"><span>Too<br>Dark</span></div>
-        <div class="options" class="withoutInput" id="option3"><span>There<br>was an<br>incident</span></div>
-        <div class="options" class="withoutInput" id="option4"><span>Red-light<br>district</span></div>
-        <div class="options" class="withInput" id="option5"><span>Etc</span></div>
-    </div>
     <!-- <div class="container">
         <button type="button" class="btn btn-outline-success" id="test">test</button>
-        <div class="options" class="lang" key="firstOption"  class="withoutInput" id="option1"><span></span></div>
-        <div class="options" class="lang" key="secondOption" class="withoutInput" id="option2"><span></span></div>
-        <div class="options" class="lang" key="thirdOption" class="withoutInput" id="option3"><span></span></div>
-        <div class="options" class="lang" key="fourthOption" class="withoutInput" id="option4"><span></span></div>
-        <div class="options" class="lang" key="fifthOption" class="withInput" id="option5"><span></span></div>
+        <div class="options withoutInput" key="firstOption" id="option1">span>Lonesome<br>road</span></div>
+        <div class="options withoutInput" id="option2"><span>Too<br>Dark</span></div>
+        <div class="options withoutInput" id="option3"><span>There<br>was an<br>incident</span></div>
+        <div class="options withoutInput" id="option4"><span>Red-light<br>district</span></div>
+        <div class="options withInput" id="option5"><span>Etc</span></div>
+    </div> -->
+    <!-- <div class="container">
+        <button type="button" id="test">test</button>
+        <div class="options lang withoutInput" id="option1"><span class="txtInCircle" key="firstOption"></span></div>
+        <div class="options lang withoutInput" id="option2"><span class="txtInCircle" key="secondOption"></span></div>
+        <div class="options lang withoutInput" id="option3"><span class="txtInCircle" key="thirdOption"></span></div>
+        <div class="options lang withoutInput" id="option4"><span class="txtInCircle" key="fourthOption"></span></div>
+        <div class="options lang withInput" id="option5"><span class="txtInCircle" key="fifthOption"></span></div>
+    </div> -->
+    <div class="container">
+        <button type="button" id="test">test</button>
+        <div class="options withoutInput" id="option1"><p class="lang" key="firstOption"></p></div>
+        <div class="options withoutInput" id="option2"><p class="lang" key="secondOption"></p></div>
+        <div class="options withoutInput" id="option3"><p class="lang" key="thirdOption"></p></div>
+        <div class="options withoutInput" id="option4"><p class="lang" key="fourthOption"></p></div>
+        <div class="options withInput" id="option5"><p class="lang" key="fifthOption"></p></div>
+    </div>
+    <!-- <div class="container">
+        <button type="button" id="test">test</button>
+        <div class="center options lang withoutInput" key="firstOption" id="option1"></div>
+        <div class="center options lang withoutInput" key="secondOption" id="option2"></div>
+        <div class="center options lang withoutInput" key="thirdOption" id="option3"></div>
+        <div class="center options lang withoutInput" key="fourthOption" id="option4"></div>
+        <div class="center options lang withInput" key="fifthOption" id="option5"></div>
     </div> -->
 </body>
 </html>
