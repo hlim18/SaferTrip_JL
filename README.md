@@ -18,7 +18,9 @@ My part of developing the SaferTrip web app
 - 3.3. [Translate() Function](https://github.com/hlim18/SaferTrip_JL#33-translate-function)
 - 3.4. [Changing DIV Background Color](https://github.com/hlim18/SaferTrip_JL#34-changing-div-background-color)
 - 3.5. [Customized SweetAlert2 Popup Boxes](https://github.com/hlim18/SaferTrip_JL#35-customized-sweetalert2-popup-boxes) 
-- 3.6. [Multiple jQuery Events](https://github.com/hlim18/SaferTrip_JL#36-multiple-jqeury-events)
+- 3.6. [Different Popup Messages between Options 1-4 and Option 5](https://github.com/hlim18/SaferTrip_JL#36-different-popup-messages-between-options-1-4-and-option-5)
+- 3.7. [How to Keep Background Color Changes on Page Reload](https://github.com/hlim18/SaferTrip_JL#37-how-to-keep-background-color-changes-on-page-reload)
+- 3.8. [Canceling a Choice](https://github.com/hlim18/SaferTrip_JL#38-canceling-a-choice) 
 
 4. [Side Navigation Menu](https://github.com/hlim18/SaferTrip_JL#4-side-navigation-menu)
 
@@ -534,7 +536,7 @@ SweetAlert2 allows us to create beautiful, responsive, customizable, accessible 
         
 - - - 
 
-## 3.6. Multiple jQuery Events 
+## 3.6. Different Popup Messages between Options 1-4 and Option 5
 ### 3.6.1. Showing Different Images in SweetAlert2 Popup Messages
 Use data-attribute to define the image link inside the element 
 ```JS
@@ -651,6 +653,21 @@ jsFiddle for this exercise can be found [here](jsfiddle.net/hlim188/15no3zyd/30)
 * SweetAlert2 : Executing “function” or “async function” based on selection of a div after clicking a button @[StackOverflow](https://stackoverflow.com/questions/51701900/sweetalert2-executing-function-or-async-function-based-on-selection-of-a-d)
 * Sweetalert 2 textarea async @ [StackOverflow](https://stackoverflow.com/questions/49751053/sweetalert-2-textarea-async)
 * Multiple Class/ID and Class Selectors @ [CSS-Tricks](https://css-tricks.com/multiple-class-id-selectors/)
+- - -
+
+### 3.7. How to Keep Background Color Changes on Page Reload
+
+
+### 3.7.1. Acknowledgements
+* How to keep background color changes on page reload? @ [StackOverflow](https://stackoverflow.com/questions/38928990/)
+
+- - -
+
+## 3.8. Canceling a Choice
+
+### 3.8.1. Acknowledgements
+* Button background color toggle @ [StackOverflow](https://stackoverflow.com/questions/17050054/)
+
 - - -
 
 # 4. Side Navigation Menu
@@ -834,5 +851,3 @@ __bold__
 
 - - -
 2018 © Jen Lim 
-
-Currently, in `swal`, you enter content like this `title: 'Thank you!'` & `text: 'Your input has been recorded.'` & `confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'`.

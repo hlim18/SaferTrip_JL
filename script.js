@@ -9,6 +9,9 @@ var arrLang = {
         "thirdOption" : "There was an incident",
         "fourthOption" : "Red-light district",
         "fifthOption" : "Etc",
+        "thxMsgTitle" : "Thank you!",
+        "thxMsgContent" : "Your input has been recorded.",
+        "thxMsgConfirmBtnTxt" : "Got it!",
         "tutorial1" : "Areas that CCTV cover are marked with green circles.",
         "tutorial2-1" : "Crime-ridden areas are marked with orange circles.",
         "tutorial2-2" : "You can participate in reporting crime-ridden areas.",
@@ -31,6 +34,9 @@ var arrLang = {
         "thirdOption" : "사고가 난 적 있어요",
         "fourthOption" : "유흥가에요",
         "fifthOption" : "기타",
+        "thxMsgTitle" : "감사합니다!",
+        "thxMsgContent" : "의견이 접수되었습니다.",
+        "thxMsgConfirmBtnTxt" : "알겠어요!",
         "tutorial1" : "CCTV가 설치되어있는 곳은<br>초록색으로 표시되어있어요.",
         "tutorial2-1" : "위험하게 느껴지는 곳은<br>주황색으로 표시되어있어요.",
         "tutorial2-2" : "여러분이 직접 표시를<br>할 수도 있어요.",
@@ -83,6 +89,10 @@ $(document).ready(function() {
     $("#title").delay(500).animate({'opacity':'1'},800);
     $("#slogan").delay(800).animate({'opacity':'1'},800);
 
+// multi-language inside of swal not working : https://jsfiddle.net/hlim188/15no3zyd/68/
+
+// toggle background color : http://jsfiddle.net/davidThomas/mX35z/1/ 
+
     // https://codepen.io/hlim18/pen/EpbLmN
     $('#test').click(function(){
         // $(".withoutInput:hidden").fadeIn()
@@ -97,7 +107,10 @@ $(document).ready(function() {
                 // // "Thank-you" message START
                     swal({
                         title: 'Thank you!',
+                        // title: '<h2 class="lang" key="thxMsgTitle"></h2>',
                         text: 'Your input has been recorded.',
+                        // text: '<div style="color:#4B0082">Your input has been recorded.</div>',
+                        // text: '<div class="lang" key="thxMsgContent"></div>',
                         // type: 'warning',
                         imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png', 
                         imageAlt: 'Cat logo',
@@ -112,6 +125,7 @@ $(document).ready(function() {
                         `,
                         confirmButtonColor: '#9FEDDA',
                         confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
+                        // confirmButtonText: '<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#000000"></div>'
                     })
                 }
                 // // "click: function" END
