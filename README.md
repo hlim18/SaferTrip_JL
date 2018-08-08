@@ -834,3 +834,5 @@ __bold__
 
 - - -
 2018 © Jen Lim 
+
+Currently, in `swal`, you enter content like this `title: 'Thank you!'` & `text: 'Your input has been recorded.'` & `confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'`.

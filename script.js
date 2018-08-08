@@ -86,7 +86,6 @@ $(document).ready(function() {
     // https://codepen.io/hlim18/pen/EpbLmN
     $('#test').click(function(){
         // $(".withoutInput:hidden").fadeIn()
-        // $(".options").fadeToggle();
         $(".withoutInput").fadeToggle()
             .on("click", function(){
                 // hex color #_ _ _ _ _ _
