@@ -24,7 +24,7 @@ var arrLang = {
     },
     "ko": {
         "tabTitle": "야옹씨의 안전한 하루",
-        "mainPgTitle": "야옹씨의<br>안전한 하루",
+        "mainPgTitle": "야옹씨의 안전한 하루",
         "subTitle": "내가 만들어나가는 우리동네 안전 지도",
         "story" : "야옹씨는 사람들이 안전하게<br>여행할 수 있도록<br>항상 여행지를 순찰하는<br>좋은 길고양이에요.<br><br>그래서 야옹씨는<br>여러분들에게 도움을 청해요.<br>위험해보이는 길을<br>알고있다면 알려주세요!<br><br>여러분이 알려주신<br>정보를 기반으로<br>위험 지역을 피한<br>안전한 길로 안내해 드릴 거에요.",
         "firstOption" : "인적이<br>드물어요",
@@ -94,26 +94,27 @@ $(document).ready(function() {
             })
             .on({
                 // // include this for "thank-you" & "cancel" message codes
-                // click: function(){
-                // // // "Thank-you" message START
-                // swal({
-                //     title: 'Thank you!',
-                //     text: 'Your input has been recorded.',
-                //     // type: 'warning',
-                //     imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png', 
-                //     imageAlt: 'Cat logo',
-                //     // imageClass: 'swal2-thx-img',
-                //     animation: false,
-                //     customClass: 'swal2-thx-msg',
-                //     // backdrop color : light gray
-                //     backdrop: `
-                //         rgba(211,211,211,0.4) 
-                //         center left
-                //         no-repeat
-                //     `,
-                //     confirmButtonColor: '#9FEDDA',
-                //     confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
-                // })
+                click: function(){
+                // // "Thank-you" message START
+                    swal({
+                        title: 'Thank you!',
+                        text: 'Your input has been recorded.',
+                        // type: 'warning',
+                        imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png', 
+                        imageAlt: 'Cat logo',
+                        // imageClass: 'swal2-thx-img',
+                        animation: false,
+                        customClass: 'swal2-thx-msg',
+                        // backdrop color : light gray
+                        backdrop: `
+                            rgba(211,211,211,0.4) 
+                            center left
+                            no-repeat
+                        `,
+                        confirmButtonColor: '#9FEDDA',
+                        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
+                    })
+                }
                 // // // "Thank-you" message END
 
                 // // "Cancel" button START
@@ -150,52 +151,53 @@ $(document).ready(function() {
                 //                 no-repeat
                 //             `,
                 //             confirmButtonColor: '#9FEDDA',
-                //             confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'            
+                //             confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
                 //         });
                 //     }
                 // });
                 // // "cancel" button END
 
                 // // include this for "text-input" & "login & password" message codes
-                click: async function(){
+                // click: async function(){
 
-                // // // "text" enter message START
-                const {value: text} = await swal({
-                    title: 'Why do you feel unsafe here?',
-                    input: 'text',
-                    inputPlaceholder: 'Type your message :)',
-                    customClass: 'swal2-textbox-msg',
+                //     // // // "text" enter message START
+                //     const {value: text} = await swal({
+                //         title: 'Why do you feel unsafe here?',
+                //         input: 'text',
+                //         inputPlaceholder: 'Type your message :)',
+                //         customClass: 'swal2-textbox-msg',
 
-                    showCancelButton: true,
-                    confirmButtonColor: '#F3C78D',
-                    confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
-                    cancelButtonColor: '#9FEDDA',
-                    cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
-                    // backdrop color : light gray
-                    backdrop: `
-                    rgba(211,211,211,0.4) 
-                    center left
-                    no-repeat
-                    `,
-                    inputValidator: (value) => {
-                        return !value && 'You need to write something!'
-                    }
-                });
-                if (text) {
-                    swal({
-                        text: `Your entered : "${text}"`,
-                        // backdrop color : light gray
-                        backdrop: `
-                        rgba(211,211,211,0.4) 
-                        center left
-                        no-repeat
-                        `,
-                        confirmButtonColor: '#F3C78D',
-                        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Okay</div>'
-                    })
-                }
+                //         showCancelButton: true,
+                //         confirmButtonColor: '#F3C78D',
+                //         confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
+                //         cancelButtonColor: '#9FEDDA',
+                //         cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
+                //         // backdrop color : light gray
+                //         backdrop: `
+                //         rgba(211,211,211,0.4) 
+                //         center left
+                //         no-repeat
+                //         `,
+                //         inputValidator: (value) => {
+                //             return !value && 'You need to write something!'
+                //         }
+                //     });
+                //     if (text) {
+                //         swal({
+                //             text: `Your entered : "${text}"`,
+                //             // backdrop color : light gray
+                //             backdrop: `
+                //             rgba(211,211,211,0.4) 
+                //             center left
+                //             no-repeat
+                //             `,
+                //             confirmButtonColor: '#F3C78D',
+                //             confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Okay</div>'
+                //         })
+                //     }
                 // // "text" enter message END
-            }
+                // }
+                // async msg END
         });
     });
     // $(".swal2-confirm.swal2-styled").on({

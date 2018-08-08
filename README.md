@@ -24,8 +24,7 @@ My part of developing the SaferTrip web app
 
 5. [Useful Information](https://github.com/hlim18/SaferTrip_JL#5-useful-information)
 - 5.1. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#51-github-markdown--useful-techniques)
-- 5.2. [Resources : Tutorials](https://github.com/hlim18/SaferTrip_JL#52-resources--tutorials)
-- 5.3. [Libraries](https://github.com/hlim18/SaferTrip_JL#53-libraries)
+- 5.2. [Libraries](https://github.com/hlim18/SaferTrip_JL#52-libraries)
 
 6. [Built With](https://github.com/hlim18/SaferTrip_JL#6-bulit-with)
 - - -
@@ -519,6 +518,7 @@ $(document).ready(function() {
 I wanted to use the textbox popup message that required user input on the `SweetAlert2` official [webpage]((sweetalert2.github.io/#position)) and couldn't make it work. I got `Uncaught SyntaxError: await is only valid in async function` error. So, I searched the issue on StackOverflow and found out that I needed to include `async` ([post](https://stackoverflow.com/questions/49751053/sweetalert-2-textarea-async)). The accepted answer says, "The issue is because you need to declare the click handler function as async in order to use the await keyword within it."
 
 
+
 ### 3.6.4. Acknowledgements
 * Combine hover and click functions (jQuery)? @ [StackOverflow](https://stackoverflow.com/questions/2432003/combine-hover-and-click-functions-jquery)
 * 2016.02.08 Mouseenter by Mike Bostock @[bl.ocks](https://bl.ocks.org/mbostock/5247027)
@@ -690,25 +690,10 @@ __bold__
 * GitHub relative link in markdown file @ [StackOverflow](https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file?rq=1)
 - - -
 
-## 5.2. Resources : Tutorials
-* <b>CSS</b>
-    - Blog
-        + Learn to Code Advanced HTML & CSS by Shay Howe @ [ShayHowe](https://learn.shayhowe.com/advanced-html-css/)
-    - Video
-        + Master CSS `flexbox` by Wes Bos @ [FlexBox](https://flexbox.io/)
-        + Learn CSS `grid` by Wes Bos @[CSS Grid](https://cssgrid.io/)
-* <b>JS</b>
-    - Blog
-        + The Modern JavaScript Tutorial by Ilya Kantor @ [JavaScript Info](https://javascript.info/)
-    - Video
-        + 30 Days of `Vanlia JS` coding challenge by Wes Bos @ [JavaScript30](https://javascript30.com/) 
-- - -
-
-## 5.3. Libraries
+## 5.2. Libraries
 * <b>CSS</b>
     - CSS @ [CSS Reference](https://cssreference.io/)
     - 2017.08.04 75 Web animation tools you have to try by Nataly Birch @ [Web Designer Depot](https://www.webdesignerdepot.com/2017/08/75-web-animation-tools-you-have-to-try/)
-
 - - -
 
 # 6. Bulit With
