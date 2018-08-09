@@ -851,3 +851,39 @@ __bold__
 
 - - -
 2018 © Jen Lim 
+
+
+https://github.com/sweetalert2/sweetalert2/issues/1199 
+
+I thought my issue was focused more on 'how do I do this?' rather than 'this is a broken functionality'. So, I submitted it to StackOverflow: https://stackoverflow.com/questions/51745372/.
+
+But, now I think that this issue might be a broken functionality. That's why I'm reporting this problem as an issue here.
+
+<b>What I would like to know:</b>
+> Is this a broken functionality or do I just don't know how to do this?
+
+> *(If it's a broken functionality)* Is it possible to solve this problem to create multi-language SweetAlert2 messages?
+
+*If you think this issue is more focused more on 'how do I do this?'*, please close this issue.
+
+<b>Explanation of my code:</b><br>
+1. *pressing <b>"test"</b> button* : you can make five circles show up or disappear.<br>
+2. *pressing <b>"English"</b> button* : contents are changed to English (except for contents in `SweetAlert2` popup messages).<br>
+3. *pressing <b>"Korean"</b> button* : contents are changed to Korean (except for contents in `SweetAlert2` popup messages).
+
+Inspired by [Adam Azad](https://stackoverflow.com/users/2151050/adam-azad)'s answer in this StackOverflow [post](https://stackoverflow.com/questions/48137394/), I started working on creating a multi-language web app that saves a user's selected language. I can successfully switch back and forth between English and Korean for all contents in my web app except for contents in  `SweetAlert2` messages.
+
+* After setting up, I added `class="lang"` and `key="(a key name that matches a content goes here)"` for each content.
+
+Because I was able to customized `confirmButtonText` by changing from `Got it!` to `'<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'`, I thought I could simply add `class="lang"` and a key name <b>to create multi-language popup messages in SweetAlert2.</b>
+
+* Changed from `'Thank you!'` to `'<h2 class="lang" key="thxMsgTitle"></h2>'` : nothing shows up.<br>
+* Changed form `'Your input has been recorded.'` to `'<div class="lang" key="thxMsgContent"></div>'` : instead of the text, the code shows up in the popup message.<br>
+* Changed from `<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>` to `'<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#000000"></div>'` : nothing shows up.
+
+Please look at this JSfiddle:</b> https://jsfiddle.net/hlim188/15no3zyd/69/.
+(I put non-working codes as comments.)
+
+<b>What I would like to achieve:</b>
+> 1. Change all contents to English when the "English" button is clicked including contents in `SweetAlert2` messages
+> 2. Change all contents to Korean when the "Korean" button is clicked including contents in `SweetAlert2` messages

@@ -105,38 +105,61 @@ $(document).ready(function() {
                 // // include this for "thank-you" & "cancel" message codes
                 click: function(){
                 // // "Thank-you" message START
-                    swal({
-                        title: 'Thank you!',
-                        // title: '<h2 class="lang" key="thxMsgTitle"></h2>',
-                        text: 'Your input has been recorded.',
-                        // text: '<div style="color:#4B0082">Your input has been recorded.</div>',
-                        // text: '<div class="lang" key="thxMsgContent"></div>',
-                        // type: 'warning',
-                        imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png', 
-                        imageAlt: 'Cat logo',
-                        // imageClass: 'swal2-thx-img',
-                        animation: false,
-                        customClass: 'swal2-thx-msg',
-                        // backdrop color : light gray
-                        backdrop: `
-                            rgba(211,211,211,0.4) 
-                            center left
-                            no-repeat
-                        `,
-                        confirmButtonColor: '#9FEDDA',
-                        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
-                        // confirmButtonText: '<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#000000"></div>'
-                    })
+                    if(lang == 'en-us'){
+                        swal({
+                            title: 'Thank you!',
+                            // title: '<h2 class="lang" key="thxMsgTitle"></h2>',
+                            text: 'Your input has been recorded.',
+                            // text: '<div style="color:#4B0082">Your input has been recorded.</div>',
+                            // text: '<div class="lang" key="thxMsgContent"></div>',
+                            // type: 'warning',
+                            imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png', 
+                            imageAlt: 'Cat logo',
+                            // imageClass: 'swal2-thx-img',
+                            animation: false,
+                            customClass: 'swal2-thx-msg',
+                            // backdrop color : light gray
+                            backdrop: `
+                                rgba(211,211,211,0.4) 
+                                center left
+                                no-repeat
+                            `,
+                            confirmButtonColor: '#9FEDDA',
+                            confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
+                            // confirmButtonText: '<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#FFFFFF"></div>'
+                        })
+                        // "en-us" swal END
+                    } else if(lang == 'ko') {
+                    // if "en-us" END & if "ko" START
+                        swal({
+                            title: '감사합니다!',
+                            // title: '<h2 class="lang" key="thxMsgTitle"></h2>',
+                            text: '의견이 접수되었습니다.',
+                            // text: '<div style="color:#4B0082">Your input has been recorded.</div>',
+                            // text: '<div class="lang" key="thxMsgContent"></div>',
+                            // type: 'warning',
+                            imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png', 
+                            imageAlt: 'Cat logo',
+                            // imageClass: 'swal2-thx-img',
+                            animation: false,
+                            customClass: 'swal2-thx-msg',
+                            // backdrop color : light gray
+                            backdrop: `
+                                rgba(211,211,211,0.4) 
+                                center left
+                                no-repeat
+                            `,
+                            confirmButtonColor: '#9FEDDA',
+                            confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">알겠어요!</div>'
+                            // confirmButtonText: '<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#000000"></div>'
+                        })
+                    }   
                 }
                 // // "click: function" END
             });
             // // "Thank-you" message END
 
         $(".withInput").fadeToggle()
-            .on("click", function(){
-                // hex color #_ _ _ _ _ _
-                $(this).css("background", "#F3C78D");
-            })
             .on({
                 // include this for "text-input" & "login & password" message codes
                 click: async function(){
@@ -163,6 +186,7 @@ $(document).ready(function() {
                             return !value && 'You need to write something!'
                         }
                         // inputValidator END
+
                     });
                     // swal END
                     if (text) {
@@ -176,10 +200,14 @@ $(document).ready(function() {
                             `,
                             confirmButtonColor: '#F3C78D',
                             confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Okay</div>'
-                        })
-                        // swal END
-                    }
-                    // if(text) EHD
+                        }).then(function(){
+                            // hex color #_ _ _ _ _ _
+                            $(".withInput").css("background", "#F3C78D");
+                        });
+                        // // swal END
+                    };
+                    // // if(text) END
+
                 }
                 // // async msg END
             });
