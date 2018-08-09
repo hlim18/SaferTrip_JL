@@ -115,7 +115,7 @@ body{
 .langBtn {
     color: white;
     background-color: transparent;
-    border-radius: 30%;
+    border-radius: 20%;
     border-style: solid;
     border-color: #F3C78D;
 }
@@ -143,6 +143,9 @@ body{
 
 /* 1) smartphones including iPhone 5 (320 x 568) */
 @media screen and (min-width : 0px) and (min-height: 0px) {
+    .langBtn {
+        font-size: 12px;
+    }
     body{
         background: url("Images/main_1_cover.svg") center center fixed;
         background-size: cover;
@@ -241,6 +244,9 @@ body{
 
 /* 2) Galaxy S5 (360 x 640) */
 @media screen and (min-width : 360px) and (min-height: 640px) {
+    .langBtn {
+        font-size: 13px;
+    }
     /* loading animation */
     #title{
         font-size: 28px;
@@ -301,6 +307,9 @@ body{
 
 /* 3) iPhones 6/7/8 (375 x 667) */
 @media screen and (min-width : 375px) and (min-height: 667px) {
+    .langBtn {
+        font-size: 14px;
+    }
     /* loading animation */
     #title{
         font-size: 31px;
@@ -360,6 +369,9 @@ body{
 
 /* 4) iPhone X (375 x 812) */
 @media screen and (min-width : 375px) and (min-height : 812px) {
+    .langBtn {
+        font-size: 16px;
+    }
     /* loading animation */
     #title{
         font-size: 33px;
@@ -417,6 +429,9 @@ body{
 
 /* 5) iPhones 6/7/8 plus (414 x 746) */
 @media screen and (min-width : 414px) {
+    .langBtn {
+        font-size: 18px;
+    }
     /* loading animation */
     #title{
         font-size: 36px;
@@ -482,6 +497,9 @@ body{
 
 /* 6) iPad (768 x 1024) */
 @media only screen and (min-width : 768px) and (min-height: 1024px) {
+    .langBtn {
+        font-size: 25px;
+    }
     /* loading animation */    
     #title{
         font-size: 60px;
@@ -555,6 +573,9 @@ body{
 
 /* 7) iPad Pro (1024 x 1366) */
 @media only screen and (min-width : 1024px) and (min-height: 1366px) {
+    .langBtn {
+        font-size: 33px;
+    }
     /* loading animation */
     #title{
         font-size: 80px;

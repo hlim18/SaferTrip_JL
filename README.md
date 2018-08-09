@@ -19,8 +19,7 @@ My part of developing the SaferTrip web app
 - 3.4. [Changing DIV Background Color](https://github.com/hlim18/SaferTrip_JL#34-changing-div-background-color)
 - 3.5. [Customized SweetAlert2 Popup Boxes](https://github.com/hlim18/SaferTrip_JL#35-customized-sweetalert2-popup-boxes) 
 - 3.6. [Different Popup Messages between Options 1-4 and Option 5](https://github.com/hlim18/SaferTrip_JL#36-different-popup-messages-between-options-1-4-and-option-5)
-- 3.7. [How to Keep Background Color Changes on Page Reload](https://github.com/hlim18/SaferTrip_JL#37-how-to-keep-background-color-changes-on-page-reload)
-- 3.8. [Canceling a Choice](https://github.com/hlim18/SaferTrip_JL#38-canceling-a-choice) 
+- 3.7. [Not Changing Background Color when "Cancel" Button is Clicked](https://github.com/hlim18/SaferTrip_JL#37-not-changing-background-color-when-cancel-button-is-clicked)
 
 4. [Side Navigation Menu](https://github.com/hlim18/SaferTrip_JL#4-side-navigation-menu)
 
@@ -210,27 +209,52 @@ body{
 - - -
 
 ## 2.4. Building Multi-Language/Multilingual Website
+Inspired by [Adam Azad](https://stackoverflow.com/users/2151050/adam-azad)'s answer in this StackOverflow [post](https://stackoverflow.com/questions/48137394/), I started working on creating a multi-language web app that saves a user's selected language. I can successfully switch back and forth between English and Korean for all contents in my web app except for contents in  `SweetAlert2` messages.
+
+* After setting up, I added `class="lang"` and `key="(a key name that matches a content goes here)"` for each content.
+
+Because I was able to customized `confirmButtonText` by changing from `Got it!` to `'<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'`, I thought I could simply add `class="lang"` and a key name <b>to create multi-language popup messages in SweetAlert2.</b>
+
+* Changed from `'Thank you!'` to `'<h2 class="lang" key="thxMsgTitle"></h2>'` : nothing shows up.<br>
+* Changed form `'Your input has been recorded.'` to `'<div class="lang" key="thxMsgContent"></div>'` : instead of the text, the code shows up in the popup message.<br>
+* Changed from `<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>` to `'<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#000000"></div>'` : nothing shows up.
+
+<b>Why it didn't work:</b> (explanation by [Milney](https://stackoverflow.com/users/2102132/milney))
+When the following code is executed, SweetAlert2 elements is not loaded onto a web page yet.
+```JS
+$(".lang").each(function(index, element) {
+    $(this).text(arrLang[lang][$(this).attr("key")]);
+});
+```
+In order to solve the issue, I should either call this again straight after the SweetAlert2 call or add some kind of event listener that does this when elements are added dynamically.
+
+[Milney](https://stackoverflow.com/users/2102132/milney) also provided alternative solution and decided to use this method.
+
+*STEP 1* Pulling the correct value out of the array as I created `SweetAlert2` messages.
+(e.g., `confirmButtonText: arrLang[lang]['thxMsgConfirmBtnTxt']`)
+
+*STEP 2* Because that didn't automatically update contents when "English" or "Korean" buttons was clicked after a webpage was loaded, I forced a webpage to refresh when "English" or "Korean" buttons was clicked by including `value="Refresh Page" onClick="window.location.reload()"` in buttons.
+
 ```HTML
 <body>
     <!-- `Bootstrap` button didn't work. So, I couldn't use it here. -->
-    <button class="translate langBtn" id="en-us">English</button>
-    <button class="translate langBtn" id="ko">Korean</button>
+    <button class="translate langBtn" id="en-us" value="Refresh Page" onClick="window.location.reload()">English</button>
+    <button class="translate langBtn" id="ko" value="Refresh Page" onClick="window.location.reload()">한국어</button>
 
     <div id="mainPage">
         <p class="lang" key="mainPgTitle" id="title"></p>
         <p class="lang" key="subTitle" id="slogan"></p>    
+    </div>
 </body>
 ```
 
 ```JS
 var arrLang = {
     "en-us": {
-        "tabTitle": "SaferTrip",
         "mainPgTitle": "SaferTrip",
         "subTitle": "Find safer paths to travel",
     },
     "ko": {
-        "tabTitle": "야옹씨의 안전한 하루",
         "mainPgTitle": "야옹씨의 안전한 하루",
         "subTitle": "내가 만들어나가는 우리동네 안전 지도"
     }
@@ -274,7 +298,7 @@ $(document).ready(function() {
 * Build multiple language website using jQuery and JSON based methods @ [StackOverflow](https://stackoverflow.com/questions/48137394/build-multiple-language-website-using-jquery-and-json-based-methods)
 * Window localStorage Property @ [w3schools](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
 * ISO 639-1 standard language codes @ [Andiamo](https://www.andiamo.co.uk/resources/iso-language-codes)
-* .attr() @ [jQuery](http://api.jquery.com/attr/)
+* How can I create multi-language popup messages in SweetAlert2? @ [StackOverflow](https://stackoverflow.com/questions/51745372/)
 - - -
 
 # 3. Crime-ridden Areas Report Options
@@ -655,19 +679,14 @@ jsFiddle for this exercise can be found [here](jsfiddle.net/hlim188/15no3zyd/30)
 * Multiple Class/ID and Class Selectors @ [CSS-Tricks](https://css-tricks.com/multiple-class-id-selectors/)
 - - -
 
-### 3.7. How to Keep Background Color Changes on Page Reload
+### 3.7. Not changing background color when "cancel" button is clicked
+Added background color only after input was submitted.
 
-
-### 3.7.1. Acknowledgements
-* How to keep background color changes on page reload? @ [StackOverflow](https://stackoverflow.com/questions/38928990/)
-
-- - -
-
-## 3.8. Canceling a Choice
-
-### 3.8.1. Acknowledgements
-* Button background color toggle @ [StackOverflow](https://stackoverflow.com/questions/17050054/)
-
+```JS
+.then(function(){
+    $(".withInput").css("background", "#F3C78D");
+});
+```
 - - -
 
 # 4. Side Navigation Menu
@@ -851,39 +870,3 @@ __bold__
 
 - - -
 2018 © Jen Lim 
-
-
-https://github.com/sweetalert2/sweetalert2/issues/1199 
-
-I thought my issue was focused more on 'how do I do this?' rather than 'this is a broken functionality'. So, I submitted it to StackOverflow: https://stackoverflow.com/questions/51745372/.
-
-But, now I think that this issue might be a broken functionality. That's why I'm reporting this problem as an issue here.
-
-<b>What I would like to know:</b>
-> Is this a broken functionality or do I just don't know how to do this?
-
-> *(If it's a broken functionality)* Is it possible to solve this problem to create multi-language SweetAlert2 messages?
-
-*If you think this issue is more focused more on 'how do I do this?'*, please close this issue.
-
-<b>Explanation of my code:</b><br>
-1. *pressing <b>"test"</b> button* : you can make five circles show up or disappear.<br>
-2. *pressing <b>"English"</b> button* : contents are changed to English (except for contents in `SweetAlert2` popup messages).<br>
-3. *pressing <b>"Korean"</b> button* : contents are changed to Korean (except for contents in `SweetAlert2` popup messages).
-
-Inspired by [Adam Azad](https://stackoverflow.com/users/2151050/adam-azad)'s answer in this StackOverflow [post](https://stackoverflow.com/questions/48137394/), I started working on creating a multi-language web app that saves a user's selected language. I can successfully switch back and forth between English and Korean for all contents in my web app except for contents in  `SweetAlert2` messages.
-
-* After setting up, I added `class="lang"` and `key="(a key name that matches a content goes here)"` for each content.
-
-Because I was able to customized `confirmButtonText` by changing from `Got it!` to `'<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'`, I thought I could simply add `class="lang"` and a key name <b>to create multi-language popup messages in SweetAlert2.</b>
-
-* Changed from `'Thank you!'` to `'<h2 class="lang" key="thxMsgTitle"></h2>'` : nothing shows up.<br>
-* Changed form `'Your input has been recorded.'` to `'<div class="lang" key="thxMsgContent"></div>'` : instead of the text, the code shows up in the popup message.<br>
-* Changed from `<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>` to `'<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#000000"></div>'` : nothing shows up.
-
-Please look at this JSfiddle:</b> https://jsfiddle.net/hlim188/15no3zyd/69/.
-(I put non-working codes as comments.)
-
-<b>What I would like to achieve:</b>
-> 1. Change all contents to English when the "English" button is clicked including contents in `SweetAlert2` messages
-> 2. Change all contents to Korean when the "Korean" button is clicked including contents in `SweetAlert2` messages

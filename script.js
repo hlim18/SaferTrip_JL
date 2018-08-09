@@ -12,6 +12,13 @@ var arrLang = {
         "thxMsgTitle" : "Thank you!",
         "thxMsgContent" : "Your input has been recorded.",
         "thxMsgConfirmBtnTxt" : "Got it!",
+        "textboxMsgTitle" : "Why do you feel unsafe here?",
+        "textboxMsgInputPlaceholder" : "Type your message :)",
+        "textboxMsgInputValidator" : "You need to write something!",
+        "textboxMsgValidationMsg" : "You entered",
+        "cancelMsgTitle" : 'Are you sure?',
+        "cancelConfirmMsgTitle" : 'Recorded!',
+        "cancelConfirmMsgText" : 'Your input has been deleted.',
         "tutorial1" : "Areas that CCTV cover are marked with green circles.",
         "tutorial2-1" : "Crime-ridden areas are marked with orange circles.",
         "tutorial2-2" : "You can participate in reporting crime-ridden areas.",
@@ -35,8 +42,15 @@ var arrLang = {
         "fourthOption" : "유흥가에요",
         "fifthOption" : "기타",
         "thxMsgTitle" : "감사합니다!",
-        "thxMsgContent" : "의견이 접수되었습니다.",
+        "thxMsgContent" : "의견이 입력되었습니다.",
         "thxMsgConfirmBtnTxt" : "알겠어요!",
+        "textboxMsgTitle" : "왜 이곳이 위험하다고 생각하시나요?",
+        "textboxMsgInputPlaceholder" : "의견을 작성해주세요 :)",
+        "textboxMsgInputValidator" : "아무것도 적지 않으셨어요!",
+        "textboxMsgValidationMsg" : "입력하신 의견이에요",
+        "cancelMsgTitle" : '삭제하실건가요?',
+        "cancelConfirmMsgTitle" : '기록되었습니다!',
+        "cancelConfirmMsgText" : '의견이 삭제되었습니다.',
         "tutorial1" : "CCTV가 설치되어있는 곳은<br>초록색으로 표시되어있어요.",
         "tutorial2-1" : "위험하게 느껴지는 곳은<br>주황색으로 표시되어있어요.",
         "tutorial2-2" : "여러분이 직접 표시를<br>할 수도 있어요.",
@@ -69,20 +83,26 @@ $(document).ready(function() {
         $(this).text(arrLang[lang][$(this).attr("key")]);
     });
       
-    // get/set the selected language
-    $(".translate").click(function() {
-        var lang = $(this).attr("id");
-
-        // update localStorage key
-        if("localStorage" in window){
-            localStorage.setItem("uiLang", lang);
-            // console.log( localStorage.getItem('uiLang') );
-        }
-        $(".lang").each(function(index, element) {
-          $(this).text(arrLang[lang][$(this).attr("key")]);
-        });
-    });
+    // // get/set the selected language
+    // // what happens after clicking the "English" or "한국어" button
+    $(".translate")
+        .on({
+            click : function() {
+                var lang = $(this).attr("id");
+        
+                // update localStorage key
+                if("localStorage" in window){
+                    localStorage.setItem("uiLang", lang);
+                    // console.log( localStorage.getItem('uiLang') );
+                }
+                $(".lang").each(function(index, element) {
+                  $(this).text(arrLang[lang][$(this).attr("key")]);
+                });
     // // * language setting END
+            }
+            // // "click" END
+        });
+        // "on" END
 
     // loading animation
     $("#fallingStars").delay(300).animate({'opacity':'1'},500);
@@ -96,68 +116,279 @@ $(document).ready(function() {
     // https://codepen.io/hlim18/pen/EpbLmN
     $('#test').click(function(){
         // $(".withoutInput:hidden").fadeIn()
-        $(".withoutInput").fadeToggle()
-            .on("click", function(){
-                // hex color #_ _ _ _ _ _
-                $(this).css("background", "#F3C78D");
-            })
+
+        // $(".withoutInput").fadeToggle()
+        //     // // *** only for "thank-you" button
+        //     // .on("click", function(){
+        //     //     // hex color #_ _ _ _ _ _
+        //     //     $(this).css("background", "#F3C78D");
+        //     // })
+
+        //     .on({
+        //         // // include this for "thank-you" & "cancel" message codes
+        //         click: function(){
+        //         // // "Thank-you" message START
+        //             swal({
+        //                 // title: 'Thank you!',
+        //                 // title: '<h2 class="lang" key="thxMsgTitle"></h2>',
+        //                 title: arrLang[lang]['thxMsgTitle'],
+
+        //                 text: 'Your input has been recorded.',
+        //                 // text: '<div style="color:#4B0082">Your input has been recorded.</div>',
+        //                 // text: '<div class="lang" key="thxMsgContent"></div>',
+        //                 text: arrLang[lang]['thxMsgContent'],
+
+        //                 // type: 'warning',
+        //                 imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png', 
+        //                 imageAlt: 'Cat logo',
+        //                 // imageClass: 'swal2-thx-img',
+        //                 animation: false,
+        //                 customClass: 'swal2-thx-msg',
+        //                 // backdrop color : light gray
+        //                 backdrop: `
+        //                     rgba(211,211,211,0.4) 
+        //                     center left
+        //                     no-repeat
+        //                 `,
+        //                 confirmButtonColor: '#9FEDDA',
+        //                 confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>'
+        //                 // confirmButtonText: '<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#FFFFFF"></div>'
+
+        //                 // // can't assign id in the button...
+        //                 // confirmButtonText: arrLang[lang]['thxMsgConfirmBtnTxt']
+        //             });
+        //             // swal END
+        //         }
+        //         // // "click: function" END
+        //     });
+        //     // // "Thank-you" message END
+
+
+        // // // CANCEL button START
+        // // "cancel message START for "option1"
+        $("#option1").fadeToggle()
             .on({
                 // // include this for "thank-you" & "cancel" message codes
                 click: function(){
-                // // "Thank-you" message START
-                    if(lang == 'en-us'){
-                        swal({
-                            title: 'Thank you!',
-                            // title: '<h2 class="lang" key="thxMsgTitle"></h2>',
-                            text: 'Your input has been recorded.',
-                            // text: '<div style="color:#4B0082">Your input has been recorded.</div>',
-                            // text: '<div class="lang" key="thxMsgContent"></div>',
-                            // type: 'warning',
-                            imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png', 
-                            imageAlt: 'Cat logo',
-                            // imageClass: 'swal2-thx-img',
-                            animation: false,
-                            customClass: 'swal2-thx-msg',
-                            // backdrop color : light gray
-                            backdrop: `
-                                rgba(211,211,211,0.4) 
-                                center left
-                                no-repeat
-                            `,
-                            confirmButtonColor: '#9FEDDA',
-                            confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
-                            // confirmButtonText: '<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#FFFFFF"></div>'
-                        })
-                        // "en-us" swal END
-                    } else if(lang == 'ko') {
-                    // if "en-us" END & if "ko" START
-                        swal({
-                            title: '감사합니다!',
-                            // title: '<h2 class="lang" key="thxMsgTitle"></h2>',
-                            text: '의견이 접수되었습니다.',
-                            // text: '<div style="color:#4B0082">Your input has been recorded.</div>',
-                            // text: '<div class="lang" key="thxMsgContent"></div>',
-                            // type: 'warning',
-                            imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png', 
-                            imageAlt: 'Cat logo',
-                            // imageClass: 'swal2-thx-img',
-                            animation: false,
-                            customClass: 'swal2-thx-msg',
-                            // backdrop color : light gray
-                            backdrop: `
-                                rgba(211,211,211,0.4) 
-                                center left
-                                no-repeat
-                            `,
-                            confirmButtonColor: '#9FEDDA',
-                            confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">알겠어요!</div>'
-                            // confirmButtonText: '<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#000000"></div>'
-                        })
-                    }   
+
+                    // "Cancel" button START
+                    swal({
+                        // title: 'Are you sure?',
+                        title: arrLang[lang]['cancelMsgTitle'],
+                        imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png',
+                        imageAlt: 'Cat logo',
+                        animation: false,
+                        customClass: 'swal2-cancel-msg',
+                        // backdrop color : light gray
+                        backdrop: `
+                            rgba(211,211,211,0.4) 
+                            center left
+                            no-repeat
+                        `,
+                        // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
+                        showCancelButton: true,
+                        confirmButtonColor: '#F3C78D',
+                        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
+                        cancelButtonColor: '#9FEDDA',
+                        cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
+                    }).then((result) => {
+                        if (result.value){
+                            swal({
+                                // title: 'Recorded!',
+                                title: arrLang[lang]['cancelConfirmMsgTitle'],
+                                text: 'Your input has been deleted.',
+                                text: arrLang[lang]['cancelConfirmMsgText'],
+                                type: 'success',
+                                animation: true,
+                                customClass: 'swal2-cancel-confirm-msg',
+                                // backdrop color : light gray
+                                backdrop: `
+                                    rgba(211,211,211,0.4) 
+                                    center left
+                                    no-repeat
+                                `,
+                                confirmButtonColor: '#9FEDDA',
+                                confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>'
+                            }).then(function(){
+                                // hex color #_ _ _ _ _ _
+                                $("#option1").css("background", "#F3C78D");
+                            });
+                        }
+                    });
+                    // "cancel" button END
                 }
                 // // "click: function" END
             });
-            // // "Thank-you" message END
+            // // "cancel message END for "option1"
+
+            // // "cancel message START for "option2"
+            $("#option2").fadeToggle()
+            .on({
+                // // include this for "thank-you" & "cancel" message codes
+                click: function(){
+
+                    // "Cancel" button START
+                    swal({
+                        // title: 'Are you sure?',
+                        title: arrLang[lang]['cancelMsgTitle'],
+                        imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png',
+                        imageAlt: 'Cat logo',
+                        animation: false,
+                        customClass: 'swal2-cancel-msg',
+                        // backdrop color : light gray
+                        backdrop: `
+                            rgba(211,211,211,0.4) 
+                            center left
+                            no-repeat
+                        `,
+                        // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
+                        showCancelButton: true,
+                        confirmButtonColor: '#F3C78D',
+                        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
+                        cancelButtonColor: '#9FEDDA',
+                        cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
+                    }).then((result) => {
+                        if (result.value){
+                            swal({
+                                // title: 'Recorded!',
+                                title: arrLang[lang]['cancelConfirmMsgTitle'],
+                                text: 'Your input has been deleted.',
+                                text: arrLang[lang]['cancelConfirmMsgText'],
+                                type: 'success',
+                                animation: true,
+                                customClass: 'swal2-cancel-confirm-msg',
+                                // backdrop color : light gray
+                                backdrop: `
+                                    rgba(211,211,211,0.4) 
+                                    center left
+                                    no-repeat
+                                `,
+                                confirmButtonColor: '#9FEDDA',
+                                confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>'
+                            }).then(function(){
+                                // hex color #_ _ _ _ _ _
+                                $("#option2").css("background", "#F3C78D");
+                            });
+                        }
+                    });
+                    // "cancel" button END
+                }
+                // // "click: function" END
+            });
+            // // "cancel message END for "option2"
+
+            // // "cancel message START for "option3"
+            $("#option3").fadeToggle()
+            .on({
+                // // include this for "thank-you" & "cancel" message codes
+                click: function(){
+
+                    // "Cancel" button START
+                    swal({
+                        // title: 'Are you sure?',
+                        title: arrLang[lang]['cancelMsgTitle'],
+                        imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png',
+                        imageAlt: 'Cat logo',
+                        animation: false,
+                        customClass: 'swal2-cancel-msg',
+                        // backdrop color : light gray
+                        backdrop: `
+                            rgba(211,211,211,0.4) 
+                            center left
+                            no-repeat
+                        `,
+                        // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
+                        showCancelButton: true,
+                        confirmButtonColor: '#F3C78D',
+                        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
+                        cancelButtonColor: '#9FEDDA',
+                        cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
+                    }).then((result) => {
+                        if (result.value){
+                            swal({
+                                // title: 'Recorded!',
+                                title: arrLang[lang]['cancelConfirmMsgTitle'],
+                                text: 'Your input has been deleted.',
+                                text: arrLang[lang]['cancelConfirmMsgText'],
+                                type: 'success',
+                                animation: true,
+                                customClass: 'swal2-cancel-confirm-msg',
+                                // backdrop color : light gray
+                                backdrop: `
+                                    rgba(211,211,211,0.4) 
+                                    center left
+                                    no-repeat
+                                `,
+                                confirmButtonColor: '#9FEDDA',
+                                confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>'
+                            }).then(function(){
+                                // hex color #_ _ _ _ _ _
+                                $("#option3").css("background", "#F3C78D");
+                            });
+                        }
+                    });
+                    // "cancel" button END
+                }
+                // // "click: function" END
+            });
+            // // "cancel message END for "option3"
+
+            // // "cancel message START for "option4"
+            $("#option4").fadeToggle()
+            .on({
+                // // include this for "thank-you" & "cancel" message codes
+                click: function(){
+
+                    // "Cancel" button START
+                    swal({
+                        // title: 'Are you sure?',
+                        title: arrLang[lang]['cancelMsgTitle'],
+                        imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png',
+                        imageAlt: 'Cat logo',
+                        animation: false,
+                        customClass: 'swal2-cancel-msg',
+                        // backdrop color : light gray
+                        backdrop: `
+                            rgba(211,211,211,0.4) 
+                            center left
+                            no-repeat
+                        `,
+                        // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
+                        showCancelButton: true,
+                        confirmButtonColor: '#F3C78D',
+                        confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
+                        cancelButtonColor: '#9FEDDA',
+                        cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
+                    }).then((result) => {
+                        if (result.value){
+                            swal({
+                                // title: 'Recorded!',
+                                title: arrLang[lang]['cancelConfirmMsgTitle'],
+                                text: 'Your input has been deleted.',
+                                text: arrLang[lang]['cancelConfirmMsgText'],
+                                type: 'success',
+                                animation: true,
+                                customClass: 'swal2-cancel-confirm-msg',
+                                // backdrop color : light gray
+                                backdrop: `
+                                    rgba(211,211,211,0.4) 
+                                    center left
+                                    no-repeat
+                                `,
+                                confirmButtonColor: '#9FEDDA',
+                                confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>'
+                            }).then(function(){
+                                // hex color #_ _ _ _ _ _
+                                $("#option4").css("background", "#F3C78D");
+                            });
+                        }
+                    });
+                    // "cancel" button END
+                }
+                // // "click: function" END
+            });
+            // // "cancel message END for "option4"
+        // // //  CANCEL button END
 
         $(".withInput").fadeToggle()
             .on({
@@ -166,11 +397,12 @@ $(document).ready(function() {
 
                     // // user-input message START
                     const {value: text} = await swal({
-                        title: 'Why do you feel unsafe here?',
+                        // title: 'Why do you feel unsafe here?',
+                        title: arrLang[lang]['textboxMsgTitle'],
                         input: 'text',
-                        inputPlaceholder: 'Type your message :)',
+                        // inputPlaceholder: 'Type your message :)',
+                        inputPlaceholder: arrLang[lang]['textboxMsgInputPlaceholder'],
                         customClass: 'swal2-textbox-msg',
-
                         showCancelButton: true,
                         confirmButtonColor: '#F3C78D',
                         confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
@@ -183,7 +415,8 @@ $(document).ready(function() {
                         no-repeat
                         `,
                         inputValidator: (value) => {
-                            return !value && 'You need to write something!'
+                            // return !value && 'You need to write something!'
+                            return !value && arrLang[lang]['textboxMsgInputValidator']
                         }
                         // inputValidator END
 
@@ -191,13 +424,15 @@ $(document).ready(function() {
                     // swal END
                     if (text) {
                         swal({
-                            text: `Your entered : "${text}"`,
+                            // text: `Your entered : "${text}"`,
+                            text: arrLang[lang]['textboxMsgValidationMsg'] + ` : "${text}"`,
+
                             // backdrop color : light gray
                             backdrop: `
                             rgba(211,211,211,0.4) 
                             center left
                             no-repeat
-                            `,
+                            `,   
                             confirmButtonColor: '#F3C78D',
                             confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Okay</div>'
                         }).then(function(){
@@ -216,46 +451,6 @@ $(document).ready(function() {
     // "test" click function END
 })
 // "document ready" function END
-
-                // // "Cancel" button START
-                // swal({
-                //     title: 'Are you sure?',
-                //     imageUrl: 'https://s25.postimg.cc/42csriokf/cat_Logo.png',
-                //     imageAlt: 'Cat logo',
-                //     animation: false,
-                //     customClass: 'swal2-cancel-msg',
-                //     // backdrop color : light gray
-                //     backdrop: `
-                //         rgba(211,211,211,0.4) 
-                //         center left
-                //         no-repeat
-                //     `,
-                //     // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
-                //     showCancelButton: true,
-                //     confirmButtonColor: '#F3C78D',
-                //     confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
-                //     cancelButtonColor: '#9FEDDA',
-                //     cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
-                // }).then((result) => {
-                //     if (result.value){
-                //         swal({
-                //             title: 'Recorded!',
-                //             text: 'Your input has been deleted.',
-                //             type: 'success',
-                //             animation: true,
-                //             customClass: 'swal2-cancel-confirm-msg',
-                //             // backdrop color : light gray
-                //             backdrop: `
-                //                 rgba(211,211,211,0.4) 
-                //                 center left
-                //                 no-repeat
-                //             `,
-                //             confirmButtonColor: '#9FEDDA',
-                //             confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'
-                //         });
-                //     }
-                // });
-                // // "cancel" button END
 
 
     // $(".swal2-confirm.swal2-styled").on({
