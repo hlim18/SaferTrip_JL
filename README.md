@@ -10,24 +10,27 @@ My part of developing the SaferTrip web app
 - 2.1. [How to use jQuery with Bootstrap 4.1.2.](https://github.com/hlim18/SaferTrip_JL#21-how-to-use-jquery-with-bootstrap-412)
 - 2.2. [Fonts Comparison](https://github.com/hlim18/SaferTrip_JL#22-fonts-comparison)
 - 2.3. [Detecting Language of a Visitor](https://github.com/hlim18/SaferTrip_JL#23-detecting-language-of-a-visitor)
-- 2.4. [Building Multi-Language/Multilingual Website](https://github.com/hlim18/SaferTrip_JL#24-building-multi-languagemultilingual-website)
+- 2.4. [Building a Multilingual Website](https://github.com/hlim18/SaferTrip_JL#24-building-a-multilingual-website)
+- 2.5. [Moving to a Different Webpage on Click](https://github.com/hlim18/SaferTrip_JL#25-moving-to-a-different-webpage-on-click)
 
 3. [Crime-ridden Areas Report Options](https://github.com/hlim18/SaferTrip_JL#3-crime-ridden-areas-report-options)
 - 3.1. [Fadein() on Click](https://github.com/hlim18/SaferTrip_JL#31-fadein-on-click)
 - 3.2. [Center Texts Inside Circles Vertically & Horizontally](https://github.com/hlim18/SaferTrip_JL#32-center-texts-inside-circles-vertically--horizontally)
-- 3.3. [Translate() Function](https://github.com/hlim18/SaferTrip_JL#33-translate-function)
+- 3.3. [Positioning divs](https://github.com/hlim18/SaferTrip_JL#33-positioning-divs)
 - 3.4. [Changing DIV Background Color](https://github.com/hlim18/SaferTrip_JL#34-changing-div-background-color)
 - 3.5. [Customized SweetAlert2 Popup Boxes](https://github.com/hlim18/SaferTrip_JL#35-customized-sweetalert2-popup-boxes) 
 - 3.6. [Different Popup Messages between Options 1-4 and Option 5](https://github.com/hlim18/SaferTrip_JL#36-different-popup-messages-between-options-1-4-and-option-5)
 - 3.7. [Not Changing Background Color when "Cancel" Button is Clicked](https://github.com/hlim18/SaferTrip_JL#37-not-changing-background-color-when-cancel-button-is-clicked)
 
-4. [Side Navigation Menu](https://github.com/hlim18/SaferTrip_JL#4-side-navigation-menu)
+4. [Tutorials](https://github.com/hlim18/SaferTrip_JL#4-tutorials)
 
-5. [Useful Information](https://github.com/hlim18/SaferTrip_JL#5-useful-information)
-- 5.1. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#51-github-markdown--useful-techniques)
-- 5.2. [Resources](https://github.com/hlim18/SaferTrip_JL#52-resources)
+5. [Side Navigation Menu](https://github.com/hlim18/SaferTrip_JL#5-side-navigation-menu)
 
-6. [Built With](https://github.com/hlim18/SaferTrip_JL#6-bulit-with)
+6. [Useful Information](https://github.com/hlim18/SaferTrip_JL#6-useful-information)
+- 5.1. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#61-github-markdown--useful-techniques)
+- 5.2. [Resources](https://github.com/hlim18/SaferTrip_JL#62-resources)
+
+7. [Built With](https://github.com/hlim18/SaferTrip_JL#7-bulit-with)
 - - -
  
 # 1. Main Page
@@ -79,7 +82,7 @@ So, I wanted to repeat only a partial part of my image that a cat didn't appear.
 
 [![current_small.png](https://s25.postimg.cc/pqyvgace7/current_small.png)](https://postimg.cc/image/bkj4l21iz/)
 
-Because I wanted to see the cat only in the middle, I asked a question on `StackOverflow` and learned about `multiple background`. This solved the issue.
+Because I wanted to see the cat only in the middle, I asked a question on `StackOverflow` and learned about `multiple background` from [Temani Afif](https://stackoverflow.com/users/8620333/temani-afif). This solved the issue.
 
 ```CSS
 @media screen and (min-width : 630px) {
@@ -106,6 +109,9 @@ Because I wanted to see the cat only in the middle, I asked a question on `Stack
     }
 }
 ```
+
+#### 1.1.2.1. Acknowledgements
+* CSS repeat-x BUT only a part I want in an image @ [StackOverflow](https://stackoverflow.com/questions/51692948/)
 
 - - -
 
@@ -201,6 +207,8 @@ body{
     1. Parse the Accept-Language HTTP header, which contains information about users' language preferences
     2. (If the server can't find matching language(s)) Determine users' location from their IP address
 
+Instead of deteting language of a visitor, we decided to make the web app's default language as Korean and provide buttons to switch between Korean and English. The reason is that we expect that most of users are Koreans living in Korea. Also, because we used `local storage`, users who want to use the app in English do not need to press the button every time they access the app.
+
 ### 2.3.1. Acknowledgements
 * Website that recognizes user's location/IP & changes lang. based on that @ [StackOverflow](https://stackoverflow.com/questions/2039016/website-that-recognizes-users-location-ip-changes-lang-based-on-that)
 * `Accept-Language` @ [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
@@ -208,36 +216,35 @@ body{
 * Detecting language of a visitor @ [Localize](https://help.localizejs.com/docs/detecting-language-of-a-visitor)
 - - -
 
-## 2.4. Building Multi-Language/Multilingual Website
-Inspired by [Adam Azad](https://stackoverflow.com/users/2151050/adam-azad)'s answer in this StackOverflow [post](https://stackoverflow.com/questions/48137394/), I started working on creating a multi-language web app that saves a user's selected language. I can successfully switch back and forth between English and Korean for all contents in my web app except for contents in  `SweetAlert2` messages.
+## 2.4. Building a Multilingual Website
+Inspired by [Adam Azad](https://stackoverflow.com/users/2151050/adam-azad)'s answer in this `StackOverflow` [post](https://stackoverflow.com/questions/48137394/), I started working on creating a multilingual web app that saves a user's selected language. I can successfully switch back and forth between English and Korean for all contents in my web app except for contents in  `SweetAlert2` messages.
 
 * After setting up, I added `class="lang"` and `key="(a key name that matches a content goes here)"` for each content.
 
-Because I was able to customized `confirmButtonText` by changing from `Got it!` to `'<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'`, I thought I could simply add `class="lang"` and a key name <b>to create multi-language popup messages in SweetAlert2.</b>
+Because I was able to customized `confirmButtonText` by changing from `Got it!` to `'<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>'`, I thought I could simply add `class="lang"` and a key name <b>to create multilingual popup messages in `SweetAlert2`.</b>
 
 * Changed from `'Thank you!'` to `'<h2 class="lang" key="thxMsgTitle"></h2>'` : nothing shows up.<br>
 * Changed form `'Your input has been recorded.'` to `'<div class="lang" key="thxMsgContent"></div>'` : instead of the text, the code shows up in the popup message.<br>
 * Changed from `<div id="swal2-confirmBtnTxt" style="color:#000000">Got it!</div>` to `'<div class="lang" key="thxMsgConfirmBtnTxt" id="swal2-confirmBtnTxt" style="color:#000000"></div>'` : nothing shows up.
 
 <b>Why it didn't work:</b> (explanation by [Milney](https://stackoverflow.com/users/2102132/milney))
-When the following code is executed, SweetAlert2 elements is not loaded onto a web page yet.
+When the following code is executed, `SweetAlert2` elements is not loaded onto a web page yet.
 ```JS
 $(".lang").each(function(index, element) {
     $(this).text(arrLang[lang][$(this).attr("key")]);
 });
 ```
-In order to solve the issue, I should either call this again straight after the SweetAlert2 call or add some kind of event listener that does this when elements are added dynamically.
+In order to solve the issue, I should either call this again straight after the `SweetAlert2` call or add some kind of event listener that does this when elements are added dynamically.
 
 [Milney](https://stackoverflow.com/users/2102132/milney) also provided alternative solution and decided to use this method.
 
-*STEP 1* Pulling the correct value out of the array as I created `SweetAlert2` messages.
+<b>*STEP 1*</b> : Pulling the correct value out of the array as I created `SweetAlert2` messages.
 (e.g., `confirmButtonText: arrLang[lang]['thxMsgConfirmBtnTxt']`)
 
-*STEP 2* Because that didn't automatically update contents when "English" or "Korean" buttons was clicked after a webpage was loaded, I forced a webpage to refresh when "English" or "Korean" buttons was clicked by including `value="Refresh Page" onClick="window.location.reload()"` in buttons.
+<b>*STEP 2*</b> : Because that didn't automatically update contents in `SweetAlert2` messages when "English" or "Korean" button was clicked, I forced a webpage to refresh when "English" or "Korean" button was clicked by adding `value="Refresh Page" onClick="window.location.reload()"`.
 
 ```HTML
 <body>
-    <!-- `Bootstrap` button didn't work. So, I couldn't use it here. -->
     <button class="translate langBtn" id="en-us" value="Refresh Page" onClick="window.location.reload()">English</button>
     <button class="translate langBtn" id="ko" value="Refresh Page" onClick="window.location.reload()">한국어</button>
 
@@ -262,7 +269,7 @@ var arrLang = {
 
 // The default language is Korean
 var lang = "ko";
-// Check for localStorage support (On reload, show the website based on previous setting)
+// Check for localStorage support (save language choice)
 if("localStorage" in window){
     var usrLang = localStorage.getItem("uiLang");
         if(usrLang) {
@@ -293,6 +300,7 @@ $(document).ready(function() {
     // // * language setting END
 }
 ```
+> `localstorage` allows me to save users' selected language.
 
 ### 2.4.1. Acknowledgements
 * Build multiple language website using jQuery and JSON based methods @ [StackOverflow](https://stackoverflow.com/questions/48137394/build-multiple-language-website-using-jquery-and-json-based-methods)
@@ -300,6 +308,16 @@ $(document).ready(function() {
 * ISO 639-1 standard language codes @ [Andiamo](https://www.andiamo.co.uk/resources/iso-language-codes)
 * How can I create multi-language popup messages in SweetAlert2? @ [StackOverflow](https://stackoverflow.com/questions/51745372/)
 - - -
+
+### 2.5. Moving to a Different Webpage on Click
+```HTML
+    $("body").click(function(){
+        window.location = window.location + "main";
+    });
+```
+> It directs to `localhost:3000/main`.
+
+- - - 
 
 # 3. Crime-ridden Areas Report Options
 ## 3.1. Fadein() on Click
@@ -329,9 +347,9 @@ $('#test').click(function(){
 - - -
 
 ## 3.2. Center Texts Inside Circles Vertically & Horizontally
-In other StackOverflow posts, people gave solutions by using `display: flex` & `vertical-align: middle` & `justify-content: center`. However, I can't use the option and solutions using `display: table-cell`, because I would like to keep `display: none` for `options` class not to show the circles when people visit the webpage. Also, I didn't set `line-height` same as `height` of a div, because this method worked for only one line of text and some of my texts became two lines inside a div. In addition, adding `transform: translateX(-50%) translateY(-50%);` didn't work for me.
+In other StackOverflow posts, people gave solutions by using `display: flex` & `vertical-align: middle` & `justify-content: center`. However, I can't use the option and solutions using `display: table-cell`, because I would like to keep `display: none` for `options` class not to show the circles when people visit the webpage. Also, I didn't set `line-height` same as `height` of a div, because this method worked for only one line of text and some of my texts became two lines inside a div. 
 
-### 3.2.1. By using <span>
+### 3.2.1. By using "span"
 ```HTML
 <div class="container">
     <button type="button" class="btn btn-outline-success" id="test">test</button>
@@ -394,11 +412,12 @@ Aftering adding codes to make a multi-language web app, I couldn't see texts in 
 ### 3.2.3. Acknowledgments
 * CSS center text (horizontally and vertically) inside a div block @ [StackOverflow](https://stackoverflow.com/questions/5703552/)
 * How do I vertically align text in a div? @ [StackOverflow](https://stackoverflow.com/questions/2939914/)
+* Quick CSS trick: How to center an object exactly in the center @ [CSS Tricks](https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/)
 
 - - -
 
-## 3.3. Translate() Function
-To locate five options in a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find right pixels for each responsive breakpoints.
+## 3.3. Positioning Divs
+To position five divs to look like a circle around a button, I used the translate() function.  The function accepts two arguments, indicating how much to move the element along the x and y axes respectively. For X and Y axes, I didn't use pixels. The reason is that I would need to find different pixels for each responsive breakpoints.
 
 [![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
 
@@ -473,7 +492,7 @@ SweetAlert2 allows us to create beautiful, responsive, customizable, accessible 
 });
 ```
 
-### 3.5.2. "Cancel" Confirmation Message
+### 3.5.2. "Cancel" Message
 ```JS
 .on({click: function(){
     swal({
@@ -516,8 +535,8 @@ SweetAlert2 allows us to create beautiful, responsive, customizable, accessible 
 });
 ```
 
-### 3.5.3. User-input Message
-`Async/await` is a new way to write asynchronous code. Previous options for asynchronous code are `callbacks` and `promises`. The keyword `await` makes JavaScript wait until that promise settles and  then go on with its result. 
+### 3.5.3. "Text Input" Message
+`Async/await` is a way to write asynchronous code. The keyword `await` makes JavaScript wait until that promise settles and  then go on with its result. 
 
 ```JS
 .on({click: async function(){
@@ -689,14 +708,18 @@ Added background color only after input was submitted.
 ```
 - - -
 
-# 4. Side Navigation Menu
+# 4. Tutorials
+
+- - - 
+
+# 5. Side Navigation Menu
 
 
 - - -
 
-# 5. Useful Information
-## 5.1. GitHub Markdown : Useful Techniques
-### 5.1.1. Headers
+# 6. Useful Information
+## 6.1. GitHub Markdown : Useful Techniques
+### 6.1.1. Headers
 
 ```
 # This is a H1
@@ -714,7 +737,7 @@ Added background color only after input was submitted.
 ##### This is a H5
 ###### This is a H6
 
-### 5.1.2. Block Quote
+### 6.1.2. Block Quote
 
 ```
 > This is a first blockquote.
@@ -724,8 +747,8 @@ Added background color only after input was submitted.
 > This is a first blockquote.
 >   > This is a second blockquote.
 
-### 5.1.3. List
-#### 5.1.3.1. Ordered List
+### 6.1.3. List
+#### 6.1.3.1. Ordered List
 
 ```
 1. First
@@ -737,7 +760,7 @@ Added background color only after input was submitted.
 2. Second
 3. Third
 
-#### 5.1.3.2. Unordered List
+#### 6.1.3.2. Unordered List
 ```
 * First
     - Second
@@ -748,7 +771,7 @@ Added background color only after input was submitted.
     - Second
         + Third
 
-### 5.1.4. Code Block 
+### 6.1.4. Code Block 
 
 * For HTML codes, put ` ```HTML ` before & ` ``` ` after
 
@@ -780,7 +803,7 @@ You can also press the tab key once or the space bar four times to create a code
 
 *This is NOT a code block.*
 
-### 5.1.5. Image Files
+### 6.1.5. Image Files
 
 I couldn't upload an image in my computer as a part of my README file even after the following attempts:
 ```
@@ -804,7 +827,7 @@ I finally made it work by uploading images to @ [PostImage](https://postimg.cc/)
 ```
 [![circles.png](https://s25.postimg.cc/up7mzk9gv/circles.png)](https://postimg.cc/image/6lgvb9qzv/)
 
-### 5.1.6. A Horizontal Line
+### 6.1.6. A Horizontal Line
 ```
 ***
 *****
@@ -823,13 +846,13 @@ I finally made it work by uploading images to @ [PostImage](https://postimg.cc/)
 
 ---------------------------------------
 
-### 5.1.7. Inline Links
+### 6.1.7. Inline Links
 ```
 [Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
 ```
 [Jen Lim's LinkedIn](https://www.linkedin.com/in/hyejunglim/)
 
-### 5.1.8. Emphasize
+### 6.1.8. Emphasize
 ```
 *italic*
 _italic_
@@ -843,7 +866,7 @@ _italic_
 __bold__
 ~~striked~~
 
-### 5.1.9. Acknowledgements
+### 6.1.9. Acknowledgements
 * About READMEs @[GitHub Help](https://help.github.com/articles/about-readmes/)
 * README-Template.md by PurpleBooth @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * How to use Markdown `in Korean` by ihoneymon @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
@@ -852,7 +875,7 @@ __bold__
 * GitHub relative link in markdown file @ [StackOverflow](https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file?rq=1)
 - - -
 
-## 5.2. Resources
+## 6.2. Resources
 * <b>CSS</b>
     - CSS @ [CSS Reference](https://cssreference.io/)
     - 2017.08.04 75 Web animation tools you have to try by Nataly Birch @ [Web Designer Depot](https://www.webdesignerdepot.com/2017/08/75-web-animation-tools-you-have-to-try/)
@@ -861,7 +884,7 @@ __bold__
     - The Skinny on CSS attribute selectors @ [CSS-tricks](https://css-tricks.com/attribute-selectors/)
 - - -
 
-# 6. Bulit With
+# 7. Bulit With
 * <b>HTML, CSS</b>
     - [BootStrap 4.1.2.](https://getbootstrap.com/docs/4.1/getting-started/introduction/) : the world’s most popular framework for building responsive, mobile-first sites
 * <b>JavaScript</b>

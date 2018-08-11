@@ -3,7 +3,7 @@ var arrLang = {
         "tabTitle": "SaferTrip",
         "mainPgTitle": "SaferTrip",
         "subTitle": "Find safer paths to travel",
-        "story" : "Kitty always patrols<br>tourist attractions to help people<br>to travel safely.<br><br>So, Kitty asks for your help.<br>Please let Kitty know<br>crime-ridden areas!<br><br>Based on what people tell Kitty,<br>Kitty will guide you<br>to safer paths to travel.",
+        "story" : "Kitty always patrols tourist attractions to help peopl to travel safely So, Kitty asks for your help Please let Kitty kno crime-ridden areas Based on what people tell Kitty, Kitty will guide yo to safer paths to travel.",
         "firstOption" : "Lonesome road",
         "secondOption" : "Too Dark",
         "thirdOption" : "There was an incident",
@@ -11,7 +11,7 @@ var arrLang = {
         "fifthOption" : "Etc",
         "thxMsgTitle" : "Thank you!",
         "thxMsgContent" : "Your input has been recorded.",
-        "thxMsgConfirmBtnTxt" : "Got it!",
+        // "thxMsgConfirmBtnTxt" : "Got it!",
         "textboxMsgTitle" : "Why do you feel unsafe here?",
         "textboxMsgInputPlaceholder" : "Type your message :)",
         "textboxMsgInputValidator" : "You need to write something!",
@@ -35,7 +35,7 @@ var arrLang = {
         "tabTitle": "야옹씨의 안전한 하루",
         "mainPgTitle": "야옹씨의 안전한 하루",
         "subTitle": "내가 만들어나가는 우리동네 안전 지도",
-        "story" : "야옹씨는 사람들이 안전하게<br>여행할 수 있도록<br>항상 여행지를 순찰하는<br>좋은 길고양이에요.<br><br>그래서 야옹씨는<br>여러분들에게 도움을 청해요.<br>위험해보이는 길을<br>알고있다면 알려주세요!<br><br>여러분이 알려주신<br>정보를 기반으로<br>위험 지역을 피한<br>안전한 길로 안내해 드릴 거에요.",
+        "story" : "야옹씨는 사람들이 안전하 여행할 수 있도록 항상 여행지를 순찰하는 좋은 길고양이에요. 그래서 야옹씨 여러분들에게 도움을 청해요. 위험해보이는 길 알고있다면 알려주세요! 여러분이 알려주신 정보를 기반으로 위험 지역을 피해 안전한 길로 안내해 드릴 거에요.",
         "firstOption" : "인적이 드물어요",
         "secondOption" : "어두워요",
         "thirdOption" : "사고가 난 적 있어요",
@@ -43,7 +43,7 @@ var arrLang = {
         "fifthOption" : "기타",
         "thxMsgTitle" : "감사합니다!",
         "thxMsgContent" : "의견이 입력되었습니다.",
-        "thxMsgConfirmBtnTxt" : "알겠어요!",
+        // "thxMsgConfirmBtnTxt" : "알겠어요!",
         "textboxMsgTitle" : "왜 이곳이 위험하다고 생각하시나요?",
         "textboxMsgInputPlaceholder" : "의견을 작성해주세요 :)",
         "textboxMsgInputValidator" : "아무것도 적지 않으셨어요!",
@@ -51,14 +51,14 @@ var arrLang = {
         "cancelMsgTitle" : '삭제하실건가요?',
         "cancelConfirmMsgTitle" : '기록되었습니다!',
         "cancelConfirmMsgText" : '의견이 삭제되었습니다.',
-        "tutorial1" : "CCTV가 설치되어있는 곳은<br>초록색으로 표시되어있어요.",
-        "tutorial2-1" : "위험하게 느껴지는 곳은<br>주황색으로 표시되어있어요.",
-        "tutorial2-2" : "여러분이 직접 표시를<br>할 수도 있어요.",
-        "tutorial3" : "길을 가다가<br>위험해보이는 곳이 있다면<br>눌러주세요.",
+        "tutorial1" : "CCTV가 설치되어있는 곳 초록색으로 표시되어있어요.",
+        "tutorial2-1" : "위험하게 느껴지는 곳 주황색으로 표시되어있어요.",
+        "tutorial2-2" : "여러분이 직접 표시 할 수 있어요.",
+        "tutorial3" : "길을 가다 위험해보이는 곳이 있다 눌러주세요.",
         "tutorial4-1" : "주황색 위치 아이콘이 생겼어요.",
         "tutorial4-2" : "아이콘을 눌러보세요!",
         "tutorial5-1" : "안전길찾기",
-        "tutorial5-2" : "CCTV가 설치되어 있거나,<br>위험하게 느껴지는 곳을 최대한 피한 안전한 길로<br>안내 받을 수도 있어요.",
+        "tutorial5-2" : "CCTV가 설치되어 있거나 위험하게 느껴지는 곳을 최대한 피한 안전한 길로 안내 받을 수 있어요.",
         "menu1" : "소개",
         "menu2" : "사용방법",
         "menu3" : "사용후기"
@@ -119,10 +119,10 @@ $(document).ready(function() {
 
         // $(".withoutInput").fadeToggle()
         //     // // *** only for "thank-you" button
-        //     // .on("click", function(){
-        //     //     // hex color #_ _ _ _ _ _
-        //     //     $(this).css("background", "#F3C78D");
-        //     // })
+        //     .on("click", function(){
+        //         // hex color #_ _ _ _ _ _
+        //         $(this).css("background", "#F3C78D");
+        //     })
 
         //     .on({
         //         // // include this for "thank-you" & "cancel" message codes
@@ -133,7 +133,7 @@ $(document).ready(function() {
         //                 // title: '<h2 class="lang" key="thxMsgTitle"></h2>',
         //                 title: arrLang[lang]['thxMsgTitle'],
 
-        //                 text: 'Your input has been recorded.',
+        //                 // text: 'Your input has been recorded.',
         //                 // text: '<div style="color:#4B0082">Your input has been recorded.</div>',
         //                 // text: '<div class="lang" key="thxMsgContent"></div>',
         //                 text: arrLang[lang]['thxMsgContent'],
@@ -187,16 +187,16 @@ $(document).ready(function() {
                         `,
                         // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
                         showCancelButton: true,
-                        confirmButtonColor: '#F3C78D',
+                        confirmButtonColor: '#9FEDDA',
                         confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
-                        cancelButtonColor: '#9FEDDA',
+                        cancelButtonColor: '#F3C78D',
                         cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
                     }).then((result) => {
                         if (result.value){
                             swal({
                                 // title: 'Recorded!',
                                 title: arrLang[lang]['cancelConfirmMsgTitle'],
-                                text: 'Your input has been deleted.',
+                                // text: 'Your input has been deleted.',
                                 text: arrLang[lang]['cancelConfirmMsgText'],
                                 type: 'success',
                                 animation: true,
@@ -243,16 +243,16 @@ $(document).ready(function() {
                         `,
                         // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
                         showCancelButton: true,
-                        confirmButtonColor: '#F3C78D',
+                        confirmButtonColor: '#9FEDDA',
                         confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
-                        cancelButtonColor: '#9FEDDA',
+                        cancelButtonColor: '#F3C78D',
                         cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
                     }).then((result) => {
                         if (result.value){
                             swal({
                                 // title: 'Recorded!',
                                 title: arrLang[lang]['cancelConfirmMsgTitle'],
-                                text: 'Your input has been deleted.',
+                                // text: 'Your input has been deleted.',
                                 text: arrLang[lang]['cancelConfirmMsgText'],
                                 type: 'success',
                                 animation: true,
@@ -299,16 +299,16 @@ $(document).ready(function() {
                         `,
                         // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
                         showCancelButton: true,
-                        confirmButtonColor: '#F3C78D',
+                        confirmButtonColor: '#9FEDDA',
                         confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
-                        cancelButtonColor: '#9FEDDA',
+                        cancelButtonColor: '#F3C78D',
                         cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
                     }).then((result) => {
                         if (result.value){
                             swal({
                                 // title: 'Recorded!',
                                 title: arrLang[lang]['cancelConfirmMsgTitle'],
-                                text: 'Your input has been deleted.',
+                                // text: 'Your input has been deleted.',
                                 text: arrLang[lang]['cancelConfirmMsgText'],
                                 type: 'success',
                                 animation: true,
@@ -355,16 +355,16 @@ $(document).ready(function() {
                         `,
                         // Crime-ridden areas : #F3C78D & Safe areas : #9FEDDA
                         showCancelButton: true,
-                        confirmButtonColor: '#F3C78D',
+                        confirmButtonColor: '#9FEDDA',
                         confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
-                        cancelButtonColor: '#9FEDDA',
+                        cancelButtonColor: '#F3C78D',
                         cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
                     }).then((result) => {
                         if (result.value){
                             swal({
                                 // title: 'Recorded!',
                                 title: arrLang[lang]['cancelConfirmMsgTitle'],
-                                text: 'Your input has been deleted.',
+                                // text: 'Your input has been deleted.',
                                 text: arrLang[lang]['cancelConfirmMsgText'],
                                 type: 'success',
                                 animation: true,
@@ -404,9 +404,9 @@ $(document).ready(function() {
                         inputPlaceholder: arrLang[lang]['textboxMsgInputPlaceholder'],
                         customClass: 'swal2-textbox-msg',
                         showCancelButton: true,
-                        confirmButtonColor: '#F3C78D',
+                        confirmButtonColor: '#9FEDDA',
                         confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Yes!</div>',
-                        cancelButtonColor: '#9FEDDA',
+                        cancelButtonColor: '#F3C78D',
                         cancelButtonText: '<div id="swal2-cancelBtnTxt" style="color:#000000">Cancel</div>',
                         // backdrop color : light gray
                         backdrop: `
@@ -421,7 +421,7 @@ $(document).ready(function() {
                         // inputValidator END
 
                     });
-                    // swal END
+                    // 1st swal END
                     if (text) {
                         swal({
                             // text: `Your entered : "${text}"`,
@@ -433,13 +433,13 @@ $(document).ready(function() {
                             center left
                             no-repeat
                             `,   
-                            confirmButtonColor: '#F3C78D',
+                            confirmButtonColor: '#9FEDDA',
                             confirmButtonText: '<div id="swal2-confirmBtnTxt" style="color:#000000">Okay</div>'
                         }).then(function(){
                             // hex color #_ _ _ _ _ _
                             $(".withInput").css("background", "#F3C78D");
                         });
-                        // // swal END
+                        // // 2nd swal END
                     };
                     // // if(text) END
 

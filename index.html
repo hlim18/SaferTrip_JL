@@ -30,8 +30,8 @@
     <!-- CSS -->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 
-    <!-- sweetalert for Bootstrap -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script> -->
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script> -->
 
     <title class="lang" key="tabTitle"></title>
 </head>
@@ -44,11 +44,10 @@
     <!-- force to refresh the page : in order to update SweetAlert messages -->
     <button class="translate langBtn" id="en-us" value="Refresh Page" onClick="window.location.reload()">English</button>
     <button class="translate langBtn" id="ko" value="Refresh Page" onClick="window.location.reload()">한국어</button>
-    <!-- `Bootstrap` button didn't work. So, I couldn't use it here. -->
 
     <div id="mainPage">
         <!-- 1st Fade in : Falling stars -->
-        <img id="fallingStars" src="Images/main_2_stars.svg" alt="Falling stars">
+        <img id="fallingStars" src="image/main_2_stars.svg" alt="Falling stars">
 
         <!-- 2nd Fade in : Title -->
         <p class="lang" key="mainPgTitle" id="title"></p>
