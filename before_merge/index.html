@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap 4.1.x -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- [Google Fonts] To embed your selected fonts into a webpage, copy this code into the <head> of your HTML document. -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+
+    <!-- Bootstrap 4.0 : jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <!-- sweetalert2 -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script> -->
+
+    <!-- sweetalert2 -->
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script> -->
+
+    <title class="lang" key="tabTitle"></title>
+</head>
+<body>
+    <!-- <button type="button" class="btn btn-outline-secondary" class="translate" id="en-us">English</button>
+    <button type="button" class="btn btn-outline-secondary" class="translate" id="ko">한국어</button> -->
+
+    <!-- https://github.com/sweetalert2/sweetalert2/issues/1199 : asked if it was a broken functionality -->
+
+    <!-- force to refresh the page : in order to update SweetAlert messages -->
+    <button class="translate langBtn" id="en-us" value="Refresh Page" onClick="window.location.reload()">English</button>
+    <button class="translate langBtn" id="ko" value="Refresh Page" onClick="window.location.reload()">한국어</button>
+
+    <div id="mainPage">
+        <!-- 1st Fade in : Falling stars -->
+        <img id="fallingStars" src="image/main_2_stars.svg" alt="Falling stars">
+
+        <!-- 2nd Fade in : Title -->
+        <p class="lang" key="mainPgTitle" id="title"></p>
+        <!-- <p id="title">야옹씨의<br>안전한 하루</p> -->
+        <!-- <p id="title">SaferTrip</p> -->
+        
+        <!-- 3rd Fade in : slogan -->
+        <p class="lang" key="subTitle" id="slogan"></p>
+        <!-- <p id="slogan">내가 만들어나가는 우리동네 안전 지도</p> -->
+        <!-- <p id="slogan">Find safer paths to travel</p> -->
+
+        <!-- <p class="lang" key="story"></p> -->
+        <!-- <p id="paragraph">Kitty always patrols<br>tourist attractions to help people<br>to travel safely.<br><br>So, Kitty asks for your help.<br>Please let Kitty know<br>crime-ridden areas!<br><br>Based on what people tell Kitty,<br>Kitty will guide you<br>to safer paths to travel.</p> -->
+        <!-- <p id="paragraph">야옹씨는 사람들이 안전하게<br>여행할 수 있도록<br>항상 여행지를 순찰하는<br>좋은 길고양이에요.<br><br>그래서 야옹씨는<br>여러분들에게 도움을 청해요.<br>위험해보이는 길을<br>알고있다면 알려주세요!<br><br>여러분이 알려주신<br>정보를 기반으로<br>위험 지역을 피한<br>안전한 길로 안내해 드릴 거에요.</p> -->
+    </div>
+
+    <!-- <div class="container">
+        <button type="button" class="btn btn-outline-success" id="test">test</button>
+        <div class="options withoutInput" id="option1"><span>인적이<br>드물어요</span></div>
+        <div class="options withoutInput" id="option2"><span>어두워요</span></div>
+        <div class="options withoutInput" id="option3"><span>사고가<br>난 적<br>있어요</span></div>
+        <div class="options withoutInput" id="option4"><span>유흥가에요</span></div>
+        <div class="options withInput" id="option5"><span>기타</span></div>
+    </div> -->
+    <!-- <div class="container">
+        <button type="button" class="btn btn-outline-success" id="test">test</button>
+        <div class="options withoutInput" key="firstOption" id="option1">span>Lonesome<br>road</span></div>
+        <div class="options withoutInput" id="option2"><span>Too<br>Dark</span></div>
+        <div class="options withoutInput" id="option3"><span>There<br>was an<br>incident</span></div>
+        <div class="options withoutInput" id="option4"><span>Red-light<br>district</span></div>
+        <div class="options withInput" id="option5"><span>Etc</span></div>
+    </div> -->
+    <!-- <div class="container">
+        <button type="button" id="test">test</button>
+        <div class="options lang withoutInput" id="option1"><span class="txtInCircle" key="firstOption"></span></div>
+        <div class="options lang withoutInput" id="option2"><span class="txtInCircle" key="secondOption"></span></div>
+        <div class="options lang withoutInput" id="option3"><span class="txtInCircle" key="thirdOption"></span></div>
+        <div class="options lang withoutInput" id="option4"><span class="txtInCircle" key="fourthOption"></span></div>
+        <div class="options lang withInput" id="option5"><span class="txtInCircle" key="fifthOption"></span></div>
+    </div> -->
+    <div class="container">
+        <button type="button" id="test">test</button>
+        <div class="options withoutInput" id="option1"><p class="lang" key="firstOption"></p></div>
+        <div class="options withoutInput" id="option2"><p class="lang" key="secondOption"></p></div>
+        <div class="options withoutInput" id="option3"><p class="lang" key="thirdOption"></p></div>
+        <div class="options withoutInput" id="option4"><p class="lang" key="fourthOption"></p></div>
+        <div class="options withInput" id="option5"><p class="lang" key="fifthOption"></p></div>
+    </div>
+    <!-- <div class="container">
+        <button type="button" id="test">test</button>
+        <div class="center options lang withoutInput" key="firstOption" id="option1"></div>
+        <div class="center options lang withoutInput" key="secondOption" id="option2"></div>
+        <div class="center options lang withoutInput" key="thirdOption" id="option3"></div>
+        <div class="center options lang withoutInput" key="fourthOption" id="option4"></div>
+        <div class="center options lang withInput" key="fifthOption" id="option5"></div>
+    </div> -->
+</body>
+</html>
