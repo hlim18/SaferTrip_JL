@@ -1,5 +1,6 @@
 # SaferTrip_JL
 My part of developing the SaferTrip web app
+> GitHub repository for the group project can be accessed [here](https://github.com/hlim18/ProjectSafeTown).
 
 ## Table of Contents
 1. [Main Page](https://github.com/hlim18/SaferTrip_JL#1-main-page)

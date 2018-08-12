@@ -27,9 +27,6 @@ var arrLang = {
         "tutorial4-2" : "Tap the icon!",
         "tutorial5-1" : "Find a safer path",
         "tutorial5-2" : "You can find a safer path more likely to be covered by CCTVs and/or less likely to be reported as crime-ridden areas.",
-        "menu1" : "Introduction",
-        "menu2" : "How to Use",
-        "menu3" : "Ratings & Reviews"
     },
     "ko": {
         "tabTitle": "야옹씨의 안전한 하루",
@@ -59,9 +56,6 @@ var arrLang = {
         "tutorial4-2" : "아이콘을 눌러보세요!",
         "tutorial5-1" : "안전길찾기",
         "tutorial5-2" : "CCTV가 설치되어 있거나 위험하게 느껴지는 곳을 최대한 피한 안전한 길로 안내 받을 수 있어요.",
-        "menu1" : "소개",
-        "menu2" : "사용방법",
-        "menu3" : "사용후기"
     }
 };
 
