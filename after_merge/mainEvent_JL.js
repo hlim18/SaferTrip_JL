@@ -94,6 +94,8 @@ $(document).ready(function(){
 
   // tutorial page 1 : safe areas
   $('#tutorialMenu').click(function(){
+    $("#sideNav")[0].style.width = "0px";
+
     $("#mapBackground").fadeIn();
     $("#tutorialGreen").fadeIn();
   });
@@ -110,7 +112,6 @@ $(document).ready(function(){
 
   // tutorial page 3 : tab the map!
   $('#mapBackground2').click(function(){
-    $("#mapBackground").fadeOut();
     $("#mapBackground2").fadeOut();
     $("#tutorialOrange1").fadeOut();
     $("#tutorialOrange2").fadeOut();
