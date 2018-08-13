@@ -24,8 +24,10 @@ My part of developing the SaferTrip web app
 - 3.7. [Not Changing Background Color when "Cancel" Button is Clicked](https://github.com/hlim18/SaferTrip_JL#37-not-changing-background-color-when-cancel-button-is-clicked)
 
 4. [Tutorials](https://github.com/hlim18/SaferTrip_JL#4-tutorials)
+- 4.1. [How to Overlay A div over Another div](https://github.com/hlim18/SaferTrip_JL#41-how-to-overlay-a-div-over-another-div)
 
 5. [Side Navigation Menu](https://github.com/hlim18/SaferTrip_JL#5-side-navigation-menu)
+- 5.1. [Language Buttons in the Side Naviation Menu](https://github.com/hlim18/SaferTrip_JL#5-language-buttons-in-the-side-navigation-menu)
 
 6. [Useful Information](https://github.com/hlim18/SaferTrip_JL#6-useful-information)
 - 5.1. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#61-github-markdown--useful-techniques)
@@ -710,11 +712,59 @@ Added background color only after input was submitted.
 - - -
 
 # 4. Tutorials
+## 4.1. How to Overlay A div over Another div
+In CSS, all elements are `position: static` by default. This means the element will be positioned according to its order in the HTML structure, with few exceptions. The other position values are `relative`, `absolute`, and `fixed`. (Explanation by [Brett DeWoody](https://stackoverflow.com/users/438581/brett-dewoody))
+
+<b>By using a `div` with style `z-index : 1` and `position: absolute`</b>, you can overlay your `div` on any other `div`.
+> `z-index` determines the order in which divs 'stack'. 
+A `div` with a higher `z-index` will appear in front of a `div` with a lower `z-index`. *Note that this property only works with positioned elements.* (Explanation by [Brett DeWoody](https://stackoverflow.com/users/438581/brett-dewoody))
+
+* A working [example](jsbin.com/edejus/1/edit) (created by [danriti](https://stackoverflow.com/users/246102/danriti))
+
+I set backgrounds `z-index` as "110" and texts `z-index` as "111", because something else's `z-index` was "103".
+
+```CSS
+#mapBackground, #mapBackground1, #mapBackground2, #mapBackground3, #mapBackground4, #mapBackground5, #mapBackground6 {
+  background: black;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 110;
+}
+```
+> I created backgrounds for each tutorial page, because we wanted to allow users to move onto the next tutorial page by clicking the screen.
+
+I hid all backgrounds and texts at first by using `hide()`. E.g. `$("#mapBackground").hide();`.
+I used `fadeOut()` and `fadeIn()` to make a background and texts appear and disappear as needed.
+
+```JS
+// tutorial page 1 : safe areas
+// tutorial page 2 : crime-ridden areas
+$('#mapBackground').click(function(){
+    $("#tutorialGreen").fadeOut();
+    $("#mapBackground").fadeOut();
+
+    $("#mapBackground2").fadeIn();
+    $("#tutorialOrange1").fadeIn();
+    $("#tutorialOrange2").fadeIn();
+});
+// tutorial page 3 : tab the map!
+// tutorial page 4 : orange icon is appeared!
+// tutorial page 5 : crime-ridden areas report options
+// tutorial page 6 : find a safer path!
+```
+
+### 4.1.1. Acknowledgements
+* How to overlay one div over another div @ [StackOverflow](https://stackoverflow.com/questions/2941189/)
 
 - - - 
 
 # 5. Side Navigation Menu
+## 5.1. Language Buttons in the Side Naviation Menu
 
+### 5.1.1. Acknowledgements
+* Position buttons next to each other in the center of page @ [StackOverflow](https://stackoverflow.com/questions/27671709/)
 
 - - -
 
