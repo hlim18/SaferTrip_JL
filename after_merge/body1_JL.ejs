@@ -1,12 +1,46 @@
 <div id="sideNav" style="width:0;">
 
-    <button class="translate langBtn" id="en-us" value="Refresh Page" onClick="window.location.reload()">English</button>
-    <button class="translate langBtn" id="ko" value="Refresh Page" onClick="window.location.reload()">한국어</button>
+  <!-- Using SweetAlert2 messages -->
+  <!-- <button class="translate langBtn" id="en-us" value="Refresh Page" onClick="window.location.reload()">English</button>
+  <button class="translate langBtn" id="ko" value="Refresh Page" onClick="window.location.reload()">한국어</button> -->
 
-    <a class="navMenu lang" href="#" key="navMenuLogin"></a>
-    <a class="navMenu lang" href="#" key="navMenuIntro"></a>
-    <a class="navMenu lang" href="#" key="navMenuHowTo"></a>
-    <a class="navMenu lang" href="#" key="navMenuRR"></a>
+  <!-- NOT Using SweetAlert2 messages -->
+  <div class="langBtn">
+    <button class="translate langTxt" id="en-us">English</button>
+    <button class="translate langTxt" id="ko">한국어</button>
+  </div>
+
 </div>
+
+<div id="tutorialPages">
+  <p class="lang" key="tutorial1" id="tutorialGreen"></p>
+  <p class="lang" key="tutorial2-1" id="tutorialOrange1"></p>
+  <p class="lang" key="tutorial2-2" id="tutorialOrange2"></p>
+  <p class="lang" key="tutorial3" id="tutorialTab"></p>
+  <p class="lang" key="tutorial4-1" id="tutorialOrangeIcon1"></p>
+  <p class="lang" key="tutorial4-2" id="tutorialOrangeIcon2"></p>
+  <p class="lang" key="tutorial5" id="tutorialOptionsExplanation"></p>
+  <p class="lang" key="tutorial6" id="tutorialSaferPath"></p>
+</div>
+
+<div id="mapBackground">
+  <!-- <a href="#" class="btn_mylct"><img src="../image/position.png" width="40px" height="40px"></img></a> -->
+</div> 
+
+<div id="mapBackground2"></div> 
+<div id="mapBackground3"></div> 
+<div id="mapBackground4"></div> 
+<div id="mapBackground5"></div>
+
+<div class="tutorialList">
+  <img id="tutorialOrangeSpot" src="image/orangespot.png"></img>
+  <div class="tutorialOptions withoutInput" id="tutorialOption1"><p class="lang" key="firstOption"></p></div>
+  <div class="tutorialOptions withoutInput" id="tutorialOption2"><p class="lang" key="secondOption"></p></div>
+  <div class="tutorialOptions withoutInput" id="tutorialOption3"><p class="lang" key="thirdOption"></p></div>
+  <div class="tutorialOptions withoutInput" id="tutorialOption4"><p class="lang" key="fourthOption"></p></div>
+  <div class="tutorialOptions withInput" id="tutorialOption5"><p class="lang" key="fifthOption"></p></div>
+</div>
+
+<div id="mapBackground6"></div>
 
 <script src="/js/mainEvent.js"></script>

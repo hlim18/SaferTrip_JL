@@ -1,0 +1,276 @@
+/* language buttons CSS */
+.langBtn {
+  /* place buttons next to each other horizontally */
+  display: inline-block;
+  position: absolute;
+}
+
+.langTxt{
+  color: white;
+  border-radius: 20%;
+  border-color: #818181;
+  background: transparent;
+}
+
+/* Tutorial CSS START */
+
+#mapBackground, #mapBackground1, #mapBackground2, #mapBackground3, #mapBackground4, #mapBackground5, #mapBackground6 {
+  background: black;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 110;
+}
+
+#tutorialGreen{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 111;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tutorialOrange1{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 111;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tutorialOrange2{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 111;
+  background: transparent;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tutorialTab{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 111;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tutorialOrangeIcon1{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 111;
+  background: transparent;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tutorialOrangeIcon2{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 111;
+  background: transparent;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tutorialOrangeSpot{
+  /* horizontally & vertically middle */
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  z-index: 111;
+  left: 50%;
+  top: 50%; 
+  /* The translate() CSS function repositions an element in the horizontal and/or vertical directions. */
+  transform: translate(-50%, -50%);
+}  
+
+.tutorialOptions {
+  background: #f7f7f5;
+  /* display: none; */  /* CAUTION!! */
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  /* transform: translateX(-50%) translateY(-50%); */
+  width: 100%;
+  /* vertically & horizontally middle */
+  left: 50%;
+  top: 50%; 
+  /* circle */
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #F3C78D;
+  /* transition: 
+      background 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+  z-index: 111;
+}
+
+/* .toggleEffect{
+  background : #F3C78D;
+} */
+
+/* text in circle */
+.tutorialOptions > p {
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  width: 100%;
+  /* Center texts inside circles */
+  top: 50%; 
+  left: 50%; 
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 112;
+}
+
+/* Making a circle */
+#tutorialOption1{
+  transform: translate(-100%, -150%);
+}
+
+#tutorialOption2{
+  transform: translate(-160%, -40%);
+}
+
+#tutorialOption3{
+  transform: translate(-50%, 50%);
+}
+
+#tutorialOption4{
+  transform: translate(60%, -40%);
+}
+
+#tutorialOption5{
+  transform: translate(15%, -150%);
+}
+
+#tutorialOptionsExplanation{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 111;
+  background: transparent;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tutorialSaferPath{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 111;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  /* right: 50%; */
+}
+
+/* 1) smartphones including iPhone 5 (320 x 568) */
+@media screen and (min-width : 0px) and (min-height: 0px) {
+  .langTxt {
+      font-size: 12px;
+  }
+  .tutorialOptions{
+      width: 60px;
+      height: 60px;
+      font-size: 12px;
+  }
+}
+
+/* 2) Galaxy S5 (360 x 640) */
+@media screen and (min-width : 360px) and (min-height: 640px) {
+  .langTxt {
+      font-size: 13px;
+  }
+  .tutorialOptions {
+      width: 70px;
+      height: 70px;
+      font-size: 13px;
+  }
+}
+
+/* 3) iPhones 6/7/8 (375 x 667) */
+@media screen and (min-width : 375px) and (min-height: 667px) {
+  .langTxt {
+      font-size: 14px;
+  }
+  .tutorialOptions {
+      width: 75px;
+      height: 75px;
+      font-size: 14px;
+  }
+}
+
+/* 4) iPhone X (375 x 812) */
+@media screen and (min-width : 375px) and (min-height : 812px) {
+  .langTxt {
+      font-size: 16px;
+  }
+}
+
+/* 5) iPhones 6/7/8 plus (414 x 746) */
+@media screen and (min-width : 414px) {
+  .langTxt {
+      font-size: 18px;
+  }
+  .tutorialOptions {
+      width: 80px;
+      height: 80px;
+      font-size: 15px;
+  }
+}
+
+/* 6) iPad (768 x 1024) */
+@media only screen and (min-width : 768px) and (min-height: 1024px) {
+  .langTxt {
+      font-size: 25px;
+  }
+  /* loading animation */    
+  .tutorialOptions {
+      width: 120px;
+      height: 120px;
+      font-size: 23px;
+  }
+}
+
+/* 7) iPad Pro (1024 x 1366) */
+@media only screen and (min-width : 1024px) and (min-height: 1366px) {
+  .langTxt {
+      font-size: 33px;
+  }
+  .tutorialOptions {
+      width: 170px;
+      height: 170px;
+      font-size: 30px;
+  }
+}
+
+/* element.style{
+  z-index: 1000;
+} */
