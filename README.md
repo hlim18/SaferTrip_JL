@@ -41,6 +41,12 @@ My part of developing the SaferTrip web app
 ### 1.1.1. Responsive Breakpoints
 > The `@media` rule is used in media queries to apply different styles for different media types/devices
 
+> `meta viewport` is needed to detect the width of devices. 
+
+```HTML
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+```
+
 Started with small screens first and worked up.
 
     1. Smartphones (320 x 568) 
@@ -65,7 +71,8 @@ Started with small screens first and worked up.
 * 2017.03.31 Stop using device breakpoints (by Adam Silver @ [Medium](https://medium.com/simple-human/stop-using-device-breakpoints-b11a87e2625c))
 * 2012.10.08 How to deal with various screen sizes by using CSS3 `@media` query `in Korean` (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
 * CSS background image to fit width, height should auto-scale in proportion @ [StackOverflow](https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion?rq=1)
-* Responsive web design @[ShayHowe](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+* Responsive web design @ [ShayHowe](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+* Media query font-size not working @ [StackOverflow](https://stackoverflow.com/questions/34379926/media-query-font-size-not-working)
 
 ### 1.1.2. Responsive background - full screen
 At first, I used `ackground-size: 100% 100%;` and the background image I received didn't fit into some screen sizes.
@@ -717,9 +724,10 @@ In CSS, all elements are `position: static` by default. This means the element w
 
 <b>By using a `div` with style `z-index : 1` and `position: absolute`</b>, you can overlay your `div` on any other `div`.
 > `z-index` determines the order in which divs 'stack'. 
-A `div` with a higher `z-index` will appear in front of a `div` with a lower `z-index`. *Note that this property only works with positioned elements.* (Explanation by [Brett DeWoody](https://stackoverflow.com/users/438581/brett-dewoody))
+A `div` with a higher `z-index` will appear in front of a `div` with a lower `z-index`. *Note that this property only works with positioned elements.* 
 
-* A working [example](jsbin.com/edejus/1/edit) (created by [danriti](https://stackoverflow.com/users/246102/danriti))
+* [Example 1](jsbin.com/edejus/1/edit) : Text over a background (created by [danriti](https://stackoverflow.com/users/246102/danriti))
+* [Example 2](http://jsfiddle.net/jfriend00/5Efm3/) : Buttons to move a div in front and behind of another div (created by [jfriend00](https://stackoverflow.com/users/816620/jfriend00)) 
 
 I set backgrounds `z-index` as "110" and texts `z-index` as "111", because something else's `z-index` was "103".
 
@@ -755,10 +763,25 @@ $('#mapBackground').click(function(){
 // tutorial page 6 : find a safer path!
 ```
 
+
 ### 4.1.1. Acknowledgements
 * How to overlay one div over another div @ [StackOverflow](https://stackoverflow.com/questions/2941189/)
+* How to change `z-index` of an element on click in `jQuery`? @ [Stackoverflow](https://stackoverflow.com/questions/22675080/)
+* What no one told you about `z-index` @ [Philip Walton](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/)
+* `Z-index` explained : how to stack elements using CSS @ [Free Code Camp](https://medium.freecodecamp.org/z-index-explained-how-to-stack-elements-using-css-7c5aa0f179b3)
 
 - - - 
+
+## 4.2. Display Text in a Single Line
+`white-space: nowrap` shows a sentence in div in a single line.
+
+* [Before] a sentence in two lines : [JSFiddle](https://jsfiddle.net/hlim188/ohzLj6cs/15/)
+* [After] a sentence in one line : [JSFiddle](https://jsfiddle.net/hlim188/ohzLj6cs/16/)
+ 
+### 4.2.1. Acknowledgements
+* CSS overflow - only 1 line of text @ [StackOverflow](https://stackoverflow.com/questions/7546389/)
+
+- - -
 
 # 5. Side Navigation Menu
 ## 5.1. Language Buttons in the Side Naviation Menu

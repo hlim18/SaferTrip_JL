@@ -7,7 +7,7 @@ var arrLang = {
       "tutorial1" : "Areas that CCTV cover are marked with green circles.",
       "tutorial2-1" : "Crime-ridden areas are marked with orange circles.",
       "tutorial2-2" : "You can participate in reporting crime-ridden areas.",
-      "tutorial3" : "Please tap where you feel unsafe.",
+      "tutorial3" : "You can tap where you feel unsafe.",
       "tutorial4-1" : "Orange location icon is appeared.",
       "tutorial4-2" : "Tap the icon!",    
       "tutorial5" : "You can choose option(s) to report why you feel unsafe here.",
@@ -85,6 +85,9 @@ $(document).ready(function(){
   $("#mapBackground5").hide();
   $("#mapBackground6").hide();
 
+  $(".tutorialSafe").hide();
+  $(".tutorialNotSafe").hide();
+
   $("#tutorialOrangeSpot").hide();
   $("#tutorialOption1").hide();
   $("#tutorialOption2").hide();
@@ -98,16 +101,20 @@ $(document).ready(function(){
 
     $("#mapBackground").fadeIn();
     $("#tutorialGreen").fadeIn();
+    $(".tutorialSafe").fadeIn();
+
   });
 
   // tutorial page 2 : crime-ridden areas
   $('#mapBackground').click(function(){
     $("#tutorialGreen").fadeOut();
     $("#mapBackground").fadeOut();
+    $(".tutorialSafe").fadeOut();
 
     $("#mapBackground2").fadeIn();
     $("#tutorialOrange1").fadeIn();
     $("#tutorialOrange2").fadeIn();
+    $(".tutorialNotSafe").fadeIn();
   });
 
   // tutorial page 3 : tab the map!
@@ -115,9 +122,10 @@ $(document).ready(function(){
     $("#mapBackground2").fadeOut();
     $("#tutorialOrange1").fadeOut();
     $("#tutorialOrange2").fadeOut();
+    $(".tutorialNotSafe").fadeOut();
 
     $("#mapBackground3").fadeIn();
-    $("#tutorialTab").fadeIn();
+    $("#.tutorialTab").fadeIn();
   });
 
   // tutorial page 4 : orange icon is appeared!

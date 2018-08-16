@@ -14,7 +14,16 @@
 
 /* Tutorial CSS START */
 
-#mapBackground, #mapBackground1, #mapBackground2, #mapBackground3, #mapBackground4, #mapBackground5, #mapBackground6 {
+#mapBackground, #mapBackground2 {
+  background: black;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 110;
+}
+
+#mapBackground3, #mapBackground4, #mapBackground5, #mapBackground6 {
   background: black;
   opacity: 0.8;
   position: absolute;
@@ -23,62 +32,176 @@
   z-index: 110;
 }
 
+/* tutorial page 1 GREEN dots */
+.tutorialSafe{
+  z-index: 111;
+  position: absolute;
+
+}
+
+/* tutorial page 2 ORANGE dots */
+.tutorialNotSafe{
+  z-index: 111;
+  position: absolute;
+}
+
+/* tutorial page 1 BEGIN */
+#tutorialSafe1{
+  top: 30%;
+  left: 50%;
+}
+
+#tutorialSafe2{
+  top: 40%;
+  left: 80%;
+}
+
+#tutorialSafe3{
+  top: 40%;
+  left: 20%;
+}
+
+#tutorialSafe4{
+  top: 60%;
+  left: 60%;
+}
+
+#tutorialSafe5{
+  top: 70%;
+  left: 30%;
+}
+
+#tutorialSafe6{
+  top: 80%;
+  left: 50%;
+}
+
+#tutorialSafe7{
+  top: 10%;
+  left: 20%;
+}
+/* tutorial page 1 END */
+
+/* tutorial page 2 BEGIN */
+#tutorialNotSafe1{
+  top: 10%;
+  left: 80%;
+}
+
+#tutorialNotSafe2{
+  top: 30%;
+  left: 10%;
+}
+
+#tutorialNotSafe3{
+  top: 70%;
+  left: 65%;
+}
+
+#tutorialNotSafe4{
+  top: 80%;
+  left: 20%;
+}
+
+#tutorialNotSafe5{
+  top: 90%;
+  left: 50%;
+}
+
+#tutorialNotSafe6{
+  top: 15%;
+  left: 25%;
+}
+
+#tutorialNotSafe7{
+  top: 55%;
+  left: 85%;
+}
+/* tutorial page 2 END */
+
+/* because "sampledanger" & "safeDot" are child elements of the map. Increasing Z-index of those will not make them appear above the background with higher z-index compared to the map. */
+
+/* mainEvent.js */
+/* #sampledanger{
+  position: absolute;
+  z-index: 112;
+} */
+
+/* mapsetting.js */
+/* #safeDot{
+  position: absolute;
+  z-index: 112;
+}  */
+
+/* page 1 */
 #tutorialGreen{
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
   z-index: 111;
   background: transparent;
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 80%;
   transform: translate(-50%, -50%);
 }
 
+/* page 2 */
 #tutorialOrange1{
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
   z-index: 111;
   background: transparent;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
+  width: 80%;
+
   transform: translate(-50%, -50%);
 }
 
 #tutorialOrange2{
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
   z-index: 111;
   background: transparent;
   position: absolute;
   top: 60%;
   left: 50%;
+  width: 80%;
+
   transform: translate(-50%, -50%);
 }
 
+/* page 3 */
 #tutorialTab{
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
   z-index: 111;
   background: transparent;
+  /* full sentence in one line */
+  white-space: nowrap;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+/* page 4 */
 #tutorialOrangeIcon1{
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
   z-index: 111;
   background: transparent;
+  /* full sentence in one line */
+  white-space: nowrap;
   position: absolute;
-  top: 70%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -86,15 +209,18 @@
 #tutorialOrangeIcon2{
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
   z-index: 111;
   background: transparent;
+  /* full sentence in one line */
+  white-space: nowrap;
   position: absolute;
-  top: 80%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+/* page 4-5 */
 #tutorialOrangeSpot{
   /* horizontally & vertically middle */
   cursor: pointer;
@@ -109,14 +235,14 @@
   transform: translate(-50%, -50%);
 }  
 
+/* page 5 */
 .tutorialOptions {
   background: #f7f7f5;
   /* display: none; */  /* CAUTION!! */
   text-align: center;
   vertical-align: middle;
   position: absolute;
-  /* transform: translateX(-50%) translateY(-50%); */
-  width: 100%;
+  transform: translateX(-50%) translateY(-50%);
   /* vertically & horizontally middle */
   left: 50%;
   top: 50%; 
@@ -139,7 +265,6 @@
   text-align: center;
   vertical-align: middle;
   position: absolute;
-  width: 100%;
   /* Center texts inside circles */
   top: 50%; 
   left: 50%; 
@@ -168,10 +293,12 @@
   transform: translate(15%, -150%);
 }
 
+/* page 5 */
 #tutorialOptionsExplanation{
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
+  width: 100%;
   z-index: 111;
   background: transparent;
   position: absolute;
@@ -180,10 +307,12 @@
   transform: translate(-50%, -50%);
 }
 
+/* page 6 */
 #tutorialSaferPath{
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
+  width: 100%;
   z-index: 111;
   background: transparent;
   position: absolute;
