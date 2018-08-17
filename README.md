@@ -957,7 +957,7 @@ __bold__
   * The modern JavaScript tutorial by Ilya Kantor @ [JavaScript Info](https://javascript.info/)
   * 30 Days of `Vanlia JS` coding challenge by Wes Bos @ [JavaScript30](https://javascript30.com/)
   * Eloquent JavaScript by Margin Haverbeje @ [Eloquent JavaScript](https://eloquentjavascript.net/index.html)
-  * ES9 
+  * ECMAScript2018 = ES9
 
 <b>CSS</b>
   * Master CSS `flexbox` by Wes Bos @ [FlexBox](https://flexbox.io/)
@@ -979,7 +979,7 @@ __bold__
   * [Vue CLI 3](https://cli.vuejs.org/) : Command Line Interface for rapid `Vue` development
 
 ### 6.2.2. Back-end
-<b>Python</b>
+<b>[Python](https://www.python.org/)</b>
   * Python/Django 6-week online class *in Korean* @ [Imagineer](https://www.imagineer.io/p/python)
   * Python 101 @ [Python 101](http://python101.pythonlibrary.org/)
   * The Python Tutorial (3.7.0.) @ [Python Software Foundation](https://docs.python.org/3/tutorial/)
@@ -988,14 +988,15 @@ __bold__
   * Python/Django 6-week online class *in Korean* @ [Imagineer](https://www.imagineer.io/p/python)
   * A complete beginner's guide to Django @ [Simple is Better than Complex](https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/)
 
-<b>AWS</b>
+<b>[AWS](https://aws.amazon.com/)</b>
   * Python/Django 6-week online class *in Korean* @ [Imagineer](https://www.imagineer.io/p/python)
+  * AWS free tier @ [AWS](https://aws.amazon.com/free/?sc_iplace=hero-static-text-link&sc_icontent=awssm-evergreen-1st-visit-text-link&sc_icampaign=acq_aws_takeover-1st-visit&trk=ha_awssm-evergreen-1st-visit-text-link) : some features FREE for new customers only for 12 months
 
 <b>[PostgreSQL](https://www.postgresql.org/)</b>
   * PostgreSQL Tutorial @ [PostgreSQL Tutorial](http://www.postgresqltutorial.com/)
 
-<b>Firebase</b>
-  * ?
+<b>[Firebase](https://firebase.google.com/)</b>
+  * Add sign-in to you web app with FirebaseUI @ [Firebase](https://firebase.google.com/docs/auth/web/firebaseui)
 
 ### 6.2.3. CS Knowledge
 <b>In General</b>
