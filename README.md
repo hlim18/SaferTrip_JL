@@ -23,15 +23,16 @@ My part of developing the SaferTrip web app
 - 3.6. [Different Popup Messages between Options 1-4 and Option 5](https://github.com/hlim18/SaferTrip_JL#36-different-popup-messages-between-options-1-4-and-option-5)
 - 3.7. [Not Changing Background Color when "Cancel" Button is Clicked](https://github.com/hlim18/SaferTrip_JL#37-not-changing-background-color-when-cancel-button-is-clicked)
 
-4. [Tutorials](https://github.com/hlim18/SaferTrip_JL#4-tutorials)
+4. [Tutorials Pages](https://github.com/hlim18/SaferTrip_JL#4-tutorials-pages)
 - 4.1. [How to Overlay A div over Another div](https://github.com/hlim18/SaferTrip_JL#41-how-to-overlay-a-div-over-another-div)
+- 4.2. [Display Text in a Single Line](https://github.com/hlim18/SaferTrip_JL#42-display-text-in-a-single-line)
 
 5. [Side Navigation Menu](https://github.com/hlim18/SaferTrip_JL#5-side-navigation-menu)
 - 5.1. [Language Buttons in the Side Naviation Menu](https://github.com/hlim18/SaferTrip_JL#5-language-buttons-in-the-side-navigation-menu)
 
 6. [Useful Information](https://github.com/hlim18/SaferTrip_JL#6-useful-information)
-- 5.1. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#61-github-markdown--useful-techniques)
-- 5.2. [Resources](https://github.com/hlim18/SaferTrip_JL#62-resources)
+- 6.1. [GitHub Markdown : Useful Techniques](https://github.com/hlim18/SaferTrip_JL#61-github-markdown--useful-techniques)
+- 6.2. [Resources for a Future Project](https://github.com/hlim18/SaferTrip_JL#62-resources-for-a-future-project)
 
 7. [Built With](https://github.com/hlim18/SaferTrip_JL#7-bulit-with)
 - - -
@@ -69,7 +70,7 @@ Started with small screens first and worked up.
 #### 1.1.1.1. Acknowledgements
 * CSS `@media` rule @ [w3schools](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
 * 2017.03.31 Stop using device breakpoints (by Adam Silver @ [Medium](https://medium.com/simple-human/stop-using-device-breakpoints-b11a87e2625c))
-* 2012.10.08 How to deal with various screen sizes by using CSS3 `@media` query `in Korean` (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
+* 2012.10.08 How to deal with various screen sizes by using CSS3 `@media` query *in Korean* (by Seong-Kwang Song @ his [blog](http://blog.saltfactory.net/using-css-media-query-for-responsive-web/))
 * CSS background image to fit width, height should auto-scale in proportion @ [StackOverflow](https://stackoverflow.com/questions/9262861/css-background-image-to-fit-width-height-should-auto-scale-in-proportion?rq=1)
 * Responsive web design @ [ShayHowe](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 * Media query font-size not working @ [StackOverflow](https://stackoverflow.com/questions/34379926/media-query-font-size-not-working)
@@ -163,8 +164,8 @@ Increasing opacity from 0 to 1 and including contents in a html document prevent
 #### 1.2.2.1. Acknowledgements
 * JSON - What is `JSON` and how to use it @ [ILoveCoding](https://ilovecoding.org/lessons/json-what-is-json-and-how-to-use-it)
 * Ajax: Create a `Single Page App` with jQuery @ [ILoveCoding](https://ilovecoding.org/lessons/ajax-create-a-single-page-app-with-jquery)
-* jQuery Ajax in Korean @ [Open Tutorials](https://opentutorials.org/course/1375/6851)
-* Node.js Course in Korean @ [Open Tutorials](https://opentutorials.org/course/2136)
+* jQuery Ajax *in Korean* @ [Open Tutorials](https://opentutorials.org/course/1375/6851)
+* Node.js Course *in Korean* @ [Open Tutorials](https://opentutorials.org/course/2136)
 * What is `CRUD`? @ [CodeAcademy](https://www.codecademy.com/articles/what-is-crud)
 * Build a Single Page Application with jQuery & AJAX Course @ [Udemy](https://www.udemy.com/jquery-ajax/learn/v4/overview)
 - - -
@@ -718,7 +719,7 @@ Added background color only after input was submitted.
 ```
 - - -
 
-# 4. Tutorials
+# 4. Tutorials Pages
 ## 4.1. How to Overlay A div over Another div
 In CSS, all elements are `position: static` by default. This means the element will be positioned according to its order in the HTML structure, with few exceptions. The other position values are `relative`, `absolute`, and `fixed`. (Explanation by [Brett DeWoody](https://stackoverflow.com/users/438581/brett-dewoody))
 
@@ -943,19 +944,68 @@ __bold__
 ### 6.1.9. Acknowledgements
 * About READMEs @[GitHub Help](https://help.github.com/articles/about-readmes/)
 * README-Template.md by PurpleBooth @ [GitHubGist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* How to use Markdown `in Korean` by ihoneymon @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+* How to use Markdown *in Korean* by ihoneymon @ [GitHubGist](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 * Markdown Cheatsheet by adam-p @ [GitHubGist](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 * How to add screenshot to READMEs in github repository? @ [StackOverflow](https://stackoverflow.com/questions/10189356/how-to-add-screenshot-to-readmes-in-github-repository?noredirect=1&lq=1)
 * GitHub relative link in markdown file @ [StackOverflow](https://stackoverflow.com/questions/7653483/github-relative-link-in-markdown-file?rq=1)
 - - -
 
-## 6.2. Resources
-* <b>CSS</b>
-    - CSS @ [CSS Reference](https://cssreference.io/)
-    - 2017.08.04 75 Web animation tools you have to try by Nataly Birch @ [Web Designer Depot](https://www.webdesignerdepot.com/2017/08/75-web-animation-tools-you-have-to-try/)
-    - Writing effective CSS selectors @ [CSS Wizardy](https://csswizardry.com/2011/09/writing-efficient-css-selectors/)
-    - How to center in CSS @[How to Center in CSS](http://howtocenterincss.com/)
-    - The Skinny on CSS attribute selectors @ [CSS-tricks](https://css-tricks.com/attribute-selectors/)
+## 6.2. Resources for a Future Project
+
+### 6.2.1. Front-end
+<b>JS</b>
+  * The modern JavaScript tutorial by Ilya Kantor @ [JavaScript Info](https://javascript.info/)
+  * 30 Days of `Vanlia JS` coding challenge by Wes Bos @ [JavaScript30](https://javascript30.com/)
+  * Eloquent JavaScript by Margin Haverbeje @ [Eloquent JavaScript](https://eloquentjavascript.net/index.html)
+  * ES9 
+
+<b>CSS</b>
+  * Master CSS `flexbox` by Wes Bos @ [FlexBox](https://flexbox.io/)
+  * Learn CSS `grid` by Wes Bos @[CSS Grid](https://cssgrid.io/)
+  * CSS Preprocessor : `Sass` vs `Stylus`
+    - 2012.04.16. `Sass` vs `Stylus` @ [Design Shack](https://designshack.net/articles/css/sass-vs-stylus-who-wins-the-minimal-syntax-battle/)
+    - 2018.05.28. 10 reasons to use a CSS Preprocessor in 2018 @ [Raygun](https://raygun.com/blog/10-reasons-css-preprocessor/)
+    - 2018.05.02. Popular CSS preprocessors 2ith examples: `Sass`, `Less` & `Stylus` @ [Raygun](https://raygun.com/blog/css-preprocessors-examples/)
+    - `Vuetify` was built on `Stylus` ([GitHub](https://github.com/vuetifyjs/vuetify/issues/1857)). Since July 2018, `Sass` can be used in `Vuetify` with `vuetify-scss` ([GitHub](https://github.com/nmsmith22389/vuetify-scss))
+    - 2013.03.01. Difference b/t `.sass` & `.scss` @ [Responsive Design](https://responsivedesign.is/articles/difference-between-sass-and-scss/)
+
+<b>Vue</b>
+  * [Vue](https://vuejs.org/) : The progressive JavaScript framework
+  * [Vuex](https://vuex.vuejs.org/) : a state management pattern + library for `Vue` applications
+  * [Vuetify](https://vuetifyjs.com/en/) : Material design component framework
+  * [Vue Router](https://router.vuejs.org/) : Navigation for a `Single-Page Application (SPA)`
+  * [Nuxt.js](https://nuxtjs.org/) : Library for `server-side rendering`, code-splitting, hot-reloading, static generation and more
+  * [Axios](https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html) : a `promise`-based HTTP client
+  * [Vue CLI 3](https://cli.vuejs.org/) : Command Line Interface for rapid `Vue` development
+
+### 6.2.2. Back-end
+<b>Python</b>
+  * Python/Django 6-week online class *in Korean* @ [Imagineer](https://www.imagineer.io/p/python)
+  * Python 101 @ [Python 101](http://python101.pythonlibrary.org/)
+  * The Python Tutorial (3.7.0.) @ [Python Software Foundation](https://docs.python.org/3/tutorial/)
+
+<b>[Django](https://www.djangoproject.com/)</b>
+  * Python/Django 6-week online class *in Korean* @ [Imagineer](https://www.imagineer.io/p/python)
+  * A complete beginner's guide to Django @ [Simple is Better than Complex](https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/)
+
+<b>AWS</b>
+  * Python/Django 6-week online class *in Korean* @ [Imagineer](https://www.imagineer.io/p/python)
+
+<b>[PostgreSQL](https://www.postgresql.org/)</b>
+  * PostgreSQL Tutorial @ [PostgreSQL Tutorial](http://www.postgresqltutorial.com/)
+
+<b>Firebase</b>
+  * ?
+
+### 6.2.3. CS Knowledge
+<b>In General</b>
+  * Teach yourself Computer Science @ [Teach Yourself CS](https://teachyourselfcs.com/)
+
+<b>Algorithms & Data Structure</b>
+  * Four semesters of Computer Science in 6 Hours by Brian Holt @ [Frontend Masters](http://btholt.github.io/four-semesters-of-cs/)
+  * Data structures fundamentals @ [edX](https://www.edx.org/course/data-structures-fundamentals-uc-san-diegox-algs201x)
+
+
 - - -
 
 # 7. Bulit With
