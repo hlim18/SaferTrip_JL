@@ -5,8 +5,7 @@ var arrLang = {
       "navMenuHowTo" : "How to Use",
       "navMenuRR" : "Ratings & Reviews",
       "tutorial1" : "Areas that CCTV cover are marked with green circles.",
-      "tutorial2-1" : "Crime-ridden areas are marked with orange circles.",
-      "tutorial2-2" : "You can participate in reporting crime-ridden areas.",
+      "tutorial2" : "Crime-ridden areas are marked with orange circles. You can participate in reporting crime-ridden areas.",
       "tutorial3" : "You can tap where you feel unsafe.",
       "tutorial4-1" : "Orange location icon is appeared.",
       "tutorial4-2" : "Tap the icon!",    
@@ -19,8 +18,7 @@ var arrLang = {
       "navMenuHowTo" : "사용방법",
       "navMenuRR" : "사용후기",
       "tutorial1" : "CCTV가 설치되어있는 곳은 초록색으로 표시되어있어요.",
-      "tutorial2-1" : "위험하게 느껴지는 곳은 주황색으로 표시되어있어요.",
-      "tutorial2-2" : "여러분이 직접 표시할 수 있어요.",
+      "tutorial2" : "위험하게 느껴지는 곳은 주황색으로 표시되어있어요. 여러분이 직접 표시할 수 있어요.",
       "tutorial3" : "길을 가다 위험해보이는 곳이 있다면, 눌러주세요.",
       "tutorial4-1" : "주황색 위치 아이콘이 생겼어요.",
       "tutorial4-2" : "아이콘을 눌러보세요!",
@@ -69,8 +67,7 @@ $(document).ready(function(){
 
   // // START OF TUTORIAL
   $("#tutorialGreen").hide();
-  $("#tutorialOrange1").hide();
-  $("#tutorialOrange2").hide();
+  $("#tutorialOrange").hide();
   $("#tutorialTab").hide();
   $("#tutorialOrangeIcon1").hide();
   $("#tutorialOrangeIcon2").hide();
@@ -112,16 +109,14 @@ $(document).ready(function(){
     $(".tutorialSafe").fadeOut();
 
     $("#mapBackground2").fadeIn();
-    $("#tutorialOrange1").fadeIn();
-    $("#tutorialOrange2").fadeIn();
+    $("#tutorialOrange").fadeIn();
     $(".tutorialNotSafe").fadeIn();
   });
 
   // tutorial page 3 : tab the map!
   $('#mapBackground2').click(function(){
     $("#mapBackground2").fadeOut();
-    $("#tutorialOrange1").fadeOut();
-    $("#tutorialOrange2").fadeOut();
+    $("#tutorialOrange").fadeOut();
     $(".tutorialNotSafe").fadeOut();
 
     $("#mapBackground3").fadeIn();

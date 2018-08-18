@@ -148,33 +148,19 @@
 }
 
 /* page 2 */
-#tutorialOrange1{
+#tutorialOrange{
   color: white;
   font-weight: bold;
   font-size: 50px;
   z-index: 111;
   background: transparent;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   width: 80%;
-
   transform: translate(-50%, -50%);
 }
 
-#tutorialOrange2{
-  color: white;
-  font-weight: bold;
-  font-size: 50px;
-  z-index: 111;
-  background: transparent;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  width: 80%;
-
-  transform: translate(-50%, -50%);
-}
 
 /* page 3 */
 #tutorialTab{
@@ -297,7 +283,7 @@
 #tutorialOptionsExplanation{
   color: white;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 49px;
   width: 100%;
   z-index: 111;
   background: transparent;
@@ -320,86 +306,11 @@
   /* right: 50%; */
 }
 
-/* 1) smartphones including iPhone 5 (320 x 568) */
-@media screen and (min-width : 0px) and (min-height: 0px) {
-  .langTxt {
-      font-size: 12px;
-  }
-  .tutorialOptions{
-      width: 60px;
-      height: 60px;
-      font-size: 12px;
-  }
+.langTxt {
+  font-size: 35px;
 }
-
-/* 2) Galaxy S5 (360 x 640) */
-@media screen and (min-width : 360px) and (min-height: 640px) {
-  .langTxt {
-      font-size: 13px;
-  }
-  .tutorialOptions {
-      width: 70px;
-      height: 70px;
-      font-size: 13px;
-  }
+.tutorialOptions {
+    width: 180px;
+    height: 180px;
+    font-size: 35px;
 }
-
-/* 3) iPhones 6/7/8 (375 x 667) */
-@media screen and (min-width : 375px) and (min-height: 667px) {
-  .langTxt {
-      font-size: 14px;
-  }
-  .tutorialOptions {
-      width: 75px;
-      height: 75px;
-      font-size: 14px;
-  }
-}
-
-/* 4) iPhone X (375 x 812) */
-@media screen and (min-width : 375px) and (min-height : 812px) {
-  .langTxt {
-      font-size: 16px;
-  }
-}
-
-/* 5) iPhones 6/7/8 plus (414 x 746) */
-@media screen and (min-width : 414px) {
-  .langTxt {
-      font-size: 18px;
-  }
-  .tutorialOptions {
-      width: 80px;
-      height: 80px;
-      font-size: 15px;
-  }
-}
-
-/* 6) iPad (768 x 1024) */
-@media only screen and (min-width : 768px) and (min-height: 1024px) {
-  .langTxt {
-      font-size: 25px;
-  }
-  /* loading animation */    
-  .tutorialOptions {
-      width: 120px;
-      height: 120px;
-      font-size: 23px;
-  }
-}
-
-/* 7) iPad Pro (1024 x 1366) */
-@media only screen and (min-width : 1024px) and (min-height: 1366px) {
-  .langTxt {
-      font-size: 33px;
-  }
-  .tutorialOptions {
-      width: 170px;
-      height: 170px;
-      font-size: 30px;
-  }
-}
-
-/* element.style{
-  z-index: 1000;
-} */
