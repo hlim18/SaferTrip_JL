@@ -26,6 +26,7 @@ My part of developing the SaferTrip web app
 4. [Tutorials Pages](https://github.com/hlim18/SaferTrip_JL#4-tutorials-pages)
 - 4.1. [How to Overlay A div over Another div](https://github.com/hlim18/SaferTrip_JL#41-how-to-overlay-a-div-over-another-div)
 - 4.2. [Display Text in a Single Line](https://github.com/hlim18/SaferTrip_JL#42-display-text-in-a-single-line)
+- 4.3. [CSS Animation : Blink an Image](https://github.com/hlim18/SaferTrip_JL#43-css-animation--blink-an-image)
 
 5. [Side Navigation Menu](https://github.com/hlim18/SaferTrip_JL#5-side-navigation-menu)
 - 5.1. [Language Buttons in the Side Naviation Menu](https://github.com/hlim18/SaferTrip_JL#5-language-buttons-in-the-side-navigation-menu)
@@ -770,7 +771,6 @@ $('#mapBackground').click(function(){
 * How to change `z-index` of an element on click in `jQuery`? @ [Stackoverflow](https://stackoverflow.com/questions/22675080/)
 * What no one told you about `z-index` @ [Philip Walton](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/)
 * `Z-index` explained : how to stack elements using CSS @ [Free Code Camp](https://medium.freecodecamp.org/z-index-explained-how-to-stack-elements-using-css-7c5aa0f179b3)
-
 - - - 
 
 ## 4.2. Display Text in a Single Line
@@ -781,6 +781,42 @@ $('#mapBackground').click(function(){
  
 ### 4.2.1. Acknowledgements
 * CSS overflow - only 1 line of text @ [StackOverflow](https://stackoverflow.com/questions/7546389/)
+- - - 
+
+## 4.3. CSS Animation : Blink an Image
+I used the feature name `animation` to create the animation effect on our button. 
+
+Defining `keyframes` is needed to trigger this effect from 0 to 100% by using the opacity feature to reduce the transparency level. 
+
+In the animation itself, I needed to specify what wwould be the duration of the animation and whether I wanted the animation to loop infinitely.
+
+```CSS
+#tutorialOrangeSpot{
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}  
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+      opacity: 0.4;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+```
+
+### 4.3.1. Acknowledgements
+* How do you make an image blink? @ [StackOverflow](https://stackoverflow.com/questions/12115247)
+* 2016.02.09 How to create a flashing button using CSS3? @ [ByTutorial](https://bytutorial.com/blogs/css3/how-to-create-a-flashing-button-using-css3)
 
 - - -
 
@@ -958,6 +994,9 @@ __bold__
   * 30 Days of `Vanlia JS` coding challenge by Wes Bos @ [JavaScript30](https://javascript30.com/)
   * Eloquent JavaScript by Margin Haverbeje @ [Eloquent JavaScript](https://eloquentjavascript.net/index.html)
   * ECMAScript2018 = ES9
+  * Webpack
+    - Webpack: When To Use And Why @ [Andrew Ray](https://blog.andrewray.me/webpack-when-to-use-and-why/)
+    - What is Webpack and why should I care? by Ciel @ Medium ([Part1](https://medium.com/the-self-taught-programmer/what-is-webpack-and-why-should-i-care-part-1-introduction-ca4da7d0d8dc), [Part2]())
 
 <b>CSS</b>
   * Master CSS `flexbox` by Wes Bos @ [FlexBox](https://flexbox.io/)
@@ -977,6 +1016,7 @@ __bold__
   * [Nuxt.js](https://nuxtjs.org/) : Library for `server-side rendering`, code-splitting, hot-reloading, static generation and more
   * [Axios](https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html) : a `promise`-based HTTP client
   * [Vue CLI 3](https://cli.vuejs.org/) : Command Line Interface for rapid `Vue` development
+- - - 
 
 ### 6.2.2. Back-end
 <b>[Python](https://www.python.org/)</b>
@@ -997,6 +1037,7 @@ __bold__
 
 <b>[Firebase](https://firebase.google.com/)</b>
   * Add sign-in to you web app with FirebaseUI @ [Firebase](https://firebase.google.com/docs/auth/web/firebaseui)
+- - -
 
 ### 6.2.3. CS Knowledge
 <b>In General</b>
